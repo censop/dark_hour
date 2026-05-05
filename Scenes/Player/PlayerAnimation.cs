@@ -18,8 +18,8 @@ public partial class PlayerAnimation : Node2D
         {
             Vector2 direction = _player.Velocity.Normalized();
             
-            //_animationTree.Set("parameters/Idle/blend_position", direction);
-            _animationTree.Set("parameters/blend_position", direction);
+            _animationTree.Set("parameters/Idle/blend_position", direction);
+            _animationTree.Set("parameters/Walk/blend_position", direction);
         }
 	}
 }

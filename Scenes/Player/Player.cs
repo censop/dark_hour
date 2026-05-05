@@ -12,7 +12,7 @@ public partial class Player : CharacterBody2D
 	{
 	}
 
-	public override void _Process(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Velocity;
 		int xDir = 0;
