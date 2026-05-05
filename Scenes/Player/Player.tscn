@@ -495,3 +495,9 @@ parameters/Walk/blend_position = Vector2(0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerAnimation" unique_id=93488682]
 libraries/ = SubResource("AnimationLibrary_ft8w5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2040890190]
+process_callback = 0
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+rotation_smoothing_enabled = true
