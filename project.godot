@@ -12,7 +12,7 @@ config_version=5
 
 config/name="DarkHour"
 run/main_scene="uid://b7n815cdnurv"
-config/features=PackedStringArray("4.6", "Mobile")
+config/features=PackedStringArray("4.6", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
