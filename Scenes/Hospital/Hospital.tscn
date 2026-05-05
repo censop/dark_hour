@@ -99,3 +99,6 @@ tile_set = SubResource("TileSet_osfji")
 
 [node name="Player" parent="." unique_id=292045112 instance=ExtResource("1_7441k")]
 position = Vector2(46, 24)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
+color = Color(0.30200383, 0.30200383, 0.30200383, 1)
