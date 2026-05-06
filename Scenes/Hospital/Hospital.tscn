@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://0guetbwp3mv4" path="res://Scenes/Player/Player.tscn" id="1_7441k"]
 [ext_resource type="Texture2D" uid="uid://cmke71ngbkq4j" path="res://Assets/kitchen_free_spritesheet.png" id="2_lm1a6"]
+[ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Battery/Battery.tscn" id="3_osfji"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lm1a6"]
 texture = ExtResource("2_lm1a6")
@@ -101,4 +102,8 @@ tile_set = SubResource("TileSet_osfji")
 position = Vector2(46, 24)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
-color = Color(0.30200383, 0.30200383, 0.30200383, 1)
+visible = false
+color = Color(0.07815645, 0.078156464, 0.078156434, 1)
+
+[node name="Battery" parent="." unique_id=72985288 instance=ExtResource("3_osfji")]
+position = Vector2(131, 27)
