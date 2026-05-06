@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections;
 
 public partial class Battery : Area2D
 {
@@ -33,7 +34,9 @@ public partial class Battery : Area2D
 	private void OnBatteryUsed()
 	{
 		//FOR NOW
-			GD.Print("Interacted");
+		GD.Print("Interacted");
+		SignalHub.EmitOnBatterUsed();
+		QueueFree();
 	}
 
 

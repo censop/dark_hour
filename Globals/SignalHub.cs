@@ -7,6 +7,7 @@ public partial class SignalHub : Node
 
 
 	[Signal] public delegate void OnBatteryUsedEventHandler();
+    [Signal] public delegate void OnBatteryDeadEventHandler();
 
 	public override void _Ready()
 	{
@@ -16,6 +17,11 @@ public partial class SignalHub : Node
 	public static void EmitOnBatterUsed()
 	{
 		Instance.EmitSignal(SignalName.OnBatteryUsed);
+	}
+
+    public static void EmitOnBatteryDead()
+	{
+		Instance.EmitSignal(SignalName.OnBatteryDead);
 	}
 
 }

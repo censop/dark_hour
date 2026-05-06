@@ -11,9 +11,15 @@ gradient = SubResource("Gradient_vvdyl")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[node name="Flashlight" type="Node2D" unique_id=1380198034]
+[node name="Flashlight" type="Node2D" unique_id=1380198034 node_paths=PackedStringArray("_batteryTimer", "_pointLight")]
 script = ExtResource("1_dao62")
+_batteryTimer = NodePath("Timer")
+_pointLight = NodePath("PointLight2D")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=362092162]
 scale = Vector2(1.5, 1.5)
 texture = SubResource("GradientTexture2D_dao62")
+
+[node name="Timer" type="Timer" parent="." unique_id=901556816]
+wait_time = 10.0
+one_shot = true
