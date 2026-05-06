@@ -36,6 +36,33 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_t26db")
 blend_point_3/pos = Vector2(1, 0)
 blend_mode = 1
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fk5o5"]
+animation = &"interact_down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_825xp"]
+animation = &"interact_up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ji083"]
+animation = &"interact_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_i5acl"]
+animation = &"interact_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0kmp4"]
+animation = &"interact_right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_epg6k"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_fk5o5")
+blend_point_0/pos = Vector2(0, 0.90000004)
+blend_point_1/node = SubResource("AnimationNodeAnimation_825xp")
+blend_point_1/pos = Vector2(0, -0.8)
+blend_point_2/node = SubResource("AnimationNodeAnimation_ji083")
+blend_point_2/pos = Vector2(-1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_i5acl")
+blend_point_3/pos = Vector2(1, 0)
+blend_point_4/node = SubResource("AnimationNodeAnimation_0kmp4")
+blend_point_4/pos = Vector2(1, 0)
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ude3g"]
 advance_mode = 2
 advance_expression = "!velocity.is_zero_approx()"
@@ -47,13 +74,34 @@ advance_expression = "velocity.is_zero_approx()"
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4wape"]
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0u84n"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!IsInteracting && !velocity.is_zero_approx()"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_esmjy"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "!IsInteracting && velocity.is_zero_approx()"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6tu5v"]
+advance_mode = 2
+advance_expression = "IsInteracting "
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_spxdj"]
+advance_mode = 2
+advance_expression = "IsInteracting
+"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_ude3g"]
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_fk5o5")
 states/Idle/position = Vector2(422.17285, 169.33334)
+states/Interact/node = SubResource("AnimationNodeBlendSpace2D_epg6k")
+states/Interact/position = Vector2(606, 120.666664)
 states/Start/position = Vector2(192.66667, 114)
 states/Walk/node = ExtResource("4_ude3g")
 states/Walk/position = Vector2(422.1701, 56.666664)
-transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_ude3g"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_jmcll"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_4wape")]
+transitions = ["Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_ude3g"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_jmcll"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_4wape"), "Interact", "Walk", SubResource("AnimationNodeStateMachineTransition_0u84n"), "Interact", "Idle", SubResource("AnimationNodeStateMachineTransition_esmjy"), "Walk", "Interact", SubResource("AnimationNodeStateMachineTransition_6tu5v"), "Idle", "Interact", SubResource("AnimationNodeStateMachineTransition_spxdj")]
 
 [sub_resource type="Animation" id="Animation_ft8w5"]
 length = 0.001
@@ -494,6 +542,7 @@ tree_root = SubResource("AnimationNodeStateMachine_ude3g")
 advance_expression_base_node = NodePath("../..")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Idle/blend_position = Vector2(0.9960784, 0.02222228)
+parameters/Interact/blend_position = Vector2(0.84313726, 0.0031745434)
 parameters/Walk/blend_position = Vector2(0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerAnimation" unique_id=93488682]

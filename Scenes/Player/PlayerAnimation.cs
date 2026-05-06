@@ -20,6 +20,7 @@ public partial class PlayerAnimation : Node2D
             
             _animationTree.Set("parameters/Idle/blend_position", direction);
             _animationTree.Set("parameters/Walk/blend_position", direction);
+			_animationTree.Set("parameters/Interact/blend_position", direction);
         }
 	}
 }
