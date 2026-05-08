@@ -14,7 +14,6 @@ tile_set = ExtResource("1_osfji")
 position = Vector2(46, 24)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
-visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="Battery" parent="." unique_id=72985288 instance=ExtResource("3_osfji")]
