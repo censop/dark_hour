@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bis4p47hfs0l2" path="res://Scenes/Player/PlayerAnimation.cs" id="3_ude3g"]
 [ext_resource type="AnimationNodeBlendSpace2D" uid="uid://ptohl8u208sj" path="res://Resources/Animations/player_walk.tres" id="4_ude3g"]
 [ext_resource type="PackedScene" uid="uid://ca3w5bbojejdg" path="res://Scenes/Flashlight/Flashlight.tscn" id="5_jmcll"]
+[ext_resource type="PackedScene" uid="uid://dlhhuvv538nsm" path="res://Scenes/GameUI/GameUI.tscn" id="6_4wape"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s0eop"]
 height = 26.0
@@ -553,6 +554,10 @@ process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=353969182]
+
+[node name="GameUI" parent="Camera2D/CanvasLayer" unique_id=1781965203 instance=ExtResource("6_4wape")]
 
 [node name="Flashlight" parent="." unique_id=1380198034 instance=ExtResource("5_jmcll")]
 position = Vector2(0, 4)

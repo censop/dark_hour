@@ -1,7 +1,35 @@
 [gd_scene format=3 uid="uid://dlhhuvv538nsm"]
 
-[node name="GameUI" type="Control" unique_id=1781965203]
+[ext_resource type="Texture2D" uid="uid://recvewos5jxt" path="res://Resources/UI/UIAtlas.tres" id="1_08tb3"]
+[ext_resource type="Script" uid="uid://b8wifvi8qtgdd" path="res://Scenes/GameUI/GameUi.cs" id="1_vw8kl"]
+
+[node name="GameUI" type="Control" unique_id=1781965203 node_paths=PackedStringArray("_menuButton")]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vw8kl")
+_menuButton = NodePath("MarginContainer/VBoxContainer/TextureButton")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2063976397]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1700997070]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=379684956]
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("1_08tb3")
