@@ -1,19 +1,26 @@
 using Godot;
 using System;
 
-public partial class GameUi : Control
+public partial class Hospital : Node2D
 {
-	[Export] private TextureButton _menuButton;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_menuButton.Pressed += OnMenuPressed;
-		
+		SignalHub.Instance.OnMenuPressed += OnMenuPressed;
 	}
+
+    public override void _UnhandledInput(InputEvent @event)
+    {
+        if (@event.IsActionPressed("menu"))
+		{
+			SignalHub.EmitOnMenuPressed();
+		}
+    }
+
 
     private void OnMenuPressed()
     {
-        SignalHub.EmitOnMenuPressed();
+        GD.Print("Menu pressed");
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
