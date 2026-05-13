@@ -38,7 +38,8 @@ public partial class Flashlight : Node2D
     private void OnBatteryDead()
     {
         SignalHub.EmitOnBatteryDead();
-		//PLACEHOLDER FOR NOW
+
+		SignalHub.EmitOnPlayerDead(); //for now since the only way the player dies is if battery is dead
 		GD.Print("battery died");
 
 		Scale = new Vector2(0, 0);

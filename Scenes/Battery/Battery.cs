@@ -35,7 +35,7 @@ public partial class Battery : Area2D
 	{
 		//FOR NOW
 		GD.Print("Interacted");
-		SignalHub.EmitOnBatterUsed();
+		SignalHub.EmitOnBatteryUsed();
 		QueueFree();
 	}
 

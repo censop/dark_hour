@@ -9,16 +9,24 @@ public partial class SignalHub : Node
 	[Signal] public delegate void OnBatteryUsedEventHandler();
     [Signal] public delegate void OnBatteryDeadEventHandler();
 	[Signal] public delegate void OnMenuPressedEventHandler();
+	[Signal] public delegate void OnPlayerDeadEventHandler();
 
 	public override void _Ready()
 	{
 		Instance = this;
 	}
 
-	public static void EmitOnBatterUsed()
+	public static void EmitOnBatteryUsed()
 	{
 		Instance.EmitSignal(SignalName.OnBatteryUsed);
 	}
+
+	public static void EmitOnPlayerDead()
+
+	{
+		Instance.EmitSignal(SignalName.OnPlayerDead);
+	}
+
 
     public static void EmitOnBatteryDead()
 	{

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://booalhb1hsph3"]
+
+[ext_resource type="Script" uid="uid://co5yerc01ptb0" path="res://Scenes/DeathUI/DeathUi.cs" id="1_gx0kc"]
+[ext_resource type="Texture2D" uid="uid://b8aojm041oy7s" path="res://Assets/UIIcons_#1_Update 3/Better Text Area (1).png" id="1_qof6q"]
+[ext_resource type="Texture2D" uid="uid://l7llhdd4hao" path="res://Assets/UIIcons_#1_Update 3/UIIcons_1 (2).png" id="2_gx0kc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1kpg"]
+atlas = ExtResource("1_qof6q")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7rjua"]
+texture = SubResource("AtlasTexture_f1kpg")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvo7x"]
+atlas = ExtResource("2_gx0kc")
+region = Rect2(16, 144, 16, 16)
+
+[node name="DeathUI" type="Control" unique_id=566384570 node_paths=PackedStringArray("_respawnButton")]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gx0kc")
+_respawnButton = NodePath("MarginContainer/Panel/MarginContainer/VBoxContainer/TextureButton")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=437147740]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 32
+
+[node name="Panel" type="Panel" parent="MarginContainer" unique_id=393278862]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7rjua")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel" unique_id=999156198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer" unique_id=524621923]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=665761406]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "you died click button to
+continue from last checkpoint
+"
+horizontal_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=312924613]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_gvo7x")
