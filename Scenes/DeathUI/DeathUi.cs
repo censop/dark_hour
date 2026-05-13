@@ -14,7 +14,8 @@ public partial class DeathUi : Control
     private void OnRespawnPressed()
     {
 		Hide();
-        GetTree().Paused = false;
+		GetTree().Paused = false;
+		SceneManager.Instance.ReloadScene();
     }
 
 

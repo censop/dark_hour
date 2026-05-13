@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SignalHub="*uid://cb55ct4cnqter"
+SaveManager="*uid://cv7y6dxnweqs"
+SceneManager="*uid://bfnxf1ahewf3m"
 
 [display]
 

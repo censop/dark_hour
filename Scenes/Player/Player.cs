@@ -11,8 +11,9 @@ public partial class Player : CharacterBody2D
 
 
 	public override void _Ready()
-	{
-	}
+    {
+        GlobalPosition = SaveManager.Instance.LastCheckpoint;
+    }
 
 
 	public override void _PhysicsProcess(double delta)
