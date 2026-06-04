@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bhhtywv1ccvbc"]
 
 [ext_resource type="Texture2D" uid="uid://cen5ubkooorrr" path="res://Assets/topdown_hospital_Assets/Pngs/room_biohazard_bin_y.png" id="1_ouedi"]
-[ext_resource type="Script" uid="uid://cyw3wdc8dix21" path="res://Scenes/Battery/Battery.cs" id="1_ur01j"]
+[ext_resource type="Script" uid="uid://cyw3wdc8dix21" path="res://Scenes/Props/Battery/Battery.cs" id="1_ur01j"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ouedi"]
 radius = 4.0

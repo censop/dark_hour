@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://b7n815cdnurv"]
 
 [ext_resource type="Script" uid="uid://cpac6xe6s01r6" path="res://Scenes/Hospital/Hospital.cs" id="1_35g8a"]
-[ext_resource type="PackedScene" uid="uid://0guetbwp3mv4" path="res://Scenes/Player/Player.tscn" id="1_7441k"]
+[ext_resource type="PackedScene" uid="uid://0guetbwp3mv4" path="res://Scenes/PlayerRelated/Player/Player.tscn" id="1_7441k"]
 [ext_resource type="TileSet" uid="uid://cxplob46no57i" path="res://Resources/TileSets/PlaceholderBackgroundTileSet.tres" id="1_osfji"]
-[ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Battery/Battery.tscn" id="3_osfji"]
+[ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="3_osfji"]
 
 [node name="Hospital" type="Node2D" unique_id=1182434823]
 script = ExtResource("1_35g8a")

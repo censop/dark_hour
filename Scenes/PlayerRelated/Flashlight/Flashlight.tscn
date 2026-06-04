@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ca3w5bbojejdg"]
 
-[ext_resource type="Script" uid="uid://c3nbbqxuiwj1i" path="res://Scenes/Flashlight/Flashlight.cs" id="1_dao62"]
+[ext_resource type="Script" uid="uid://c3nbbqxuiwj1i" path="res://Scenes/PlayerRelated/Flashlight/Flashlight.cs" id="1_dao62"]
 
 [sub_resource type="Gradient" id="Gradient_vvdyl"]
 offsets = PackedFloat32Array(0, 0.704)

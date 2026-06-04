@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dlhhuvv538nsm"]
 
 [ext_resource type="Texture2D" uid="uid://recvewos5jxt" path="res://Resources/UI/UIAtlas.tres" id="1_08tb3"]
-[ext_resource type="Script" uid="uid://b8wifvi8qtgdd" path="res://Scenes/GameUI/GameUi.cs" id="1_vw8kl"]
+[ext_resource type="Script" uid="uid://b8wifvi8qtgdd" path="res://Scenes/UI/GameUI/GameUi.cs" id="1_vw8kl"]
 
 [node name="GameUI" type="Control" unique_id=1781965203 node_paths=PackedStringArray("_menuButton")]
 layout_mode = 3
