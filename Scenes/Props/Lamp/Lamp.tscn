@@ -1,3 +1,40 @@
 [gd_scene format=3 uid="uid://c6tvrns6aulu5"]
 
-[node name="Lamp" type="Node2D" unique_id=526361743]
+[ext_resource type="Script" uid="uid://sw0svrppnbc0" path="res://Scenes/Props/Lamp/Lamp.cs" id="1_6fejp"]
+[ext_resource type="Texture2D" uid="uid://di5o6ugcprncr" path="res://Assets/topdown_hospital_Assets/Pngs/room_flower.png" id="1_xdcgg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6fejp"]
+radius = 6.0
+height = 16.0
+
+[sub_resource type="Gradient" id="Gradient_vvdyl"]
+offsets = PackedFloat32Array(0, 0.704)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xdcgg"]
+gradient = SubResource("Gradient_vvdyl")
+width = 175
+height = 175
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="Lamp" type="Area2D" unique_id=1218542311 node_paths=PackedStringArray("_flickerTimer", "_pointLight")]
+collision_layer = 9
+collision_mask = 20
+script = ExtResource("1_6fejp")
+_flickerTimer = NodePath("FlickerTimer")
+_pointLight = NodePath("PointLight2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1141089014]
+shape = SubResource("CapsuleShape2D_6fejp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1183889570]
+scale = Vector2(2, 2)
+texture = ExtResource("1_xdcgg")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1448672928]
+scale = Vector2(1.5, 1.5)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_xdcgg")
+
+[node name="FlickerTimer" type="Timer" parent="." unique_id=1149674503]
