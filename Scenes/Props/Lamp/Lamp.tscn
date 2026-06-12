@@ -13,19 +13,23 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_xdcgg"]
 gradient = SubResource("Gradient_vvdyl")
-width = 175
-height = 175
+width = 176
+height = 176
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[node name="Lamp" type="Area2D" unique_id=1218542311 node_paths=PackedStringArray("_flickerTimer", "_pointLight")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_6fejp"]
+radius = 88.0
+
+[node name="Lamp" type="Area2D" unique_id=1218542311 node_paths=PackedStringArray("_flickerTimer", "_pointLight", "_lightArea2D")]
 collision_layer = 9
 collision_mask = 20
 script = ExtResource("1_6fejp")
 _flickerTimer = NodePath("FlickerTimer")
 _pointLight = NodePath("PointLight2D")
+_lightArea2D = NodePath("LightArea")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1141089014]
+[node name="LampCollisionShape" type="CollisionShape2D" parent="." unique_id=1141089014]
 shape = SubResource("CapsuleShape2D_6fejp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1183889570]
@@ -38,3 +42,10 @@ shadow_enabled = true
 texture = SubResource("GradientTexture2D_xdcgg")
 
 [node name="FlickerTimer" type="Timer" parent="." unique_id=1149674503]
+
+[node name="LightArea" type="Area2D" parent="." unique_id=291401794]
+collision_layer = 9
+collision_mask = 5
+
+[node name="LightCollisionShape" type="CollisionShape2D" parent="LightArea" unique_id=1567262211]
+shape = SubResource("CircleShape2D_6fejp")

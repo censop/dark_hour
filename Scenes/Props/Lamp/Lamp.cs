@@ -6,13 +6,35 @@ public partial class Lamp : Area2D
 {
 	[Export] Timer _flickerTimer;
 	[Export] PointLight2D _pointLight;
+	[Export] Area2D _lightArea2D;
 
 	private const float FLICKER_TIMELEFT_UPPER = 5;
 	private const float FLICKER_TIMELEFT_LOWER = 3;
 	public override void _Ready()
 	{
 		_flickerTimer.Timeout += OnFlickerTimeOut;
+		_lightArea2D.BodyEntered += OnLightBodyEntered;
+		_lightArea2D.BodyExited += OnLightBodyExited;
 	}
+
+    private void OnLightBodyExited(Node2D body)
+    {
+		if (body is Player)
+		{
+			GlobalVariables.IsPlayerInLight = false;
+			GD.Print("body exitedddd");
+		}
+    }
+
+    private void OnLightBodyEntered(Node2D body)
+    {
+		if (body is Player)
+		{
+			GlobalVariables.IsPlayerInLight = true;
+			GD.Print("body enterrred");	
+		}
+    }
+
 
     private async void OnFlickerTimeOut()
     {
@@ -24,6 +46,7 @@ public partial class Lamp : Area2D
 		_pointLight.Energy = originalEnergy;
 		_flickerTimer.Start(GD.RandRange(FLICKER_TIMELEFT_LOWER, FLICKER_TIMELEFT_UPPER));
     }
+
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
