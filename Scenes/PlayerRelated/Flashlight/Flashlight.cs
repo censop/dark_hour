@@ -38,12 +38,13 @@ public partial class Flashlight : Node2D
     private void OnBatteryDead()
     {
         SignalHub.EmitOnBatteryDead();
-
-		SignalHub.EmitOnPlayerDead(); //for now since the only way the player dies is if battery is dead
-		GD.Print("battery died");
-
+		if (GlobalVariables.IsPlayerInLight == false) //checking if player is in the safe area
+		{
+			SignalHub.EmitOnPlayerDead(); //for now since the only way the player dies is if battery is dead
+			GD.Print("battery died");
+		}
 		Scale = new Vector2(0, 0);
-		QueueFree();
+		//QueueFree();
     }
 	
     public override void _Process(double delta)

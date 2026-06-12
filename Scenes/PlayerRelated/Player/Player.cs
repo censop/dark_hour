@@ -15,7 +15,6 @@ public partial class Player : CharacterBody2D
         GlobalPosition = SaveManager.Instance.LastCheckpoint;
     }
 
-
 	public override void _PhysicsProcess(double delta)
 	{
 		if (IsInteracting) 
