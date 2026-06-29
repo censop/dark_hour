@@ -10,7 +10,8 @@ public partial class SignalHub : Node
     [Signal] public delegate void OnBatteryDeadEventHandler();
 	[Signal] public delegate void OnMenuPressedEventHandler();
 	[Signal] public delegate void OnPlayerDeadEventHandler();
-
+	[Signal] public delegate void OnPlayerEnterredLightEventHandler();
+	[Signal] public delegate void OnPlayerExitedLightEventHandler();
 	public override void _Ready()
 	{
 		Instance = this;
@@ -37,5 +38,11 @@ public partial class SignalHub : Node
 	{
 		Instance.EmitSignal(SignalName.OnMenuPressed);
 	}
+
+	public static void EmitOnPlayerExitedLight()
+	{
+		Instance.EmitSignal(SignalName.OnPlayerExitedLight);
+	}
+
 
 }

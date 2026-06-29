@@ -11,10 +11,11 @@ gradient = SubResource("Gradient_vvdyl")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 
-[node name="Flashlight" type="Node2D" unique_id=1380198034 node_paths=PackedStringArray("_batteryTimer", "_flickerTimer", "_pointLight")]
+[node name="Flashlight" type="Node2D" unique_id=1380198034 node_paths=PackedStringArray("_batteryTimer", "_flickerTimer", "_deathTimer", "_pointLight")]
 script = ExtResource("1_dao62")
-_batteryTimer = NodePath("BatterTimer")
+_batteryTimer = NodePath("BatteryTimer")
 _flickerTimer = NodePath("FlickerTimer")
+_deathTimer = NodePath("DeathTimer")
 _pointLight = NodePath("PointLight2D")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=362092162]
@@ -22,8 +23,12 @@ scale = Vector2(1.5, 1.5)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_dao62")
 
-[node name="BatterTimer" type="Timer" parent="." unique_id=901556816]
+[node name="BatteryTimer" type="Timer" parent="." unique_id=901556816]
 wait_time = 10.0
 one_shot = true
 
 [node name="FlickerTimer" type="Timer" parent="." unique_id=854158223]
+
+[node name="DeathTimer" type="Timer" parent="." unique_id=1120972549]
+wait_time = 2.0
+one_shot = true

@@ -5,6 +5,7 @@ public partial class Flashlight : Node2D
 {
 	[Export] Timer _batteryTimer;
 	[Export] Timer _flickerTimer;
+	[Export] Timer _deathTimer;
 	[Export] PointLight2D _pointLight;
 	[Export] float _maxLightScale = 1.5f;
 
@@ -18,13 +19,17 @@ public partial class Flashlight : Node2D
 
 		_batteryTimer.Timeout += OnBatteryDead;
 		_flickerTimer.Timeout += OnFlickerTimeOut;
+		_deathTimer.Timeout += OnDeathTimerOut;
 		SignalHub.Instance.OnBatteryUsed += OnBatteryAcquired;
 		_batteryTimer.Start();
+		SignalHub.Instance.OnPlayerExitedLight += OnLightExited;
 	}
+
 
     public override void _ExitTree()
     {
         SignalHub.Instance.OnBatteryUsed -= OnBatteryAcquired;
+		SignalHub.Instance.OnPlayerExitedLight -= OnLightExited;
     }
 
     private void OnBatteryAcquired()
@@ -35,18 +40,34 @@ public partial class Flashlight : Node2D
 		_batteryTimer.Start();
     }
 
-    private void OnBatteryDead()
+	private void OnLightExited()
+    {
+        if (GlobalVariables.BatteryTimePercentage == 0)
+		{
+			_deathTimer.Start();
+			GD.Print("Death timer started");
+		}
+    }
+
+    private async void OnBatteryDead()
     {
         SignalHub.EmitOnBatteryDead();
-		if (GlobalVariables.IsPlayerInLight == false) //checking if player is in the safe area
-		{
-			SignalHub.EmitOnPlayerDead(); //for now since the only way the player dies is if battery is dead
-			GD.Print("battery died");
-		}
+		_deathTimer.Start();
+		GD.Print("Death timer started");
 		Scale = new Vector2(0, 0);
+		GlobalVariables.BatteryTimePercentage = 0;
 		//QueueFree(); //CANT DO THIS RIGHT NOW BC IF IN LIGHT THE PLAYER DOESNT DIE
     }
 	
+	private void OnDeathTimerOut()
+    {
+        if (GlobalVariables.IsPlayerInLight == false && GlobalVariables.BatteryTimePercentage == 0) //checking if player is in the safe area and if new battery wasnt acquired since the deathtimer started
+		{
+			SignalHub.EmitOnPlayerDead(); //for now since the only way the player dies is if battery is dead
+			GD.Print("Death timer timeout");
+		}
+    }
+
     public override void _Process(double delta)
 	{
 		if (!_batteryTimer.IsStopped())
@@ -55,6 +76,7 @@ public partial class Flashlight : Node2D
 			GlobalVariables.BatteryTimePercentage = timeLeftPercent;
             Scale = new Vector2(timeLeftPercent, timeLeftPercent);
         }
+
 	}
 
 	private async void OnFlickerTimeOut()

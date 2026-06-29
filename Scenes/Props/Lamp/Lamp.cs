@@ -23,6 +23,7 @@ public partial class Lamp : StaticBody2D
 		{
 			GlobalVariables.IsPlayerInLight = false;
 			GD.Print("body exitedddd");
+			SignalHub.EmitOnPlayerExitedLight();
 		}
     }
 
