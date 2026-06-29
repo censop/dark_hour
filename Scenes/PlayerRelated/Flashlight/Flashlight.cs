@@ -52,6 +52,7 @@ public partial class Flashlight : Node2D
 		if (!_batteryTimer.IsStopped())
         {
             float timeLeftPercent = (float)(_batteryTimer.TimeLeft / _batteryTimer.WaitTime);
+			GlobalVariables.BatteryTimePercentage = timeLeftPercent;
             Scale = new Vector2(timeLeftPercent, timeLeftPercent);
         }
 	}

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://recvewos5jxt" path="res://Resources/UI/UIAtlas.tres" id="1_08tb3"]
 [ext_resource type="Script" uid="uid://b8wifvi8qtgdd" path="res://Scenes/UI/GameUI/GameUi.cs" id="1_vw8kl"]
 
-[node name="GameUI" type="Control" unique_id=1781965203 node_paths=PackedStringArray("_menuButton")]
+[node name="GameUI" type="Control" unique_id=1781965203 node_paths=PackedStringArray("_menuButton", "_progressBar")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,6 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vw8kl")
 _menuButton = NodePath("MarginContainer/HBoxContainer/TextureButton")
+_progressBar = NodePath("MarginContainer/HBoxContainer/ProgressBar")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2063976397]
 layout_mode = 1
@@ -33,13 +34,13 @@ size_flags_vertical = 0
 layout_mode = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer" unique_id=1941528154]
-custom_minimum_size = Vector2(0, 10)
+custom_minimum_size = Vector2(60, 10)
 layout_mode = 2
 size_flags_horizontal = 3
-fill_mode = 1
+show_percentage = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1422763555]
-custom_minimum_size = Vector2(140, 0)
+custom_minimum_size = Vector2(170, 0)
 layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=379684956]

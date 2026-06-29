@@ -4,6 +4,9 @@ using System;
 public partial class GameUi : Control
 {
 	[Export] private TextureButton _menuButton;
+
+	[Export] private ProgressBar _progressBar;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -19,5 +22,6 @@ public partial class GameUi : Control
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
 	{
+		_progressBar.Value = GlobalVariables.BatteryTimePercentage * 100;
 	}
 }

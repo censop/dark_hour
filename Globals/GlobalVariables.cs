@@ -5,6 +5,7 @@ public partial class GlobalVariables : Node
 {
     public static GlobalVariables Instance {private set; get;}
     public static bool IsPlayerInLight = false;
+    public static float BatteryTimePercentage = 1;
 
     public override void _Ready()
     {

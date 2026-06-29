@@ -30,8 +30,4 @@ public partial class DeathUi : Control
 		GetTree().Paused = true;
         Show();
     }
-
-    public override void _Process(double delta)
-	{
-	}
 }

@@ -39,8 +39,4 @@ public partial class Battery : Area2D
 		QueueFree();
 	}
 
-
-    public override void _Process(double delta)
-	{
-	}
 }
