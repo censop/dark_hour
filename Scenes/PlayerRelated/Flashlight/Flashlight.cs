@@ -44,7 +44,7 @@ public partial class Flashlight : Node2D
 			GD.Print("battery died");
 		}
 		Scale = new Vector2(0, 0);
-		//QueueFree();
+		//QueueFree(); //CANT DO THIS RIGHT NOW BC IF IN LIGHT THE PLAYER DOESNT DIE
     }
 	
     public override void _Process(double delta)
