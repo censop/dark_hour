@@ -1,8 +1,6 @@
 using Godot;
-using System;
-using System.Drawing;
 
-public partial class Lamp : StaticBody2D
+public partial class LightSource : StaticBody2D
 {
 	[Export] Timer _flickerTimer;
 	[Export] PointLight2D _pointLight;

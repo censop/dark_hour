@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dadx20lwjgn5c"]
+
+[ext_resource type="PackedScene" uid="uid://3egaiuv0h42o" path="res://Scenes/Props/LightSources/LightSource/LightSource.tscn" id="1_2cisi"]
+
+[node name="Lamp" type="Node2D" unique_id=950535501]
+
+[node name="LightSource" parent="." unique_id=1462218562 instance=ExtResource("1_2cisi")]
+
+[editable path="LightSource"]
