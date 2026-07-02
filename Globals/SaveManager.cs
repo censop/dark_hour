@@ -28,7 +28,7 @@ public partial class SaveManager : Node
         {
             using var file = FileAccess.Open(_savePath, FileAccess.ModeFlags.Write); //using keyword automatically closes the file after its done with it
             file.StoreString(jsonString);
-            GD.Print("Game Saved to: " + ProjectSettings.GlobalizePath(_savePath));
+            GD.Print($"Save info:{playerPos}, {batteryPercent}, {usedBatteries}, Game Saved to: " + ProjectSettings.GlobalizePath(_savePath));
         }catch
         {
             GD.Print("Game couldn't be saved");

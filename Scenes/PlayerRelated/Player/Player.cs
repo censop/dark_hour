@@ -12,10 +12,21 @@ public partial class Player : CharacterBody2D
 
 	public override void _Ready()
     {
-        GlobalPosition = SaveManager.Instance.LastCheckpoint;
+        SignalHub.Instance.OnSaveGame += OnSaveGame;
     }
 
-	public override void _PhysicsProcess(double delta)
+    public override void _ExitTree()
+    {
+        SignalHub.Instance.OnSaveGame -= OnSaveGame;
+    }
+
+
+    private void OnSaveGame()
+    {
+        SaveManager.Instance.SaveGame(GlobalPosition, GlobalVariables.BatteryTimePercentage, GlobalVariables.ConsumedBatteries);
+    }
+
+    public override void _PhysicsProcess(double delta)
 	{
 		if (IsInteracting) 
         {
