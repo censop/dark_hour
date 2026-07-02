@@ -5,9 +5,17 @@ using System.Collections;
 public partial class Battery : Area2D
 {
 
+	[Export] String UniqueID = "Battery_001"; //need to change this for each battery
+
 	private bool _isBodyInside = false;
 	public override void _Ready()
 	{
+		if (GlobalVariables.ConsumedBatteries.Contains(UniqueID))
+		{
+			QueueFree();
+			return;
+		}
+
 		BodyEntered += OnBodyEntered;
 		BodyExited += OnBodyExited;
 	}
@@ -36,6 +44,7 @@ public partial class Battery : Area2D
 		//FOR NOW
 		GD.Print("Interacted");
 		SignalHub.EmitOnBatteryUsed();
+		GlobalVariables.ConsumedBatteries.Add(UniqueID);
 		QueueFree();
 	}
 
