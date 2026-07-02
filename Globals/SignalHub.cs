@@ -12,6 +12,7 @@ public partial class SignalHub : Node
 	[Signal] public delegate void OnPlayerDeadEventHandler();
 	[Signal] public delegate void OnPlayerEnterredLightEventHandler();
 	[Signal] public delegate void OnPlayerExitedLightEventHandler();
+	[Signal] public delegate void OnSaveGameEventHandler();
 	public override void _Ready()
 	{
 		Instance = this;
@@ -42,6 +43,11 @@ public partial class SignalHub : Node
 	public static void EmitOnPlayerExitedLight()
 	{
 		Instance.EmitSignal(SignalName.OnPlayerExitedLight);
+	}
+
+	public static void EmitOnSaveGame()
+	{
+		Instance.EmitSignal(SignalName.OnSaveGame);
 	}
 
 

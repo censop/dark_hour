@@ -15,6 +15,10 @@ texture = SubResource("AtlasTexture_f1kpg")
 atlas = ExtResource("2_f1kpg")
 region = Rect2(16, 144, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_7g5nr"]
+atlas = ExtResource("2_f1kpg")
+region = Rect2(64, 112, 16, 16)
+
 [node name="PauseMenu" type="Control" unique_id=205763017 node_paths=PackedStringArray("_resumeButton")]
 process_mode = 2
 layout_mode = 3
@@ -24,7 +28,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4bayv")
-_resumeButton = NodePath("MarginContainer/Panel/MarginContainer/VBoxContainer/TextureButton")
+_resumeButton = NodePath("MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/ContinueButton")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=422069987]
 layout_mode = 1
@@ -60,8 +64,19 @@ text = "game paused. click
 button to unpause
 "
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1979326553]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1205774908]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ContinueButton" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1979326553]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_4bayv")
+
+[node name="SaveButton" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1757866361]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = SubResource("AtlasTexture_7g5nr")
