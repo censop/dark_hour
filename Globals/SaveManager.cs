@@ -8,7 +8,7 @@ public partial class SaveManager : Node
     public static SaveManager Instance {private set; get;}
     private String _savePath = "user://savegame.json";
 
-    public override void _Ready()
+    public override void _EnterTree()
     {
         Instance = this;
     }
