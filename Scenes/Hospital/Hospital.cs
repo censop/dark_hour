@@ -12,6 +12,7 @@ public partial class Hospital : Node2D
 	{
 		SignalHub.Instance.OnMenuPressed += OnMenuPressed;
 
+
         if (_data != null)
         {
             _player.GlobalPosition = new Vector2(_data.PlayerPosX, _data.PlayerPosY);
