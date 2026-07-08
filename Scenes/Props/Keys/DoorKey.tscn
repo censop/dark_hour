@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cmnjvqosb7fru"]
+
+[ext_resource type="Texture2D" uid="uid://dsu7tkwhde1sn" path="res://Assets/topdown_hospital_Assets/Pngs/room_pills_02.png" id="1_ibr1x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibr1x"]
+size = Vector2(8.333333, 10)
+
+[node name="DoorKey" type="Area2D" unique_id=519018229]
+scale = Vector2(1.2, 1.2)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1363033967]
+texture = ExtResource("1_ibr1x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=28376047]
+shape = SubResource("RectangleShape2D_ibr1x")
