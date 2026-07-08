@@ -28,6 +28,7 @@ public partial class Hospital : Node2D
         {
             GlobalVariables.BatteryTimePercentage = _data.BatteryPercentage;
             GlobalVariables.ConsumedBatteries = _data.DestroyedBatteries;
+            GlobalVariables.DoorKeysCollected = _data.DoorKeyInventory;
         }
 
     }

@@ -13,7 +13,7 @@ public partial class SaveManager : Node
         Instance = this;
     }
 
-    public void SaveGame(Vector2 playerPos, float batteryPercent, List<String> usedBatteries)
+    public void SaveGame(Vector2 playerPos, float batteryPercent, List<String> usedBatteries, List<String> collectedDoorKeys)
     {
         SaveData data = new SaveData
         {
@@ -21,6 +21,7 @@ public partial class SaveManager : Node
             PlayerPosY = playerPos.Y,
             BatteryPercentage = batteryPercent,
             DestroyedBatteries = usedBatteries,
+            DoorKeyInventory = collectedDoorKeys,
         };
 
         string jsonString = JsonSerializer.Serialize(data);
