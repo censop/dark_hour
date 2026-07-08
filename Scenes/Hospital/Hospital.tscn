@@ -5,8 +5,8 @@
 [ext_resource type="TileSet" uid="uid://cxplob46no57i" path="res://Resources/TileSets/PlaceholderBackgroundTileSet.tres" id="1_osfji"]
 [ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="3_osfji"]
 [ext_resource type="PackedScene" uid="uid://dadx20lwjgn5c" path="res://Scenes/Props/LightSources/Lamp/Lamp.tscn" id="5_rt5xv"]
-[ext_resource type="PackedScene" uid="uid://dcof068357k60" path="res://Scenes/Props/Doors/LockedDoor.tscn" id="6_qr0c3"]
-[ext_resource type="PackedScene" uid="uid://cmnjvqosb7fru" path="res://Scenes/Props/Keys/DoorKey.tscn" id="7_uiugr"]
+[ext_resource type="PackedScene" uid="uid://dcof068357k60" path="res://Scenes/Props/Doors/LockedDoor/LockedDoor.tscn" id="6_qr0c3"]
+[ext_resource type="PackedScene" uid="uid://cmnjvqosb7fru" path="res://Scenes/Props/Keys/DoorKey/DoorKey.tscn" id="7_uiugr"]
 
 [node name="Hospital" type="Node2D" unique_id=1182434823 node_paths=PackedStringArray("_player")]
 script = ExtResource("1_35g8a")

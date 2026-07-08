@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cmnjvqosb7fru"]
 
-[ext_resource type="Script" uid="uid://wn76v0okix47" path="res://Scenes/Props/Keys/DoorKey.cs" id="1_hgiux"]
+[ext_resource type="Script" uid="uid://wn76v0okix47" path="res://Scenes/Props/Keys/DoorKey/DoorKey.cs" id="1_hgiux"]
 [ext_resource type="Texture2D" uid="uid://dsu7tkwhde1sn" path="res://Assets/topdown_hospital_Assets/Pngs/room_pills_02.png" id="1_ibr1x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ibr1x"]

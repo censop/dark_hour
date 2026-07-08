@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dcof068357k60"]
 
 [ext_resource type="Texture2D" uid="uid://cmke71ngbkq4j" path="res://Assets/kitchen_free_spritesheet.png" id="1_8npdx"]
-[ext_resource type="Script" uid="uid://difminmldqb81" path="res://Scenes/Props/Doors/LockedDoor.cs" id="1_l3b3h"]
+[ext_resource type="Script" uid="uid://difminmldqb81" path="res://Scenes/Props/Doors/LockedDoor/LockedDoor.cs" id="1_l3b3h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l3b3h"]
 atlas = ExtResource("1_8npdx")
@@ -10,14 +10,15 @@ region = Rect2(32, 96, 32, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8npdx"]
 size = Vector2(16, 27)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8npdx"]
-radius = 20.615528
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hktxa"]
+height = 74.0
 
-[node name="LockedDoor" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea")]
+[node name="LockedDoor" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_interactionShape")]
 collision_layer = 8
 collision_mask = 12
 script = ExtResource("1_l3b3h")
 _interactionArea = NodePath("InteractionArea")
+_interactionShape = NodePath("PhysicalCollisionShape")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1521458141]
 scale = Vector2(0.5, 0.5)
@@ -28,7 +29,9 @@ position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_8npdx")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1261220341]
+collision_layer = 9
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=755303202]
 position = Vector2(0, 2)
-shape = SubResource("CircleShape2D_8npdx")
+shape = SubResource("CapsuleShape2D_hktxa")

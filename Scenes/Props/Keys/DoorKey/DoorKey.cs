@@ -27,6 +27,7 @@ public partial class DoorKey : Area2D
         if (@event.IsActionPressed("interact") && _isBodyInside)
 		{
 			OnCollectDoorKey();
+            GD.Print($"DoorKey collected: {KeyID}");
 		}
     }
 
