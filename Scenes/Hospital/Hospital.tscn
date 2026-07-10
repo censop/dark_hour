@@ -21,7 +21,6 @@ tile_set = ExtResource("1_osfji")
 position = Vector2(-88, -38)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
-visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=328171972]

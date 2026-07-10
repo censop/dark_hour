@@ -18,10 +18,7 @@ public partial class SwitchLight : LightSource
 
 		_isLightOn = GlobalVariables.TurntOnLights.Contains(SwitchLightID);
 
-		if (!_isLightOn)
-		{
-			_lightArea2D.SetDeferred(Area2D.PropertyName.Monitoring, false);
-		}
+		SetLightState(_isLightOn);
 	}
 
     private void OnInteractionExited(Node2D body)
@@ -40,21 +37,30 @@ public partial class SwitchLight : LightSource
     {
         if (@event.IsActionPressed("interact") && _canInteract)
 		{
-			if (_isLightOn)
-			{
-				_lightArea2D.SetDeferred(Area2D.PropertyName.Monitoring, false);
-				_isLightOn = false;
-				GlobalVariables.TurntOnLights.Remove(SwitchLightID);
-			}
-			else
-			{
-				_lightArea2D.SetDeferred(Area2D.PropertyName.Monitoring, true);
-				_isLightOn = true;
-				GlobalVariables.TurntOnLights.Add(SwitchLightID);
-			}
+			_isLightOn = !_isLightOn;
+			GD.Print($"Light state: {_isLightOn}");
+
+            if (_isLightOn)
+                GlobalVariables.TurntOnLights.Add(SwitchLightID);
+            else
+                GlobalVariables.TurntOnLights.Remove(SwitchLightID);
+
+            SetLightState(_isLightOn);
 		}
     }
 
-	
+	private void SetLightState(bool turnOn)
+    {
+        _pointLight.Enabled = turnOn;
 
+        _flickerTimer.Paused = !turnOn;
+
+        _lightArea2D.SetDeferred(Area2D.PropertyName.Monitoring, turnOn);
+
+        if (!turnOn && GlobalVariables.IsPlayerInLight)
+        {
+            GlobalVariables.IsPlayerInLight = false;
+            SignalHub.EmitOnPlayerExitedLight();
+        }
+    }
 }
