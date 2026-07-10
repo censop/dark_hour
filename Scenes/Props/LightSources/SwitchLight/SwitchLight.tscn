@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://d3o2bru1sdb0w"]
+
+[ext_resource type="Script" uid="uid://b1ryaky0r1n27" path="res://Scenes/Props/LightSources/LightSource/LightSource.cs" id="1_4uy43"]
+[ext_resource type="Texture2D" uid="uid://s65ivkdv8lyc" path="res://Assets/topdown_hospital_Assets/Pngs/maternity_light.png" id="1_5tstd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rl8t"]
+radius = 9.0
+height = 36.0
+
+[sub_resource type="Gradient" id="Gradient_vvdyl"]
+offsets = PackedFloat32Array(0, 0.704)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xusom"]
+gradient = SubResource("Gradient_vvdyl")
+width = 176
+height = 176
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nsb3v"]
+radius = 88.0
+
+[node name="SwitchLight" type="StaticBody2D" unique_id=1462218562 node_paths=PackedStringArray("_flickerTimer", "_pointLight", "_lightArea2D")]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_4uy43")
+_flickerTimer = NodePath("FlickerTimer")
+_pointLight = NodePath("PointLight2D")
+_lightArea2D = NodePath("LightArea")
+
+[node name="LampCollisionShape" type="CollisionShape2D" parent="." unique_id=174495371]
+shape = SubResource("CapsuleShape2D_0rl8t")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1886647636]
+texture = ExtResource("1_5tstd")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1974558198]
+scale = Vector2(1.5, 1.5)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_xusom")
+
+[node name="FlickerTimer" type="Timer" parent="." unique_id=584306155]
+
+[node name="LightArea" type="Area2D" parent="." unique_id=633575845]
+position = Vector2(0, 1)
+collision_layer = 9
+collision_mask = 5
+
+[node name="LightCollisionShape" type="CollisionShape2D" parent="LightArea" unique_id=1961981188]
+shape = SubResource("CircleShape2D_nsb3v")
