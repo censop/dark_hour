@@ -9,6 +9,7 @@ public partial class GlobalVariables : Node
     public static float BatteryTimePercentage = 1;
     public static List<String> ConsumedBatteries = new List<string>();
     public static List<String> DoorKeysCollected = new List<string>();
+    public static List<String> TurntOnLights = new List<string>();
 
     public override void _Ready()
     {

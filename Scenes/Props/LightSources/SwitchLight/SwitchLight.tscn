@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d3o2bru1sdb0w"]
 
-[ext_resource type="Script" uid="uid://b1ryaky0r1n27" path="res://Scenes/Props/LightSources/LightSource/LightSource.cs" id="1_4uy43"]
 [ext_resource type="Texture2D" uid="uid://s65ivkdv8lyc" path="res://Assets/topdown_hospital_Assets/Pngs/maternity_light.png" id="1_5tstd"]
+[ext_resource type="Script" uid="uid://dyycalsph7r1i" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.cs" id="1_26mvl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rl8t"]
 radius = 9.0
@@ -21,10 +21,14 @@ fill_from = Vector2(0.5, 0.5)
 [sub_resource type="CircleShape2D" id="CircleShape2D_nsb3v"]
 radius = 88.0
 
-[node name="SwitchLight" type="StaticBody2D" unique_id=1462218562 node_paths=PackedStringArray("_flickerTimer", "_pointLight", "_lightArea2D")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_4uy43"]
+radius = 30.0
+
+[node name="SwitchLight" type="StaticBody2D" unique_id=1462218562 node_paths=PackedStringArray("_interactionShape", "_flickerTimer", "_pointLight", "_lightArea2D")]
 collision_layer = 8
 collision_mask = 5
-script = ExtResource("1_4uy43")
+script = ExtResource("1_26mvl")
+_interactionShape = NodePath("InteractionArea")
 _flickerTimer = NodePath("FlickerTimer")
 _pointLight = NodePath("PointLight2D")
 _lightArea2D = NodePath("LightArea")
@@ -49,3 +53,8 @@ collision_mask = 5
 
 [node name="LightCollisionShape" type="CollisionShape2D" parent="LightArea" unique_id=1961981188]
 shape = SubResource("CircleShape2D_nsb3v")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1319242895]
+
+[node name="InteractionShape" type="CollisionShape2D" parent="InteractionArea" unique_id=905392137]
+shape = SubResource("CircleShape2D_4uy43")

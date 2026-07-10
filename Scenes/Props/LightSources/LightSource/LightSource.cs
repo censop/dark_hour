@@ -2,9 +2,9 @@ using Godot;
 
 public partial class LightSource : StaticBody2D
 {
-	[Export] Timer _flickerTimer;
-	[Export] PointLight2D _pointLight;
-	[Export] Area2D _lightArea2D;
+	[Export] protected Timer _flickerTimer;
+	[Export] protected PointLight2D _pointLight;
+	[Export] protected Area2D _lightArea2D;
 
 	private const float FLICKER_TIMELEFT_UPPER = 5;
 	private const float FLICKER_TIMELEFT_LOWER = 3;
