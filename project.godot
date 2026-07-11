@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DarkHour"
-run/main_scene="uid://b7n815cdnurv"
+run/main_scene="uid://j4qy24a7gq7e"
 config/features=PackedStringArray("4.6", "C#", "Mobile")
 config/icon="res://icon.svg"
 
@@ -21,6 +21,7 @@ SignalHub="*uid://cb55ct4cnqter"
 SaveManager="*uid://cv7y6dxnweqs"
 SceneManager="*uid://bfnxf1ahewf3m"
 GlobalVariables="*uid://c1ak47ftenv1l"
+ScenePaths="*uid://cjwijylubkfmm"
 
 [display]
 

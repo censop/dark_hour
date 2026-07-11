@@ -14,4 +14,9 @@ public partial class SceneManager : Node
     {
         GetTree().ReloadCurrentScene();
     }
+
+    public void ChangeScene(String scenePath)
+    {
+        GetTree().ChangeSceneToFile(scenePath);
+    }
 }

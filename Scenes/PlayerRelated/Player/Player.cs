@@ -13,6 +13,7 @@ public partial class Player : CharacterBody2D
 	public override void _Ready()
     {
         SignalHub.Instance.OnSaveGame += OnSaveGame;
+        Position = GlobalVariables.PlayerPos;
     }
 
     public override void _ExitTree()
