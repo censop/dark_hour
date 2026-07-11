@@ -31,6 +31,7 @@ public partial class LightSource : StaticBody2D
 		{
 			GlobalVariables.IsPlayerInLight = true;
 			GD.Print("body enterrred");	
+			SignalHub.EmitOnPlayerEnterredLight();
 		}
     }
 

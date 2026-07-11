@@ -8,6 +8,8 @@ public partial class Flashlight : Node2D
 	[Export] Timer _deathTimer;
 	[Export] PointLight2D _pointLight;
 	[Export] float _maxLightScale = 1.5f;
+	[Export] float _maxBatteryTime = 60;
+	private float _lightEnergy;
 
 	private const float FLICKER_TIMELEFT_UPPER = 5;
 	private const float FLICKER_TIMELEFT_LOWER = 3;
@@ -21,15 +23,25 @@ public partial class Flashlight : Node2D
 		_flickerTimer.Timeout += OnFlickerTimeOut;
 		_deathTimer.Timeout += OnDeathTimerOut;
 		SignalHub.Instance.OnBatteryUsed += OnBatteryAcquired;
-		_batteryTimer.Start();
 		SignalHub.Instance.OnPlayerExitedLight += OnLightExited;
-	}
+		SignalHub.Instance.OnPlayerEnterredLight += OnLightEntered;
 
+		float timeRemaining = _maxBatteryTime * GlobalVariables.BatteryTimePercentage;
+		if (timeRemaining > 0)
+		{
+			_batteryTimer.Start(timeRemaining); 
+		}
+		else
+		{
+			OnBatteryDead();
+   		}	
+	}
 
     public override void _ExitTree()
     {
         SignalHub.Instance.OnBatteryUsed -= OnBatteryAcquired;
 		SignalHub.Instance.OnPlayerExitedLight -= OnLightExited;
+		SignalHub.Instance.OnPlayerEnterredLight -= OnLightEntered;
     }
 
     private void OnBatteryAcquired()
@@ -37,16 +49,24 @@ public partial class Flashlight : Node2D
 		GD.Print("resetting the light");
         _pointLight.Enabled = true;
 		_pointLight.Scale = new Vector2(_maxLightScale, _maxLightScale);
+
+		_batteryTimer.WaitTime = _maxBatteryTime;
 		_batteryTimer.Start();
     }
 
 	private void OnLightExited()
     {
+		ContinueFlashlight();
         if (GlobalVariables.BatteryTimePercentage == 0)
 		{
 			_deathTimer.Start();
 			GD.Print("Death timer started");
 		}
+    }
+
+	private void OnLightEntered()
+    {
+        PauseFlashlight();
     }
 
     private async void OnBatteryDead()
@@ -56,7 +76,6 @@ public partial class Flashlight : Node2D
 		GD.Print("Death timer started");
 		Scale = new Vector2(0, 0);
 		GlobalVariables.BatteryTimePercentage = 0;
-		//QueueFree(); //CANT DO THIS RIGHT NOW BC IF IN LIGHT THE PLAYER DOESNT DIE
     }
 	
 	private void OnDeathTimerOut()
@@ -72,7 +91,7 @@ public partial class Flashlight : Node2D
 	{
 		if (!_batteryTimer.IsStopped())
         {
-            float timeLeftPercent = (float)(_batteryTimer.TimeLeft / _batteryTimer.WaitTime);
+            float timeLeftPercent = (float)(_batteryTimer.TimeLeft / _maxBatteryTime);
 			GlobalVariables.BatteryTimePercentage = timeLeftPercent;
             Scale = new Vector2(timeLeftPercent, timeLeftPercent);
         }
@@ -92,4 +111,20 @@ public partial class Flashlight : Node2D
 		_flickerTimer.Start(GD.RandRange(FLICKER_TIMELEFT_LOWER, FLICKER_TIMELEFT_UPPER));
 
 	}
+
+	private void PauseFlashlight() 
+	{
+		_batteryTimer.Paused = true;
+		_flickerTimer.Paused = true;
+		_deathTimer.Paused = true;
+		_pointLight.Enabled = false;
+	}
+	private void ContinueFlashlight() 
+	{
+		_batteryTimer.Paused = false;
+		_flickerTimer.Paused = false;
+		_deathTimer.Paused = false;
+		_pointLight.Enabled = true;
+	}
+
 }

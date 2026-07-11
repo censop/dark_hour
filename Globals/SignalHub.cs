@@ -44,6 +44,10 @@ public partial class SignalHub : Node
 	{
 		Instance.EmitSignal(SignalName.OnPlayerExitedLight);
 	}
+	public static void EmitOnPlayerEnterredLight()
+	{
+		Instance.EmitSignal(SignalName.OnPlayerEnterredLight);
+	}
 
 	public static void EmitOnSaveGame()
 	{
