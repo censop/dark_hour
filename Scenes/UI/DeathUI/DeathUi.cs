@@ -15,6 +15,7 @@ public partial class DeathUi : Control
     {
 		Hide();
 		GetTree().Paused = false;
+        SignalHub.EmitOnLoadGame();
 		SceneManager.Instance.ReloadScene();
     }
 

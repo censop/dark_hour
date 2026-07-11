@@ -12,7 +12,9 @@ public partial class StartScreen : Control
 	{
 		_loadButton.Pressed += OnLoadPressed;
 		_restartButton.Pressed += OnRestartPressed;
+        SignalHub.Instance.OnLoadGame += OnLoadPressed;
 	}
+
 
     private void OnLoadPressed()
     {
