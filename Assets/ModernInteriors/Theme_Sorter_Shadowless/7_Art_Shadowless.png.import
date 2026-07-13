@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjsyombv5t84o"
-path="res://.godot/imported/15_Christmas_Shadowless.png-b64a02f1cdd3b9793f90b0cc9158819b.ctex"
+uid="uid://dq7rqb7bbh405"
+path="res://.godot/imported/7_Art_Shadowless.png-f6e81760ad5d8c2a94b3d938820c4529.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/15_Christmas_Shadowless.png"
-dest_files=["res://.godot/imported/15_Christmas_Shadowless.png-b64a02f1cdd3b9793f90b0cc9158819b.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/7_Art_Shadowless.png"
+dest_files=["res://.godot/imported/7_Art_Shadowless.png-f6e81760ad5d8c2a94b3d938820c4529.ctex"]
 
 [params]
 

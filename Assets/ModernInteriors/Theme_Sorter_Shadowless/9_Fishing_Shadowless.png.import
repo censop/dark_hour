@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pvexao6ki0jk"
-path="res://.godot/imported/9_Fishing_Shadowless.png-6dc76eabadea9d36ff85a842eb5cecdc.ctex"
+path="res://.godot/imported/9_Fishing_Shadowless.png-c4c0a2dacd9174bcf43815e8187eb45b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/9_Fishing_Shadowless.png"
-dest_files=["res://.godot/imported/9_Fishing_Shadowless.png-6dc76eabadea9d36ff85a842eb5cecdc.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/9_Fishing_Shadowless.png"
+dest_files=["res://.godot/imported/9_Fishing_Shadowless.png-c4c0a2dacd9174bcf43815e8187eb45b.ctex"]
 
 [params]
 

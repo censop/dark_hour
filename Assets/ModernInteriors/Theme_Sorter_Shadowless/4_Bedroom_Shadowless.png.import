@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://utwfppykctnl"
-path="res://.godot/imported/24_Ice_Cream_Shop_Shadowless.png-b88546a0be98e16b57dbf59dfeb4f493.ctex"
+uid="uid://bbv8oaffsec32"
+path="res://.godot/imported/4_Bedroom_Shadowless.png-8d881ea619c1a165cb3a89d685abaaf1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/24_Ice_Cream_Shop_Shadowless.png"
-dest_files=["res://.godot/imported/24_Ice_Cream_Shop_Shadowless.png-b88546a0be98e16b57dbf59dfeb4f493.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/4_Bedroom_Shadowless.png"
+dest_files=["res://.godot/imported/4_Bedroom_Shadowless.png-8d881ea619c1a165cb3a89d685abaaf1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j0jjvm4vp57h"
-path="res://.godot/imported/21_Clothing_Store_Shadowless.png-a94e1e4b0a1ca59125bfa35e86fa2e37.ctex"
+uid="uid://bjsyombv5t84o"
+path="res://.godot/imported/15_Christmas_Shadowless.png-2f1b568814c867e2e5d74d9b68288953.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/21_Clothing_Store_Shadowless.png"
-dest_files=["res://.godot/imported/21_Clothing_Store_Shadowless.png-a94e1e4b0a1ca59125bfa35e86fa2e37.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/15_Christmas_Shadowless.png"
+dest_files=["res://.godot/imported/15_Christmas_Shadowless.png-2f1b568814c867e2e5d74d9b68288953.ctex"]
 
 [params]
 

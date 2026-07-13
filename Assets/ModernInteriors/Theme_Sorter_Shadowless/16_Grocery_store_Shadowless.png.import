@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bctilggw2aqh5"
-path="res://.godot/imported/22_Museum_Shadowless.png-5020fc67f7e8850c29dad764f6c7960d.ctex"
+uid="uid://b3ktwnolds1uy"
+path="res://.godot/imported/16_Grocery_store_Shadowless.png-4304efdd47b5d325a6966616f27584a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/22_Museum_Shadowless.png"
-dest_files=["res://.godot/imported/22_Museum_Shadowless.png-5020fc67f7e8850c29dad764f6c7960d.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/16_Grocery_store_Shadowless.png"
+dest_files=["res://.godot/imported/16_Grocery_store_Shadowless.png-4304efdd47b5d325a6966616f27584a3.ctex"]
 
 [params]
 

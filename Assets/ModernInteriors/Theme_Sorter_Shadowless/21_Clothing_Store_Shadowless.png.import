@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4m71lgvsgiuq"
-path="res://.godot/imported/14_Basement_Shadowless.png-5acbc5e9d19c2cf58acb0ed0a65959d3.ctex"
+uid="uid://j0jjvm4vp57h"
+path="res://.godot/imported/21_Clothing_Store_Shadowless.png-1c430e30391f3f0ec2aa2e1e37139728.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/14_Basement_Shadowless.png"
-dest_files=["res://.godot/imported/14_Basement_Shadowless.png-5acbc5e9d19c2cf58acb0ed0a65959d3.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/21_Clothing_Store_Shadowless.png"
+dest_files=["res://.godot/imported/21_Clothing_Store_Shadowless.png-1c430e30391f3f0ec2aa2e1e37139728.ctex"]
 
 [params]
 

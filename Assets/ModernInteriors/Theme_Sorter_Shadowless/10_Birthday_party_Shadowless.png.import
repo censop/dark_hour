@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3ktwnolds1uy"
-path="res://.godot/imported/16_Grocery_store_Shadowless.png-0650c63adfc20a222f1a0934e2d9e579.ctex"
+uid="uid://bqbg5bkgh8q27"
+path="res://.godot/imported/10_Birthday_party_Shadowless.png-5417fec7a2cff64a2cb428dee4382e3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/16_Grocery_store_Shadowless.png"
-dest_files=["res://.godot/imported/16_Grocery_store_Shadowless.png-0650c63adfc20a222f1a0934e2d9e579.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/10_Birthday_party_Shadowless.png"
+dest_files=["res://.godot/imported/10_Birthday_party_Shadowless.png-5417fec7a2cff64a2cb428dee4382e3d.ctex"]
 
 [params]
 

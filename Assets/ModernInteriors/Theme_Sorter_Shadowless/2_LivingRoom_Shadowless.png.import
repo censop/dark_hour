@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbv8oaffsec32"
-path="res://.godot/imported/4_Bedroom_Shadowless.png-47c99ecc5c6763cf9ce38bb02b1e35a6.ctex"
+uid="uid://5swe3wqcbpjx"
+path="res://.godot/imported/2_LivingRoom_Shadowless.png-8e34e9d274f23ace070404d8d04b3051.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/4_Bedroom_Shadowless.png"
-dest_files=["res://.godot/imported/4_Bedroom_Shadowless.png-47c99ecc5c6763cf9ce38bb02b1e35a6.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/2_LivingRoom_Shadowless.png"
+dest_files=["res://.godot/imported/2_LivingRoom_Shadowless.png-8e34e9d274f23ace070404d8d04b3051.ctex"]
 
 [params]
 

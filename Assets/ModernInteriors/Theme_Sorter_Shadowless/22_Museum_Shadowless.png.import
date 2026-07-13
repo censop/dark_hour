@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh3okj3xdkgyw"
-path="res://.godot/imported/3_Bathroom_Shadowless.png-fcbd6e7bf4830193bf61c0ea4dccf03a.ctex"
+uid="uid://bctilggw2aqh5"
+path="res://.godot/imported/22_Museum_Shadowless.png-aac837acdd8cb0bde684dd1faae38bd9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/3_Bathroom_Shadowless.png"
-dest_files=["res://.godot/imported/3_Bathroom_Shadowless.png-fcbd6e7bf4830193bf61c0ea4dccf03a.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/22_Museum_Shadowless.png"
+dest_files=["res://.godot/imported/22_Museum_Shadowless.png-aac837acdd8cb0bde684dd1faae38bd9.ctex"]
 
 [params]
 

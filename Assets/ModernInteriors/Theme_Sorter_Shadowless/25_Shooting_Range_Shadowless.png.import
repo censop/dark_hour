@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fdlpm3v232qc"
-path="res://.godot/imported/19_Hospital_Shadowless.png-412c202e0d5622dd38b43925f3b28b75.ctex"
+uid="uid://dypdnvtmscvlt"
+path="res://.godot/imported/25_Shooting_Range_Shadowless.png-cd80d78bb3b793a04acff03d0639bb45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png"
-dest_files=["res://.godot/imported/19_Hospital_Shadowless.png-412c202e0d5622dd38b43925f3b28b75.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/25_Shooting_Range_Shadowless.png"
+dest_files=["res://.godot/imported/25_Shooting_Range_Shadowless.png-cd80d78bb3b793a04acff03d0639bb45.ctex"]
 
 [params]
 

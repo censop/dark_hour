@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6sbx4neexaat"
-path="res://.godot/imported/26_Condominium_Shadowless.png-9a80b79ade308e62de4de7367402e18c.ctex"
+uid="uid://fdlpm3v232qc"
+path="res://.godot/imported/19_Hospital_Shadowless.png-9a5cf35a734adb3c73a18fd8075eb3f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/26_Condominium_Shadowless.png"
-dest_files=["res://.godot/imported/26_Condominium_Shadowless.png-9a80b79ade308e62de4de7367402e18c.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png"
+dest_files=["res://.godot/imported/19_Hospital_Shadowless.png-9a5cf35a734adb3c73a18fd8075eb3f6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc10vvkvm0rss"
-path="res://.godot/imported/12_Kitchen_Shadowless.png-c90ee819095c3e8d83954aa52ab522bd.ctex"
+uid="uid://b5n0p1qcy7rnf"
+path="res://.godot/imported/11_Halloween_Shadowless.png-b9c36aed656f4ac19098603141afb6de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/12_Kitchen_Shadowless.png"
-dest_files=["res://.godot/imported/12_Kitchen_Shadowless.png-c90ee819095c3e8d83954aa52ab522bd.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/11_Halloween_Shadowless.png"
+dest_files=["res://.godot/imported/11_Halloween_Shadowless.png-b9c36aed656f4ac19098603141afb6de.ctex"]
 
 [params]
 

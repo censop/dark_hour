@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tn0e2uc4ex3l"
-path="res://.godot/imported/6_Music_and_sport_Shadowless.png-291aaf3da66fff5bbb2430e510c25fc6.ctex"
+uid="uid://cbkghtffpctmv"
+path="res://.godot/imported/13_Conference_Hall_Shadowless.png-63e96509698830d0125c4b860204779c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/6_Music_and_sport_Shadowless.png"
-dest_files=["res://.godot/imported/6_Music_and_sport_Shadowless.png-291aaf3da66fff5bbb2430e510c25fc6.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/13_Conference_Hall_Shadowless.png"
+dest_files=["res://.godot/imported/13_Conference_Hall_Shadowless.png-63e96509698830d0125c4b860204779c.ctex"]
 
 [params]
 

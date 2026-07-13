@@ -94,7 +94,8 @@ menu={
 2d_physics/layer_2="battery"
 2d_physics/layer_3="player"
 2d_physics/layer_4="furniture"
-2d_physics/layer_5="wall"
+2d_physics/layer_5="wall_near"
+2d_physics/layer_6="wall"
 
 [physics]
 

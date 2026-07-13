@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbkghtffpctmv"
-path="res://.godot/imported/13_Conference_Hall_Shadowless.png-2254baf9d5703b2bc1a5fcc5717ca404.ctex"
+uid="uid://b4m71lgvsgiuq"
+path="res://.godot/imported/14_Basement_Shadowless.png-4d3ee3ffa498f85c7abc3265bfe5ebc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/13_Conference_Hall_Shadowless.png"
-dest_files=["res://.godot/imported/13_Conference_Hall_Shadowless.png-2254baf9d5703b2bc1a5fcc5717ca404.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/14_Basement_Shadowless.png"
+dest_files=["res://.godot/imported/14_Basement_Shadowless.png-4d3ee3ffa498f85c7abc3265bfe5ebc1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqbg5bkgh8q27"
-path="res://.godot/imported/10_Birthday_party_Shadowless.png-1ffc332b90fe1a38627965dcc22fc071.ctex"
+uid="uid://tn0e2uc4ex3l"
+path="res://.godot/imported/6_Music_and_sport_Shadowless.png-4fa105110de9233e3fd5d31ffc6ff45a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/10_Birthday_party_Shadowless.png"
-dest_files=["res://.godot/imported/10_Birthday_party_Shadowless.png-1ffc332b90fe1a38627965dcc22fc071.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/6_Music_and_sport_Shadowless.png"
+dest_files=["res://.godot/imported/6_Music_and_sport_Shadowless.png-4fa105110de9233e3fd5d31ffc6ff45a.ctex"]
 
 [params]
 

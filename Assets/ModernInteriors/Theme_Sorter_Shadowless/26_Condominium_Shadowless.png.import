@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b10nyt2gqns6q"
-path="res://.godot/imported/1_Generic_Shadowless.png-30e212d4f0e4783c7452313cba9064cb.ctex"
+uid="uid://b6sbx4neexaat"
+path="res://.godot/imported/26_Condominium_Shadowless.png-a4abfee916870e53a65319ab9e6842fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/1_Generic_Shadowless.png"
-dest_files=["res://.godot/imported/1_Generic_Shadowless.png-30e212d4f0e4783c7452313cba9064cb.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/26_Condominium_Shadowless.png"
+dest_files=["res://.godot/imported/26_Condominium_Shadowless.png-a4abfee916870e53a65319ab9e6842fa.ctex"]
 
 [params]
 

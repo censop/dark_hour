@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dypdnvtmscvlt"
-path="res://.godot/imported/25_Shooting_Range_Shadowless.png-d65a81f827c70aa4c76f47c35ab2de27.ctex"
+uid="uid://dh3okj3xdkgyw"
+path="res://.godot/imported/3_Bathroom_Shadowless.png-bb17cc03c474d06d614bf267405eefd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/25_Shooting_Range_Shadowless.png"
-dest_files=["res://.godot/imported/25_Shooting_Range_Shadowless.png-d65a81f827c70aa4c76f47c35ab2de27.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/3_Bathroom_Shadowless.png"
+dest_files=["res://.godot/imported/3_Bathroom_Shadowless.png-bb17cc03c474d06d614bf267405eefd6.ctex"]
 
 [params]
 

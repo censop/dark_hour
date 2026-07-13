@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5n0p1qcy7rnf"
-path="res://.godot/imported/11_Halloween_Shadowless.png-27d7d61324564f9d2edb1c4a5f8862a5.ctex"
+uid="uid://c0gg8sru17s2u"
+path="res://.godot/imported/8_Gym_Shadowless.png-fcccfdbb56b851f0862fd784bf12b535.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Theme_Sorter_Shadowless/11_Halloween_Shadowless.png"
-dest_files=["res://.godot/imported/11_Halloween_Shadowless.png-27d7d61324564f9d2edb1c4a5f8862a5.ctex"]
+source_file="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/8_Gym_Shadowless.png"
+dest_files=["res://.godot/imported/8_Gym_Shadowless.png-fcccfdbb56b851f0862fd784bf12b535.ctex"]
 
 [params]
 
