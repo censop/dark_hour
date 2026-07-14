@@ -6,6 +6,7 @@ public partial class LockedDoor : StaticBody2D
 	[Export] Area2D _interactionArea;
 	[Export] CollisionShape2D _interactionShape;
 	[Export] String DoorId = "Door_001";
+	[Export] Node2D _sprite;
 
 	private bool _isBodyInsideArea = false;
 
@@ -38,8 +39,9 @@ public partial class LockedDoor : StaticBody2D
 	private void UnlockDoor()
 	{
 		_interactionShape.SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
+		_sprite.Visible = false;
 
-        GD.Print($"Door {DoorId} Unlocked!");
+    	GD.Print($"Door {DoorId} Unlocked!");
 	}
 
 	private bool PlayerHasKey()
