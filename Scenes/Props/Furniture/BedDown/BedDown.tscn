@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bfdouw7pnem58"]
+
+[ext_resource type="PackedScene" uid="uid://kff1pe2dq3rr" path="res://Scenes/Props/Furniture/FurnitureBase/FurnitureBase.tscn" id="1_4h5xe"]
+
+[node name="BedDown" unique_id=1463422088 instance=ExtResource("1_4h5xe")]

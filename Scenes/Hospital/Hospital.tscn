@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dcof068357k60" path="res://Scenes/Props/Doors/LockedDoor/LockedDoor.tscn" id="6_qr0c3"]
 [ext_resource type="PackedScene" uid="uid://cmnjvqosb7fru" path="res://Scenes/Props/Keys/DoorKey/DoorKey.tscn" id="7_uiugr"]
 [ext_resource type="PackedScene" uid="uid://d3o2bru1sdb0w" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.tscn" id="7_vb0tx"]
+[ext_resource type="PackedScene" uid="uid://bfdouw7pnem58" path="res://Scenes/Props/Furniture/BedDown/BedDown.tscn" id="10_no4i3"]
 
 [node name="Hospital" type="Node2D" unique_id=1182434823]
 script = ExtResource("1_35g8a")
@@ -21,14 +22,13 @@ tile_set = ExtResource("1_osfji")
 position = Vector2(-88, -38)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
-visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=328171972]
 tile_map_data = PackedByteArray("AAD4/wQAAAALADUAAAD4/wUAAAALADYAAAD4/wYAAAALADYAAAD4/wcAAAALADYAAAD4/wgAAAALADYAAAD4/wkAAAALADYAAAD4/woAAAALADYAAAD4/wsAAAALADYAAAD4/wwAAAALADYAAAD4/w0AAAALADYAAAD4/w4AAAALADYAAAD4/w8AAAALADYAAAD4/xAAAAALADYAAAD4/xEAAAALADYAAAD4/xIAAAALADYAAAD4/xMAAAALADYAAAD4/xQAAAALADYAAAD4/xUAAAALADYAAAD4/xYAAAALADYAAAD4/wMAAAALADUAAAD4/wIAAAALADQAAAD3/wMAAAAHADUAAAD3/wIAAAAHADQAAAD2/wMAAAAHADUAAAD2/wIAAAAHADQAAAD1/wMAAAAHADUAAAD1/wIAAAAHADQAAAD0/wMAAAAHADUAAAD0/wIAAAAHADQAAADz/wMAAAAHADUAAADz/wIAAAAHADQAAADy/wMAAAAHADUAAADy/wIAAAAHADQAAADx/wMAAAAHADUAAADx/wIAAAAHADQAAADw/wMAAAAHADUAAADw/wIAAAAHADQAAADv/wMAAAAGADUAAADv/wIAAAAGADQAAADw/wUAAAALADUAAADw/wQAAAALADQAAADv/wUAAAAHADUAAADv/wQAAAAHADQAAADu/wUAAAAHADUAAADu/wQAAAAHADQAAADt/wUAAAAHADUAAADt/wQAAAAHADQAAADs/wUAAAAHADUAAADs/wQAAAAHADQAAADr/wUAAAAHADUAAADr/wQAAAAHADQAAADq/wUAAAAHADUAAADq/wQAAAAHADQAAADp/wUAAAAHADUAAADp/wQAAAAHADQAAADo/wUAAAAHADUAAADo/wQAAAAHADQAAADn/wUAAAAGADUAAADw//r/AAALADUAAADw//n/AAALADQAAADv//r/AAAHADUAAADv//n/AAAHADQAAADu//r/AAAHADUAAADu//n/AAAHADQAAADt//r/AAAHADUAAADt//n/AAAHADQAAADs//r/AAAHADUAAADs//n/AAAHADQAAADr//r/AAAHADUAAADr//n/AAAHADQAAADq//r/AAAHADUAAADq//n/AAAHADQAAADp//r/AAAHADUAAADp//n/AAAHADQAAADo//r/AAAHADUAAADo//n/AAAHADQAAADn//r/AAAGADUAAADn//n/AAAGADQAAAAEAPv/AAAHADQAAAADAPz/AAAHADUAAAADAPv/AAAHADQAAAACAPz/AAAHADUAAAACAPv/AAAHADQAAAABAPz/AAAHADUAAAABAPv/AAAHADQAAAAAAPz/AAAHADUAAAAAAPv/AAAHADQAAAD///z/AAAHADUAAAD///v/AAAHADQAAAD+//z/AAAHADUAAAD+//v/AAAHADQAAAD9//z/AAAHADUAAAD9//v/AAAHADQAAAD8//z/AAAHADUAAAD8//v/AAAHADQAAAD7//z/AAAHADUAAAD7//v/AAAHADQAAAD6//z/AAAHADUAAAD6//v/AAAHADQAAAD5//z/AAAHADUAAAD5//v/AAAHADQAAAD4//z/AAAHADUAAAD4//v/AAAHADQAAAD3//z/AAAHADUAAAD3//v/AAAHADQAAAD2//z/AAAHADUAAAD2//v/AAAHADQAAAD1//z/AAAHADUAAAD1//v/AAAHADQAAAD0//z/AAAHADUAAAD0//v/AAAHADQAAADz//z/AAAHADUAAADz//v/AAAHADQAAADy//z/AAAHADUAAADy//v/AAAHADQAAADx//z/AAAHADUAAADx//v/AAAHADQAAADw//z/AAAHADUAAADw//v/AAAHADQAAADv//z/AAAGADUAAADv//v/AAAGADQAAADn//v/AAAGADUAAADn//z/AAAGADUAAADn//3/AAAGADUAAADn//7/AAAGADUAAADn////AAAGADUAAADn/wAAAAAGADUAAADn/wEAAAAGADUAAADn/wIAAAAGADUAAADn/wMAAAAGADYAAADn/wQAAAAGADQAAAAEAPz/AAAHADUAAAAFAPv/AAAIADQAAAAFAPz/AAAIADUAAAAIAPv/AAAHADQAAAAIAPz/AAAHADUAAAAKAPz/AAAHADUAAAAKAPv/AAAHADQAAAAJAPz/AAAHADUAAAAJAPv/AAAHADQAAAAQAPz/AAAHADUAAAAQAPv/AAAHADQAAAAPAPz/AAAHADUAAAAPAPv/AAAHADQAAAAOAPz/AAAHADUAAAAOAPv/AAAHADQAAAANAPz/AAAHADUAAAANAPv/AAAHADQAAAAMAPz/AAAHADUAAAAMAPv/AAAHADQAAAALAPz/AAAHADUAAAALAPv/AAAHADQAAAAUAPz/AAALADUAAAAUAPv/AAALADQAAAATAPz/AAAHADUAAAATAPv/AAAHADQAAAASAPz/AAAHADUAAAASAPv/AAAHADQAAAARAPz/AAAHADUAAAARAPv/AAAHADQAAAA=")
 tile_set = ExtResource("4_cvxms")
 
-[node name="Batteries" type="Node" parent="." unique_id=1228059859]
+[node name="Batteries" type="Node2D" parent="." unique_id=1043119433]
 
 [node name="Battery" parent="Batteries" unique_id=72985288 instance=ExtResource("3_osfji")]
 position = Vector2(207, -32)
@@ -41,22 +41,27 @@ UniqueID = "Battery_003"
 position = Vector2(-117, 170)
 UniqueID = "Battery_002"
 
-[node name="Doors" type="Node" parent="." unique_id=1722226525]
+[node name="Doors" type="Node2D" parent="." unique_id=483209405]
 
 [node name="LockedDoor001" parent="Doors" unique_id=1643899151 instance=ExtResource("6_qr0c3")]
 position = Vector2(104, -64)
 
-[node name="DoorKeys" type="Node" parent="." unique_id=716332816]
+[node name="DoorKeys" type="Node2D" parent="." unique_id=477014829]
 
 [node name="DoorKey001" parent="DoorKeys" unique_id=519018229 instance=ExtResource("7_uiugr")]
 position = Vector2(-23, -24)
 
-[node name="SwitchLights" type="Node" parent="." unique_id=1602619381]
+[node name="SwitchLights" type="Node2D" parent="." unique_id=1207247492]
 
 [node name="SwitchLight" parent="SwitchLights" unique_id=1004399128 instance=ExtResource("7_vb0tx")]
 position = Vector2(-110, 102)
 
-[node name="Lamps" type="Node" parent="." unique_id=1627317945]
+[node name="Lamps" type="Node2D" parent="." unique_id=447198015]
 
 [node name="Lamp" parent="Lamps" unique_id=950535501 instance=ExtResource("5_rt5xv")]
 position = Vector2(-321, -17)
+
+[node name="Furniture" type="Node2D" parent="." unique_id=705353095]
+
+[node name="BedDown" parent="Furniture" unique_id=1463422088 instance=ExtResource("10_no4i3")]
+position = Vector2(-359, 22)
