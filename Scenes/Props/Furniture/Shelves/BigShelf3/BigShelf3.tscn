@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d1qcui2gyucfp"]
+
+[ext_resource type="PackedScene" uid="uid://qolxrnhm077q" path="res://Scenes/Props/Furniture/Shelves/BigShelf2/BigShelf2.tscn" id="1_um7dv"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_premi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y7oc"]
+atlas = ExtResource("2_premi")
+region = Rect2(144, 96, 32, 48)
+
+[node name="BigShelf3" unique_id=1463422088 instance=ExtResource("1_um7dv")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+texture = SubResource("AtlasTexture_5y7oc")

@@ -10,7 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://booalhb1hsph3" path="res://Scenes/UI/DeathUI/DeathUI.tscn" id="7_fk5o5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s0eop"]
-height = 26.0
+radius = 5.0
+height = 24.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ft8w5"]
 radius = 16.0
@@ -558,14 +559,13 @@ position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=353969182]
+visible = false
 
 [node name="GameUI" parent="Camera2D/CanvasLayer" unique_id=1781965203 instance=ExtResource("6_4wape")]
 
 [node name="PauseMenu" parent="Camera2D/CanvasLayer" unique_id=205763017 instance=ExtResource("6_t26db")]
-visible = false
 
 [node name="DeathUI" parent="Camera2D/CanvasLayer" unique_id=566384570 instance=ExtResource("7_fk5o5")]
-visible = false
 
 [node name="Flashlight" parent="." unique_id=1380198034 instance=ExtResource("5_jmcll")]
 position = Vector2(0, 4)

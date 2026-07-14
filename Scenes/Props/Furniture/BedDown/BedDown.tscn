@@ -1,5 +1,20 @@
 [gd_scene format=3 uid="uid://bfdouw7pnem58"]
 
 [ext_resource type="PackedScene" uid="uid://kff1pe2dq3rr" path="res://Scenes/Props/Furniture/FurnitureBase/FurnitureBase.tscn" id="1_4h5xe"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_eqbxl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdqrr"]
+atlas = ExtResource("2_eqbxl")
+region = Rect2(80, 384, 32, 48)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iv3sa"]
+radius = 9.0
+height = 42.0
 
 [node name="BedDown" unique_id=1463422088 instance=ExtResource("1_4h5xe")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+texture = SubResource("AtlasTexture_pdqrr")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
+shape = SubResource("CapsuleShape2D_iv3sa")

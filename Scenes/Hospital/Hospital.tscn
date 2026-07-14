@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cmnjvqosb7fru" path="res://Scenes/Props/Keys/DoorKey/DoorKey.tscn" id="7_uiugr"]
 [ext_resource type="PackedScene" uid="uid://d3o2bru1sdb0w" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.tscn" id="7_vb0tx"]
 [ext_resource type="PackedScene" uid="uid://bfdouw7pnem58" path="res://Scenes/Props/Furniture/BedDown/BedDown.tscn" id="10_no4i3"]
+[ext_resource type="PackedScene" uid="uid://cevluta3khawc" path="res://Scenes/Props/Furniture/Skeleton/Skeleton.tscn" id="11_x85e5"]
+[ext_resource type="PackedScene" uid="uid://duc0f53b8su0b" path="res://Scenes/Props/Furniture/Shelves/BigShelfEmpty/BigShelfEmpty.tscn" id="12_3ekpi"]
 
 [node name="Hospital" type="Node2D" unique_id=1182434823]
 script = ExtResource("1_35g8a")
@@ -65,3 +67,9 @@ position = Vector2(-321, -17)
 
 [node name="BedDown" parent="Furniture" unique_id=1463422088 instance=ExtResource("10_no4i3")]
 position = Vector2(-359, 22)
+
+[node name="Skeleton" parent="Furniture" unique_id=1094542597 instance=ExtResource("11_x85e5")]
+position = Vector2(-274, -67)
+
+[node name="BigShelfEmpty" parent="Furniture" unique_id=785814962 instance=ExtResource("12_3ekpi")]
+position = Vector2(-370, -82)
