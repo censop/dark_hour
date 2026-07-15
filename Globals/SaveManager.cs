@@ -13,7 +13,7 @@ public partial class SaveManager : Node
         Instance = this;
     }
 
-    public void SaveGame(Vector2 playerPos, float batteryPercent, List<String> collectedBatteries, List<String> notUsedBatteries, List<String> collectedDoorKeys, List<String> lightsOn)
+    public void SaveGame(Vector2 playerPos, float batteryPercent, List<String> collectedBatteries, int notUsedBatteries, List<String> collectedDoorKeys, List<String> lightsOn)
     {
         SaveData data = new SaveData
         {

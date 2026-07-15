@@ -24,7 +24,6 @@ tile_set = ExtResource("1_osfji")
 position = Vector2(-88, -38)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
-visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=328171972]
@@ -34,10 +33,10 @@ tile_set = ExtResource("4_cvxms")
 [node name="Batteries" type="Node2D" parent="." unique_id=1043119433]
 
 [node name="Battery" parent="Batteries" unique_id=72985288 instance=ExtResource("3_osfji")]
-position = Vector2(207, -32)
+position = Vector2(-44, 8)
 
 [node name="Battery2" parent="Batteries" unique_id=1733496960 instance=ExtResource("3_osfji")]
-position = Vector2(-324, 5)
+position = Vector2(-17, 29)
 UniqueID = "Battery_003"
 
 [node name="Battery3" parent="Batteries" unique_id=719915438 instance=ExtResource("3_osfji")]
@@ -60,7 +59,6 @@ position = Vector2(-23, -24)
 position = Vector2(-110, 102)
 
 [node name="Lamps" type="Node2D" parent="." unique_id=447198015]
-visible = false
 
 [node name="Lamp" parent="Lamps" unique_id=950535501 instance=ExtResource("5_rt5xv")]
 position = Vector2(-321, -17)

@@ -11,9 +11,11 @@ public partial class Hospital : Node2D
 			SignalHub.EmitOnMenuPressed();
 		}
 
-        if (@event.IsActionPressed("consume"))
+        if (@event.IsActionPressed("consume") && GlobalVariables.NotConsumedBatteries > 0)
 		{
 			SignalHub.EmitOnBatteryUsed();
+            GlobalVariables.NotConsumedBatteries --;
+            GD.Print("NotConsumedBatteries: " + GlobalVariables.NotConsumedBatteries);
 		}
     }
 }

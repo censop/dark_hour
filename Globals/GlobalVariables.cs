@@ -8,7 +8,7 @@ public partial class GlobalVariables : Node
     public static bool IsPlayerInLight = false;
     public static float BatteryTimePercentage = 1;
     public static List<String> CollectedBatteries = new List<string>();
-    public static List<String> NotConsumedBatteries {get; set;} = new List<string>();
+    public static int NotConsumedBatteries = 0;
     public static List<String> DoorKeysCollected = new List<string>();
     public static List<String> TurntOnLights = new List<string>();
     public static Vector2 PlayerPos = Vector2.Zero;

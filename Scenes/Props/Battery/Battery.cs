@@ -45,6 +45,8 @@ public partial class Battery : Area2D
 		//FOR NOW
 		GD.Print("Interacted");
 		GlobalVariables.CollectedBatteries.Add(UniqueID);
+		GlobalVariables.NotConsumedBatteries++;
+		GD.Print("NotConsumedBatteries: " + GlobalVariables.NotConsumedBatteries);
 		QueueFree();
 	}
 
