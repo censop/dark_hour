@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c2at45us0dow0"]
+
+[ext_resource type="PackedScene" uid="uid://tgiiyec0utmw" path="res://Scenes/Props/Furniture/Cupboards/BigCupboard/BigCupboard.tscn" id="1_tqhdh"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_gtbqu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfmso"]
+atlas = ExtResource("2_gtbqu")
+region = Rect2(160, 1232, 32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nejia"]
+size = Vector2(17, 25)
+
+[node name="SmallCupboard" unique_id=1463422088 instance=ExtResource("1_tqhdh")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+texture = SubResource("AtlasTexture_xfmso")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
+position = Vector2(6.5, -2.5)
+shape = SubResource("RectangleShape2D_nejia")

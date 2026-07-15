@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://kff1pe2dq3rr"]
 
-[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="1_vhrv3"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="1_vhrv3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4xun"]
 atlas = ExtResource("1_vhrv3")

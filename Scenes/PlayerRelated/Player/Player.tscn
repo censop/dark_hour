@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0guetbwp3mv4"]
 
 [ext_resource type="Script" uid="uid://cefk6rw3rshol" path="res://Scenes/PlayerRelated/Player/Player.cs" id="1_ft8w5"]
-[ext_resource type="Texture2D" uid="uid://d3cdfvf0m6cc4" path="res://Assets/CharacterTest/16x32 All Animations.png" id="1_s0eop"]
+[ext_resource type="Texture2D" uid="uid://d3cdfvf0m6cc4" path="res://Assets/Sprites/CharacterTest/16x32 All Animations.png" id="1_s0eop"]
 [ext_resource type="Script" uid="uid://bis4p47hfs0l2" path="res://Scenes/PlayerRelated/Player/PlayerAnimation.cs" id="3_ude3g"]
 [ext_resource type="AnimationNodeBlendSpace2D" uid="uid://ptohl8u208sj" path="res://Resources/Animations/player_walk.tres" id="4_ude3g"]
 [ext_resource type="PackedScene" uid="uid://ca3w5bbojejdg" path="res://Scenes/PlayerRelated/Flashlight/Flashlight.tscn" id="5_jmcll"]

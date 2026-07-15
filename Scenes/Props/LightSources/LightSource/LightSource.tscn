@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://3egaiuv0h42o"]
 
 [ext_resource type="Script" uid="uid://b1ryaky0r1n27" path="res://Scenes/Props/LightSources/LightSource/LightSource.cs" id="1_mmxlp"]
-[ext_resource type="Texture2D" uid="uid://di5o6ugcprncr" path="res://Assets/topdown_hospital_Assets/Pngs/room_flower.png" id="2_1vn3p"]
+[ext_resource type="Texture2D" uid="uid://di5o6ugcprncr" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/room_flower.png" id="2_1vn3p"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rl8t"]
 radius = 6.0

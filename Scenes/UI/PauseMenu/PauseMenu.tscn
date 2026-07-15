@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b24onv1yrkgj8"]
 
 [ext_resource type="Script" uid="uid://igvf6ff64t0y" path="res://Scenes/UI/PauseMenu/PauseMenu.cs" id="1_4bayv"]
-[ext_resource type="Texture2D" uid="uid://b8aojm041oy7s" path="res://Assets/UIIcons_#1_Update 3/Better Text Area (1).png" id="1_kgxba"]
-[ext_resource type="Texture2D" uid="uid://l7llhdd4hao" path="res://Assets/UIIcons_#1_Update 3/UIIcons_1 (2).png" id="2_f1kpg"]
+[ext_resource type="Texture2D" uid="uid://b8aojm041oy7s" path="res://Assets/Sprites/UIIcons_#1_Update 3/Better Text Area (1).png" id="1_kgxba"]
+[ext_resource type="Texture2D" uid="uid://l7llhdd4hao" path="res://Assets/Sprites/UIIcons_#1_Update 3/UIIcons_1 (2).png" id="2_f1kpg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1kpg"]
 atlas = ExtResource("1_kgxba")

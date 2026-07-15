@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dcof068357k60"]
 
 [ext_resource type="Script" uid="uid://difminmldqb81" path="res://Scenes/Props/Doors/LockedDoor/LockedDoor.cs" id="1_l3b3h"]
-[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_hktxa"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_hktxa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l3b3h"]
 atlas = ExtResource("2_hktxa")

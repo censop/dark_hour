@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://g38wluh2gjh6"]
 
-[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="1_pc3mq"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="1_pc3mq"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pc3mq"]
 

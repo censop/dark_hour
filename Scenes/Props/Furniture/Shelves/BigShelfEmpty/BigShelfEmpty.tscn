@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://duc0f53b8su0b"]
 
 [ext_resource type="PackedScene" uid="uid://kff1pe2dq3rr" path="res://Scenes/Props/Furniture/FurnitureBase/FurnitureBase.tscn" id="1_2g6qj"]
-[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_m8cli"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_m8cli"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l8hcv"]
 atlas = ExtResource("2_m8cli")

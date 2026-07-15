@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3o2bru1sdb0w"]
 
-[ext_resource type="Texture2D" uid="uid://s65ivkdv8lyc" path="res://Assets/topdown_hospital_Assets/Pngs/maternity_light.png" id="1_5tstd"]
+[ext_resource type="Texture2D" uid="uid://s65ivkdv8lyc" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/maternity_light.png" id="1_5tstd"]
 [ext_resource type="Script" uid="uid://dyycalsph7r1i" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.cs" id="1_26mvl"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rl8t"]
