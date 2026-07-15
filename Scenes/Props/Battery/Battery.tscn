@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bhhtywv1ccvbc"]
 
-[ext_resource type="Texture2D" uid="uid://cen5ubkooorrr" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/room_biohazard_bin_y.png" id="1_ouedi"]
 [ext_resource type="Script" uid="uid://cyw3wdc8dix21" path="res://Scenes/Props/Battery/Battery.cs" id="1_ur01j"]
+[ext_resource type="Texture2D" uid="uid://bjgtmneyvgg8l" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/room_hand_sanitizer.png" id="2_rij71"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ouedi"]
-radius = 4.0
-height = 12.0
+radius = 3.0
+height = 8.0
 
 [node name="Battery" type="Area2D" unique_id=72985288]
 collision_layer = 2
@@ -13,8 +13,8 @@ collision_mask = 4
 script = ExtResource("1_ur01j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1931769877]
-texture = ExtResource("1_ouedi")
+texture = ExtResource("2_rij71")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=667987919]
-position = Vector2(1, 0)
+position = Vector2(-1, -1)
 shape = SubResource("CapsuleShape2D_ouedi")

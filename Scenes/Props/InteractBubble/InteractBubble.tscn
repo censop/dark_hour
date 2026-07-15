@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ltx5jixck2g3"]
+
+[ext_resource type="Texture2D" uid="uid://omhthw7jbby2" path="res://Assets/Sprites/UIIcons_#1_Update 3/UIIcons_1 (3).png" id="1_0i16x"]
+[ext_resource type="FontFile" uid="uid://c42etw2frghki" path="res://Assets/Texts/ByteBounce.ttf" id="2_ejea0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqcn2"]
+atlas = ExtResource("1_0i16x")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="LabelSettings" id="LabelSettings_x2jcd"]
+font = ExtResource("2_ejea0")
+
+[node name="InteractBubble" type="Node2D" unique_id=1854633125]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1789736451]
+texture = SubResource("AtlasTexture_dqcn2")
+
+[node name="Label" type="Label" parent="Sprite2D" unique_id=1735310782]
+offset_left = -3.0
+offset_top = -7.0
+offset_right = 4.0
+offset_bottom = 4.0
+text = "E"
+label_settings = SubResource("LabelSettings_x2jcd")

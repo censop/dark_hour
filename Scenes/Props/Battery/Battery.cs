@@ -10,7 +10,7 @@ public partial class Battery : Area2D
 	private bool _isBodyInside = false;
 	public override void _Ready()
 	{
-		if (GlobalVariables.ConsumedBatteries.Contains(UniqueID))
+		if (GlobalVariables.CollectedBatteries.Contains(UniqueID))
 		{
 			QueueFree();
 			return;
@@ -35,16 +35,16 @@ public partial class Battery : Area2D
     {
         if (@event.IsActionPressed("interact") && _isBodyInside)
 		{
-			OnBatteryUsed();
+			OnBatteryCollected();
 		}
+		
     }
 
-	private void OnBatteryUsed()
+	private void OnBatteryCollected()
 	{
 		//FOR NOW
 		GD.Print("Interacted");
-		SignalHub.EmitOnBatteryUsed();
-		GlobalVariables.ConsumedBatteries.Add(UniqueID);
+		GlobalVariables.CollectedBatteries.Add(UniqueID);
 		QueueFree();
 	}
 

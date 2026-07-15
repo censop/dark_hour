@@ -10,5 +10,10 @@ public partial class Hospital : Node2D
 		{
 			SignalHub.EmitOnMenuPressed();
 		}
+
+        if (@event.IsActionPressed("consume"))
+		{
+			SignalHub.EmitOnBatteryUsed();
+		}
     }
 }

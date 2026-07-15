@@ -23,7 +23,7 @@ public partial class StartScreen : Control
         if (data != null)
         {
             GlobalVariables.BatteryTimePercentage = data.BatteryPercentage;
-            GlobalVariables.ConsumedBatteries = data.DestroyedBatteries;
+            GlobalVariables.CollectedBatteries = data.AllBatteries;
             GlobalVariables.DoorKeysCollected = data.DoorKeyInventory;
             GlobalVariables.TurntOnLights = data.LightSwitchesOn;
 			GlobalVariables.PlayerPos = new Vector2(data.PlayerPosX, data.PlayerPosY);

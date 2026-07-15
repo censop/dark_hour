@@ -13,14 +13,15 @@ public partial class SaveManager : Node
         Instance = this;
     }
 
-    public void SaveGame(Vector2 playerPos, float batteryPercent, List<String> usedBatteries, List<String> collectedDoorKeys, List<String> lightsOn)
+    public void SaveGame(Vector2 playerPos, float batteryPercent, List<String> collectedBatteries, List<String> notUsedBatteries, List<String> collectedDoorKeys, List<String> lightsOn)
     {
         SaveData data = new SaveData
         {
             PlayerPosX = playerPos.X,
             PlayerPosY = playerPos.Y,
             BatteryPercentage = batteryPercent,
-            DestroyedBatteries = usedBatteries,
+            AllBatteries = collectedBatteries,
+            CurrentBatteries = notUsedBatteries,
             DoorKeyInventory = collectedDoorKeys,
             LightSwitchesOn = lightsOn,
         };
@@ -30,7 +31,7 @@ public partial class SaveManager : Node
         {
             using var file = FileAccess.Open(_savePath, FileAccess.ModeFlags.Write); //using keyword automatically closes the file after its done with it
             file.StoreString(jsonString);
-            GD.Print($"Save info:{playerPos}, {batteryPercent}, {usedBatteries}, Game Saved to: " + ProjectSettings.GlobalizePath(_savePath));
+            GD.Print($"Save info:{playerPos}, {batteryPercent}, {notUsedBatteries}, Game Saved to: " + ProjectSettings.GlobalizePath(_savePath));
         }catch
         {
             GD.Print("Game couldn't be saved");
