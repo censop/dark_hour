@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://w8ia3b7bncxs"]
+
+[ext_resource type="PackedScene" uid="uid://dj2q61pxn1h72" path="res://Scenes/Props/Furniture/Plants/BigPlant/BigPlant.tscn" id="1_w3d8u"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_gdx5h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1q77i"]
+atlas = ExtResource("2_gdx5h")
+region = Rect2(112, 624, 32, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tthcv"]
+size = Vector2(27, 3.5)
+
+[node name="Curtain" unique_id=1463422088 instance=ExtResource("1_w3d8u")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(1, -14)
+texture = SubResource("AtlasTexture_1q77i")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
+position = Vector2(1, -8)
+shape = SubResource("RectangleShape2D_tthcv")

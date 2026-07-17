@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dyjvnf38xtroe"]
+
+[ext_resource type="PackedScene" uid="uid://cdsmiohg1o37h" path="res://Scenes/Props/Furniture/Plants/ThinPlant/ThinPlant.tscn" id="1_k1fcm"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_x57kx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxgt8"]
+atlas = ExtResource("2_x57kx")
+region = Rect2(16, 224, 16, 48)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vp7fr"]
+radius = 6.0
+height = 24.0
+
+[node name="SmallPlant" unique_id=1463422088 instance=ExtResource("1_k1fcm")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+texture = SubResource("AtlasTexture_sxgt8")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_vp7fr")

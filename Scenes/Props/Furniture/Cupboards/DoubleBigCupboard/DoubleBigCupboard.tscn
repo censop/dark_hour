@@ -8,13 +8,14 @@ atlas = ExtResource("2_bx3et")
 region = Rect2(0, 1136, 32, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38syp"]
-size = Vector2(29, 28)
+size = Vector2(28, 3)
 
 [node name="DoubleBigCupboard" unique_id=1463422088 instance=ExtResource("1_ldn1k")]
 
 [node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(1, -10)
 texture = SubResource("AtlasTexture_vhknh")
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
-position = Vector2(-0.5, 0)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_38syp")

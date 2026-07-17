@@ -8,13 +8,14 @@ atlas = ExtResource("2_m4ma0")
 region = Rect2(176, 1136, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lc0bq"]
-size = Vector2(31, 23)
+size = Vector2(31, 14)
 
 [node name="BedSide" unique_id=1463422088 instance=ExtResource("1_lc0bq")]
 
 [node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(0, -12)
 texture = SubResource("AtlasTexture_sbkno")
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
-position = Vector2(0.5, 3.5)
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_lc0bq")
