@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b7n815cdnurv"]
+
+[ext_resource type="Script" uid="uid://cpac6xe6s01r6" path="res://Scenes/Map/Hospital/Hospital.cs" id="1_35g8a"]
+[ext_resource type="PackedScene" uid="uid://0guetbwp3mv4" path="res://Scenes/PlayerRelated/Player/Player.tscn" id="1_7441k"]
+
+[node name="Hospital" type="Node2D" unique_id=1182434823]
+script = ExtResource("1_35g8a")
+
+[node name="Player" parent="." unique_id=292045112 instance=ExtResource("1_7441k")]
+z_index = 1
+position = Vector2(-88, -38)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
+visible = false
+color = Color(0.07815645, 0.078156464, 0.078156434, 1)
