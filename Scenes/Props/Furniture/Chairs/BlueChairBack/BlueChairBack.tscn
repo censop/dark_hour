@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bibjjfp8wq7ek"]
+
+[ext_resource type="PackedScene" uid="uid://caskrsn8u7dw0" path="res://Scenes/Props/Furniture/Chairs/BlueChairFront/BlueChairFront.tscn" id="1_el1xi"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_am1cu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfc3i"]
+atlas = ExtResource("2_am1cu")
+region = Rect2(176, 304, 16, 16)
+
+[node name="BlueChairBack" unique_id=1463422088 instance=ExtResource("1_el1xi")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+texture = SubResource("AtlasTexture_pfc3i")
