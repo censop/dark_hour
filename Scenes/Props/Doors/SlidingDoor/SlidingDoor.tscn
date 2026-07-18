@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c8grkf0ndt8s1"]
+
+[ext_resource type="Script" uid="uid://uls0bxyjvutc" path="res://Scenes/Props/Doors/SlidingDoor/SlidingDoor.cs" id="1_xnmyn"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_x3sff"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lv3k"]
+atlas = ExtResource("2_x3sff")
+region = Rect2(112, 784, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3sff"]
+atlas = ExtResource("2_x3sff")
+region = Rect2(112, 832, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnmyn"]
+atlas = ExtResource("2_x3sff")
+region = Rect2(144, 800, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8npdx"]
+size = Vector2(31, 10.125)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hktxa"]
+radius = 29.0
+height = 64.0
+
+[node name="SlidingDoor" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_collisionShape", "_sprite")]
+collision_layer = 8
+collision_mask = 28
+script = ExtResource("1_xnmyn")
+_interactionArea = NodePath("InteractionArea")
+_collisionShape = NodePath("PhysicalCollisionShape")
+_sprite = NodePath("Sprites/Sprite2D")
+
+[node name="Sprites" type="Node2D" parent="." unique_id=1678634123]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprites" unique_id=1521458141]
+position = Vector2(0, -13)
+texture = SubResource("AtlasTexture_1lv3k")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprites" unique_id=1537910947]
+position = Vector2(-8, -24)
+texture = SubResource("AtlasTexture_x3sff")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 6)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprites" unique_id=1473265710]
+position = Vector2(8, -24)
+texture = SubResource("AtlasTexture_x3sff")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 6)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprites" unique_id=1774683619]
+position = Vector2(25, -6)
+texture = SubResource("AtlasTexture_xnmyn")
+
+[node name="PhysicalCollisionShape" type="CollisionShape2D" parent="." unique_id=1120102542]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_8npdx")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1261220341]
+collision_layer = 9
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=755303202]
+visible = false
+position = Vector2(6, -7)
+shape = SubResource("CapsuleShape2D_hktxa")

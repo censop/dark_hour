@@ -1,11 +1,10 @@
 using Godot;
 using System;
 
-public partial class LockedDoor : StaticBody2D
+public partial class SlidingDoor : StaticBody2D
 {
 	[Export] Area2D _interactionArea;
-	[Export] CollisionShape2D _interactionShape;
-	[Export] String DoorId = "Door_001";
+	[Export] CollisionShape2D _collisionShape;
 	[Export] Node2D _sprite;
 
 	private bool _isBodyInsideArea = false;
@@ -30,7 +29,7 @@ public partial class LockedDoor : StaticBody2D
 
     public override void _UnhandledInput(InputEvent @event)
     {
-        if (@event.IsActionPressed("interact") && _isBodyInsideArea && PlayerHasKey())
+        if (@event.IsActionPressed("interact") && _isBodyInsideArea)
 		{
 			UnlockDoor();
 		}
@@ -38,24 +37,8 @@ public partial class LockedDoor : StaticBody2D
 
 	private void UnlockDoor()
 	{
-		_interactionShape.SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
+		_collisionShape.SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
 		_sprite.Visible = false;
 
-    	GD.Print($"Door {DoorId} Unlocked!");
 	}
-
-	private bool PlayerHasKey()
-	{
-		for (int i = 0; i < GlobalVariables.DoorKeysCollected.Count; i++)
-		{
-			if (DoorId[^3..] == GlobalVariables.DoorKeysCollected[i][^3..])
-			{
-				GD.Print($"Key present");
-				return true;
-			}
-		}
-
-		return false;
-	}
-
 }
