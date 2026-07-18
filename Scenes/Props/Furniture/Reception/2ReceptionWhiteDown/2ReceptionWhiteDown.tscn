@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://7usb4a0ykbbx"]
+
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="1_1po8e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4xun"]
+atlas = ExtResource("1_1po8e")
+region = Rect2(80, 144, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bjlh"]
+atlas = ExtResource("1_1po8e")
+region = Rect2(128, 144, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17j5i"]
+atlas = ExtResource("1_1po8e")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o304a"]
+atlas = ExtResource("1_1po8e")
+region = Rect2(96, 144, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs5gd"]
+atlas = ExtResource("1_1po8e")
+region = Rect2(176, 624, 32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vhrv3"]
+size = Vector2(95.375, 36.75)
+
+[node name="2ReceptionWhiteDown" type="StaticBody2D" unique_id=1463422088]
+collision_layer = 8
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1954714297]
+position = Vector2(-40, -16)
+texture = SubResource("AtlasTexture_y4xun")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1446510023]
+position = Vector2(40, -16)
+texture = SubResource("AtlasTexture_3bjlh")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=949271725]
+position = Vector2(16, -8)
+texture = SubResource("AtlasTexture_17j5i")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1037742538]
+position = Vector2(-16, -8)
+texture = SubResource("AtlasTexture_17j5i")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=498922163]
+position = Vector2(-16, -16)
+texture = SubResource("AtlasTexture_o304a")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=753361636]
+position = Vector2(16, -16)
+texture = SubResource("AtlasTexture_o304a")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=586669888]
+position = Vector2(-16, -24)
+texture = SubResource("AtlasTexture_fs5gd")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1890160551]
+position = Vector2(16, -24)
+texture = SubResource("AtlasTexture_fs5gd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=440692879]
+position = Vector2(0, -13.375)
+shape = SubResource("RectangleShape2D_vhrv3")

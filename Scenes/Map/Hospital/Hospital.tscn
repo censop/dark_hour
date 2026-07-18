@@ -3,18 +3,20 @@
 [ext_resource type="Script" uid="uid://cpac6xe6s01r6" path="res://Scenes/Map/Hospital/Hospital.cs" id="1_35g8a"]
 [ext_resource type="PackedScene" uid="uid://0guetbwp3mv4" path="res://Scenes/PlayerRelated/Player/Player.tscn" id="1_7441k"]
 [ext_resource type="PackedScene" uid="uid://d77an4oemjgt" path="res://Scenes/Map/PatientRoom1/PatientRoom1.tscn" id="2_p1612"]
+[ext_resource type="PackedScene" uid="uid://b3ueqw5vlyed8" path="res://Scenes/Map/BigHallway1/BigHallway1.tscn" id="4_jw6yd"]
 
 [node name="Hospital" type="Node2D" unique_id=1182434823]
 y_sort_enabled = true
 script = ExtResource("1_35g8a")
 
 [node name="PatientRoom1" parent="." unique_id=1015740257 instance=ExtResource("2_p1612")]
-position = Vector2(0, 1)
 
 [node name="Player" parent="." unique_id=292045112 instance=ExtResource("1_7441k")]
 position = Vector2(-12, 26)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
+visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
-[editable path="PatientRoom1"]
+[node name="BigHallway1" parent="." unique_id=1931291724 instance=ExtResource("4_jw6yd")]
+position = Vector2(240, 8)

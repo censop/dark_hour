@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bp4stfk81p48p"]
+
+[ext_resource type="PackedScene" uid="uid://kff1pe2dq3rr" path="res://Scenes/Props/Furniture/FurnitureBase/FurnitureBase.tscn" id="1_8s1g8"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_shtth"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6gvs"]
+atlas = ExtResource("2_shtth")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yn6ng"]
+size = Vector2(7, 9)
+
+[node name="PhoneLeft" unique_id=1463422088 instance=ExtResource("1_8s1g8")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(0, -1)
+texture = SubResource("AtlasTexture_f6gvs")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_yn6ng")

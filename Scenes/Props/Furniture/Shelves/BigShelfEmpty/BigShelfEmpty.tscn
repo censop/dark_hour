@@ -8,7 +8,7 @@ atlas = ExtResource("2_m8cli")
 region = Rect2(48, 96, 32, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6c7nl"]
-size = Vector2(29, 32)
+size = Vector2(29, 8)
 
 [node name="BigShelfEmpty" unique_id=1463422088 instance=ExtResource("1_2g6qj")]
 
@@ -16,5 +16,5 @@ size = Vector2(29, 32)
 texture = SubResource("AtlasTexture_l8hcv")
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
-position = Vector2(0.5, -4)
+position = Vector2(1, -6)
 shape = SubResource("RectangleShape2D_6c7nl")

@@ -8,7 +8,7 @@ atlas = ExtResource("2_cagy8")
 region = Rect2(32, 1136, 16, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ob74d"]
-size = Vector2(14, 28)
+size = Vector2(14, 7)
 
 [node name="SmallCupboard" unique_id=1463422088 instance=ExtResource("1_3u1ne")]
 
@@ -16,5 +16,5 @@ size = Vector2(14, 28)
 texture = SubResource("AtlasTexture_d4alq")
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
-position = Vector2(-1, 0)
+position = Vector2(1, -1)
 shape = SubResource("RectangleShape2D_ob74d")
