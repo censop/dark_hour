@@ -15,6 +15,7 @@ script = ExtResource("1_35g8a")
 position = Vector2(-12, 26)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
+visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="BigHallway1" parent="." unique_id=1931291724 instance=ExtResource("4_jw6yd")]

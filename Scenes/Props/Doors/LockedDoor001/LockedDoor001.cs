@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class LockedDoor : StaticBody2D
+public partial class LockedDoor001 : StaticBody2D
 {
 	[Export] Area2D _interactionArea;
 	[Export] CollisionShape2D _interactionShape;

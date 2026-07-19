@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dcof068357k60"]
 
-[ext_resource type="Script" uid="uid://difminmldqb81" path="res://Scenes/Props/Doors/LockedDoor/LockedDoor.cs" id="1_l3b3h"]
-[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_hktxa"]
+[ext_resource type="Script" uid="uid://difminmldqb81" path="res://Scenes/Props/Doors/LockedDoor001/LockedDoor001.cs" id="1_8735p"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_u5jcs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l3b3h"]
-atlas = ExtResource("2_hktxa")
+atlas = ExtResource("2_u5jcs")
 region = Rect2(144, 832, 16, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8npdx"]
@@ -14,10 +14,10 @@ size = Vector2(31, 10.125)
 radius = 17.0
 height = 72.0
 
-[node name="LockedDoor" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_interactionShape", "_sprite")]
+[node name="LockedDoor001" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_interactionShape", "_sprite")]
 collision_layer = 8
 collision_mask = 28
-script = ExtResource("1_l3b3h")
+script = ExtResource("1_8735p")
 _interactionArea = NodePath("InteractionArea")
 _interactionShape = NodePath("PhysicalCollisionShape")
 _sprite = NodePath("Sprites")

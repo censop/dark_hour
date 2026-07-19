@@ -30,37 +30,37 @@ collision_layer = 8
 collision_mask = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1954714297]
-position = Vector2(-40, -16)
+position = Vector2(-40, -4)
 texture = SubResource("AtlasTexture_y4xun")
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1446510023]
-position = Vector2(40, -16)
+position = Vector2(40, -4)
 texture = SubResource("AtlasTexture_3bjlh")
 
 [node name="Sprite2D5" type="Sprite2D" parent="." unique_id=949271725]
-position = Vector2(16, -8)
+position = Vector2(16, 4)
 texture = SubResource("AtlasTexture_17j5i")
 
 [node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1037742538]
-position = Vector2(-16, -8)
+position = Vector2(-16, 4)
 texture = SubResource("AtlasTexture_17j5i")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=498922163]
-position = Vector2(-16, -16)
+position = Vector2(-17, -4)
 texture = SubResource("AtlasTexture_o304a")
 
 [node name="Sprite2D7" type="Sprite2D" parent="." unique_id=753361636]
-position = Vector2(16, -16)
+position = Vector2(17, -4)
 texture = SubResource("AtlasTexture_o304a")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=586669888]
-position = Vector2(-16, -24)
+position = Vector2(-17, -13)
 texture = SubResource("AtlasTexture_fs5gd")
 
 [node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1890160551]
-position = Vector2(16, -24)
+position = Vector2(17, -13)
 texture = SubResource("AtlasTexture_fs5gd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=440692879]
-position = Vector2(0, -13.375)
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_vhrv3")

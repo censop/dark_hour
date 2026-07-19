@@ -7,6 +7,11 @@ public partial class Player : CharacterBody2D
 	[Export] private float _walkSpeed = 60.0f;
 	[Export] private float _runSpeed = 100.0f;
 
+    public CharacterBody2D GrabbedObject = null;
+    private bool _isGrabbing = false;
+    [Export] private float _pushPullSpeed = 40.0f;
+
+
 	public bool IsInteracting = false;
 
 
@@ -29,6 +34,17 @@ public partial class Player : CharacterBody2D
 
     public override void _PhysicsProcess(double delta)
 	{
+        if (Input.IsActionPressed("interact") && GrabbedObject != null)
+        {
+            _isGrabbing = true;
+
+        }
+        else
+        {
+            _isGrabbing = false;
+        }
+
+
 		if (IsInteracting) 
         {
             Velocity = Vector2.Zero;

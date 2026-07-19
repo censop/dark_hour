@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cebby05jtdqna"]
+
+[ext_resource type="PackedScene" uid="uid://dcof068357k60" path="res://Scenes/Props/Doors/LockedDoor001/LockedDoor001.tscn" id="1_tegr3"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_47v3n"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgfff"]
+atlas = ExtResource("2_47v3n")
+region = Rect2(64, 336, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47v3n"]
+atlas = ExtResource("2_47v3n")
+region = Rect2(64, 336, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2k7k"]
+atlas = ExtResource("2_47v3n")
+region = Rect2(112, 832, 16, 16)
+
+[node name="LockedDoor002" unique_id=1643899151 instance=ExtResource("1_tegr3")]
+DoorId = "Door_002"
+
+[node name="Sprite2D" parent="Sprites" parent_id_path=PackedInt32Array(1678634123) index="0" unique_id=1521458141]
+texture = SubResource("AtlasTexture_pgfff")
+
+[node name="Sprite2D2" parent="Sprites" parent_id_path=PackedInt32Array(1678634123) index="1" unique_id=226985261]
+texture = SubResource("AtlasTexture_47v3n")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprites" parent_id_path=PackedInt32Array(1678634123) index="2" unique_id=2071459463]
+position = Vector2(-8, -26)
+texture = SubResource("AtlasTexture_k2k7k")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 6)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprites" parent_id_path=PackedInt32Array(1678634123) index="3" unique_id=343102219]
+position = Vector2(8, -26)
+texture = SubResource("AtlasTexture_k2k7k")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 6)
+
+[node name="InteractionArea" parent="." index="2" unique_id=1261220341]
+visible = false
