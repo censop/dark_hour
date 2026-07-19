@@ -7,9 +7,8 @@
 atlas = ExtResource("2_eqbxl")
 region = Rect2(80, 384, 32, 48)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iv3sa"]
-radius = 9.0
-height = 42.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pkgv0"]
+size = Vector2(19, 23)
 
 [node name="BedDown" unique_id=1463422088 instance=ExtResource("1_4h5xe")]
 
@@ -17,4 +16,5 @@ height = 42.0
 texture = SubResource("AtlasTexture_pdqrr")
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
-shape = SubResource("CapsuleShape2D_iv3sa")
+position = Vector2(-0.5, -7.5)
+shape = SubResource("RectangleShape2D_pkgv0")
