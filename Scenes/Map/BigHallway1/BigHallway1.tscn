@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_jwv1s"]
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="3_yk2qd"]
 [ext_resource type="PackedScene" uid="uid://csxsuqqsmhjev" path="res://Scenes/Props/Furniture/Chairs/3BlueChairBack/3BlueChairBack.tscn" id="4_jwv1s"]
+[ext_resource type="PackedScene" uid="uid://dhr6buajtas0u" path="res://Scenes/Props/MovableFurniture/MovableFurnitureBase/MoveableFurnitureBase.tscn" id="5_8snl3"]
 [ext_resource type="PackedScene" uid="uid://dftqlfll6qrdj" path="res://Scenes/Props/Furniture/Chairs/3BlueChairFront/3BlueChairFront.tscn" id="5_yk2qd"]
 [ext_resource type="PackedScene" uid="uid://dj2q61pxn1h72" path="res://Scenes/Props/Furniture/Plants/BigPlant/BigPlant.tscn" id="6_vtmhj"]
 [ext_resource type="PackedScene" uid="uid://du4oicknvmdpb" path="res://Scenes/Props/Furniture/Shelves/BigShelf1/BigShelf1.tscn" id="7_bblp8"]
@@ -3302,3 +3303,5 @@ position = Vector2(80, 77)
 
 [node name="DoorKey" parent="." unique_id=519018229 instance=ExtResource("15_30ep5")]
 position = Vector2(49, 0)
+
+[node name="MoveableFurnitureBase" parent="." unique_id=990666621 instance=ExtResource("5_8snl3")]

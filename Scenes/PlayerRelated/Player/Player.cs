@@ -44,21 +44,43 @@ public partial class Player : CharacterBody2D
             _isGrabbing = false;
         }
 
+        Vector2 inputDir = Input.GetVector("walk_left", "walk_right", "walk_up", "walk_down");
 
-		if (IsInteracting) 
+        if (_isGrabbing && inputDir != Vector2.Zero)
         {
-            Velocity = Vector2.Zero;
-            MoveAndSlide();
-            return;
+            Vector2 step = inputDir * _pushPullSpeed * (float)delta;
+
+            AddCollisionExceptionWith(GrabbedObject);
+            GrabbedObject.AddCollisionExceptionWith(this);
+
+            KinematicCollision2D playerCol = MoveAndCollide(step, testOnly: true);
+            KinematicCollision2D boxCol = GrabbedObject.MoveAndCollide(step, testOnly: true);
+
+            if (playerCol == null && boxCol == null)
+            {
+                MoveAndCollide(step);
+                GrabbedObject.MoveAndCollide(step);
+            }
+
+            RemoveCollisionExceptionWith(GrabbedObject);
+            GrabbedObject.RemoveCollisionExceptionWith(this);
         }
-
-		Vector2 inputDir = Input.GetVector("walk_left", "walk_right", "walk_up", "walk_down");
-        Velocity = inputDir * _walkSpeed;
-        MoveAndSlide();
-
-        if (Input.IsActionJustPressed("interact"))
+        else
         {
-            StartInteraction();
+            if (IsInteracting) 
+            {
+                Velocity = Vector2.Zero;
+                MoveAndSlide();
+                return;
+            }
+
+            Velocity = inputDir * _walkSpeed;
+            MoveAndSlide();
+
+            if (Input.IsActionJustPressed("interact"))
+            {
+                StartInteraction();
+            }
         }
     }
 

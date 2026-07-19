@@ -3,13 +3,25 @@ using System;
 
 public partial class MoveableFurnitureBase : CharacterBody2D
 {
-	// Called when the node enters the scene tree for the first time.
+	[Export] Area2D _interactionArea;
 	public override void _Ready()
 	{
+		_interactionArea.BodyEntered += OnBodyEntered;
+		
+		_interactionArea.BodyExited += OnBodyExited;
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+    private void OnBodyEntered(Node2D body)
+    {
+        if (body is Player player) player.GrabbedObject = this; 
+    }
+
+
+    private void OnBodyExited(Node2D body)
+    {
+        if (body is Player player)
+		{
+			if (player.GrabbedObject == this) player.GrabbedObject = null; 
+		} 
+    }
 }

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dhr6buajtas0u"]
 
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="1_bic76"]
+[ext_resource type="Script" uid="uid://c5p552xjcv37y" path="res://Scenes/Props/MovableFurniture/MovableFurnitureBase/MoveableFurnitureBase.cs" id="1_f75fk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y4xun"]
 atlas = ExtResource("1_bic76")
@@ -13,9 +14,11 @@ size = Vector2(19, 22.5)
 radius = 13.0
 height = 50.0
 
-[node name="MoveableFurnitureBase" type="CharacterBody2D" unique_id=990666621]
+[node name="MoveableFurnitureBase" type="CharacterBody2D" unique_id=990666621 node_paths=PackedStringArray("_interactionArea")]
 collision_layer = 8
-collision_mask = 4
+collision_mask = 12
+script = ExtResource("1_f75fk")
+_interactionArea = NodePath("Area2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1954714297]
 position = Vector2(0, -13)
@@ -27,6 +30,8 @@ shape = SubResource("RectangleShape2D_vhrv3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2143934371]
 visible = false
+collision_layer = 8
+collision_mask = 4
 
 [node name="InteractionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=477013390]
 position = Vector2(0, -13)
