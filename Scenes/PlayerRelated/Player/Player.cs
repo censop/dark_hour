@@ -9,7 +9,7 @@ public partial class Player : CharacterBody2D
 
     public CharacterBody2D GrabbedObject = null;
     private bool _isGrabbing = false;
-    [Export] private float _pushPullSpeed = 40.0f;
+    [Export] private float _pushPullSpeed = 20.0f;
 
 
 	public bool IsInteracting = false;
@@ -49,6 +49,7 @@ public partial class Player : CharacterBody2D
         if (_isGrabbing && inputDir != Vector2.Zero)
         {
             Vector2 step = inputDir * _pushPullSpeed * (float)delta;
+            Velocity = inputDir * _pushPullSpeed;
 
             AddCollisionExceptionWith(GrabbedObject);
             GrabbedObject.AddCollisionExceptionWith(this);
@@ -60,6 +61,11 @@ public partial class Player : CharacterBody2D
             {
                 MoveAndCollide(step);
                 GrabbedObject.MoveAndCollide(step);
+            }
+            else 
+            {       
+                // for animation
+                Velocity = Vector2.Zero; 
             }
 
             RemoveCollisionExceptionWith(GrabbedObject);
