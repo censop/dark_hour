@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bwnxnc0ehvdon"]
+
+[ext_resource type="PackedScene" uid="uid://c63do8eq2x6gy" path="res://Scenes/Props/Furniture/Beds/BedLeft/BedLeft.tscn" id="1_aupal"]
+
+[node name="BedRight" unique_id=1463422088 instance=ExtResource("1_aupal")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+flip_h = true

@@ -3,6 +3,10 @@
 [ext_resource type="TileSet" uid="uid://cxplob46no57i" path="res://Resources/TileSets/PlaceholderBackgroundTileSet.tres" id="1_55d3o"]
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_u1goi"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_h4wmk"]
+[ext_resource type="PackedScene" uid="uid://tgiiyec0utmw" path="res://Scenes/Props/Furniture/Cupboards/BigCupboard/BigCupboard.tscn" id="4_u1goi"]
+[ext_resource type="PackedScene" uid="uid://c63do8eq2x6gy" path="res://Scenes/Props/Furniture/Beds/BedLeft/BedLeft.tscn" id="5_h4wmk"]
+[ext_resource type="PackedScene" uid="uid://bwnxnc0ehvdon" path="res://Scenes/Props/Furniture/Beds/BedRight/BedRight.tscn" id="6_kdek6"]
+[ext_resource type="PackedScene" uid="uid://2tsnbj83usc6" path="res://Scenes/Props/Furniture/Cupboards/SideSmallCupboard/SideSmallCupboard.tscn" id="7_5ud5c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_h4wmk")
@@ -3228,3 +3232,24 @@ tile_set = SubResource("TileSet_m6a6t")
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD+//7/AAALADUAAAD+//3/AAALADQAAAD9//7/AAAHADUAAAD9//3/AAAHADQAAAD8//7/AAAGADUAAAD8//3/AAAGADQAAAADAP7/AAALADUAAAADAP3/AAALADQAAAACAP7/AAAHADUAAAACAP3/AAAHADQAAAABAP7/AAAGADUAAAABAP3/AAAGADQAAAA=")
 tile_set = SubResource("TileSet_x618o")
+
+[node name="Furnitures" type="Node2D" parent="." unique_id=59738742]
+y_sort_enabled = true
+
+[node name="SmallCupboard" parent="Furnitures" unique_id=1463422088 instance=ExtResource("4_u1goi")]
+position = Vector2(-41, -14)
+
+[node name="SmallCupboard2" parent="Furnitures" unique_id=1120452221 instance=ExtResource("4_u1goi")]
+position = Vector2(40, -14)
+
+[node name="BedLeft" parent="Furnitures" unique_id=1268081371 instance=ExtResource("5_h4wmk")]
+position = Vector2(-32, 14)
+
+[node name="BedRight" parent="Furnitures" unique_id=227613207 instance=ExtResource("6_kdek6")]
+position = Vector2(32, 14)
+
+[node name="SideSmallCupboard" parent="Furnitures" unique_id=114908693 instance=ExtResource("7_5ud5c")]
+position = Vector2(-42, 27)
+
+[node name="SideSmallCupboard2" parent="Furnitures" unique_id=689596438 instance=ExtResource("7_5ud5c")]
+position = Vector2(42, 27)

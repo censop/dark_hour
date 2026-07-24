@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://c63do8eq2x6gy"]
 
-[ext_resource type="PackedScene" uid="uid://kff1pe2dq3rr" path="res://Scenes/Props/Furniture/FurnitureBase/FurnitureBase.tscn" id="1_lc0bq"]
-[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_m4ma0"]
+[ext_resource type="PackedScene" uid="uid://kff1pe2dq3rr" path="res://Scenes/Props/Furniture/FurnitureBase/FurnitureBase.tscn" id="1_u56ca"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_e02yj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sbkno"]
-atlas = ExtResource("2_m4ma0")
+atlas = ExtResource("2_e02yj")
 region = Rect2(176, 1136, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lc0bq"]
 size = Vector2(31, 14)
 
-[node name="BedSide" unique_id=1463422088 instance=ExtResource("1_lc0bq")]
+[node name="BedLeft" unique_id=1463422088 instance=ExtResource("1_u56ca")]
 
 [node name="Sprite2D" parent="." index="0" unique_id=1954714297]
 position = Vector2(0, -12)

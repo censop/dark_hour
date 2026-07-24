@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://d77an4oemjgt"]
 
-[ext_resource type="PackedScene" uid="uid://c63do8eq2x6gy" path="res://Scenes/Props/Furniture/Beds/BedSide/BedSide.tscn" id="1_dnb6q"]
+[ext_resource type="PackedScene" uid="uid://c63do8eq2x6gy" path="res://Scenes/Props/Furniture/Beds/BedLeft/BedLeft.tscn" id="1_dnb6q"]
 [ext_resource type="PackedScene" uid="uid://cjjpaumogy2sp" path="res://Scenes/Props/Furniture/Cupboards/DoubleBigCupboard/DoubleBigCupboard.tscn" id="3_egpu8"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="4_5u4rw"]
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="5_2eovg"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dadx20lwjgn5c" path="res://Scenes/Props/LightSources/Lamp/Lamp.tscn" id="7_2eovg"]
 [ext_resource type="PackedScene" uid="uid://cdsmiohg1o37h" path="res://Scenes/Props/Furniture/Plants/ThinPlant/ThinPlant.tscn" id="7_lcvn7"]
 [ext_resource type="PackedScene" uid="uid://2tsnbj83usc6" path="res://Scenes/Props/Furniture/Cupboards/SideSmallCupboard/SideSmallCupboard.tscn" id="9_fbvsr"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("4_5u4rw")
