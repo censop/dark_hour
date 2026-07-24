@@ -37,64 +37,64 @@ public partial class Flashlight : Node2D
    		}	
 	}
 
-    public override void _ExitTree()
-    {
-        SignalHub.Instance.OnBatteryUsed -= OnBatteryAcquired;
+	public override void _ExitTree()
+	{
+		SignalHub.Instance.OnBatteryUsed -= OnBatteryAcquired;
 		SignalHub.Instance.OnPlayerExitedLight -= OnLightExited;
 		SignalHub.Instance.OnPlayerEnterredLight -= OnLightEntered;
-    }
+	}
 
-    private void OnBatteryAcquired()
-    {
+	private void OnBatteryAcquired()
+	{
 		GD.Print("resetting the light");
-        _pointLight.Enabled = true;
+		_pointLight.Enabled = true;
 		_pointLight.Scale = new Vector2(_maxLightScale, _maxLightScale);
 
 		_batteryTimer.WaitTime = _maxBatteryTime;
 		_batteryTimer.Start();
-    }
+	}
 
 	private void OnLightExited()
-    {
+	{
 		ContinueFlashlight();
-        if (GlobalVariables.BatteryTimePercentage == 0)
+		if (GlobalVariables.BatteryTimePercentage == 0)
 		{
 			_deathTimer.Start();
 			GD.Print("Death timer started");
 		}
-    }
+	}
 
 	private void OnLightEntered()
-    {
-        PauseFlashlight();
-    }
+	{
+		PauseFlashlight();
+	}
 
-    private async void OnBatteryDead()
-    {
-        SignalHub.EmitOnBatteryDead();
+	private async void OnBatteryDead()
+	{
+		SignalHub.EmitOnBatteryDead();
 		_deathTimer.Start();
 		GD.Print("Death timer started");
 		Scale = new Vector2(0, 0);
 		GlobalVariables.BatteryTimePercentage = 0;
-    }
+	}
 	
 	private void OnDeathTimerOut()
-    {
-        if (GlobalVariables.IsPlayerInLight == false && GlobalVariables.BatteryTimePercentage == 0) //checking if player is in the safe area and if new battery wasnt acquired since the deathtimer started
+	{
+		if (GlobalVariables.IsPlayerInLight == false && GlobalVariables.BatteryTimePercentage == 0) //checking if player is in the safe area and if new battery wasnt acquired since the deathtimer started
 		{
 			SignalHub.EmitOnPlayerDead(); //for now since the only way the player dies is if battery is dead
 			GD.Print("Death timer timeout");
 		}
-    }
+	}
 
-    public override void _Process(double delta)
+	public override void _Process(double delta)
 	{
 		if (!_batteryTimer.IsStopped())
-        {
-            float timeLeftPercent = (float)(_batteryTimer.TimeLeft / _maxBatteryTime);
+		{
+			float timeLeftPercent = (float)(_batteryTimer.TimeLeft / _maxBatteryTime);
 			GlobalVariables.BatteryTimePercentage = timeLeftPercent;
-            Scale = new Vector2(timeLeftPercent, timeLeftPercent);
-        }
+			Scale = new Vector2(timeLeftPercent, timeLeftPercent);
+		}
 
 	}
 
