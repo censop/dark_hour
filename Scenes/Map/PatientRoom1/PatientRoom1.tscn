@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://cdsmiohg1o37h" path="res://Scenes/Props/Furniture/Plants/ThinPlant/ThinPlant.tscn" id="7_lcvn7"]
 [ext_resource type="PackedScene" uid="uid://2tsnbj83usc6" path="res://Scenes/Props/Furniture/Cupboards/SideSmallCupboard/SideSmallCupboard.tscn" id="9_fbvsr"]
 
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("4_5u4rw")
 0:0/0 = 0
@@ -3237,7 +3236,6 @@ tile_map_data = PackedByteArray("AAAGAP//AAAHADUAAAAGAP7/AAAHADQAAAAFAP//AAAKADU
 tile_set = SubResource("TileSet_x618o")
 
 [node name="Lamp" parent="." unique_id=950535501 instance=ExtResource("7_2eovg")]
-visible = false
 z_index = 5
 position = Vector2(-4, 28)
 

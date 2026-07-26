@@ -3,9 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://s65ivkdv8lyc" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/maternity_light.png" id="1_5tstd"]
 [ext_resource type="Script" uid="uid://dyycalsph7r1i" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.cs" id="1_26mvl"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rl8t"]
-radius = 9.0
-height = 36.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4uy43"]
+size = Vector2(12, 6)
 
 [sub_resource type="Gradient" id="Gradient_vvdyl"]
 offsets = PackedFloat32Array(0, 0.704)
@@ -34,7 +33,8 @@ _pointLight = NodePath("PointLight2D")
 _lightArea2D = NodePath("LightArea")
 
 [node name="LampCollisionShape" type="CollisionShape2D" parent="." unique_id=174495371]
-shape = SubResource("CapsuleShape2D_0rl8t")
+position = Vector2(-6, 13)
+shape = SubResource("RectangleShape2D_4uy43")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1886647636]
 texture = ExtResource("1_5tstd")

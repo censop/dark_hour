@@ -4,6 +4,7 @@ using System;
 public partial class SwitchLight : LightSource
 {
 	[Export] string SwitchLightID = "SwitchLight_001";
+    [Export] bool _checkPointLight = true;
 	[Export] Area2D _interactionShape;
 
 	private bool _isLightOn;
@@ -34,20 +35,45 @@ public partial class SwitchLight : LightSource
 
 
     public override void _UnhandledInput(InputEvent @event)
+{
+    if (@event.IsActionPressed("interact") && _canInteract)
     {
-        if (@event.IsActionPressed("interact") && _canInteract)
-		{
-			_isLightOn = !_isLightOn;
-			GD.Print($"Light state: {_isLightOn}");
+        if (_checkPointLight && _isLightOn)
+        {
+            return; 
+        }
 
-            if (_isLightOn)
+        _isLightOn = !_isLightOn;
+        GD.Print($"Light state: {_isLightOn}");
+
+        if (_checkPointLight)
+        {
+            if (!GlobalVariables.TurntOnLights.Contains(SwitchLightID))
+            {
                 GlobalVariables.TurntOnLights.Add(SwitchLightID);
+            }
+            
+            SignalHub.EmitOnSaveGame();
+            SetLightState(true);
+            _canInteract = false;
+            _interactionShape.SetDeferred(Area2D.PropertyName.Monitoring, false);
+        }
+        
+        else
+        {
+            if (_isLightOn)
+            {
+                if (!GlobalVariables.TurntOnLights.Contains(SwitchLightID))
+                    GlobalVariables.TurntOnLights.Add(SwitchLightID);
+            }
             else
+            {
                 GlobalVariables.TurntOnLights.Remove(SwitchLightID);
-
+            }
             SetLightState(_isLightOn);
-		}
+        }
     }
+}
 
 	private void SetLightState(bool turnOn)
     {

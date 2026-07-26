@@ -3226,3 +3226,5 @@ tile_set = SubResource("TileSet_m6a6t")
 [node name="WallsBack" type="TileMapLayer" parent="Walls" unique_id=1053688348]
 y_sort_enabled = true
 tile_set = SubResource("TileSet_x618o")
+
+[node name="Furniture" type="Node2D" parent="." unique_id=495333549]
