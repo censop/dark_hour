@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dkj1kqbtgivga"]
+
+[ext_resource type="PackedScene" uid="uid://d3tj0ndn26r26" path="res://Scenes/Props/Furniture/Chairs/BlueChairLeft/BlueChairLeft.tscn" id="1_yvrjo"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_rvqay"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebj1m"]
+atlas = ExtResource("2_rvqay")
+region = Rect2(112, 224, 16, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_el1xi"]
+size = Vector2(12, 4)
+
+[node name="YellowChairFront" unique_id=1463422088 instance=ExtResource("1_yvrjo")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(0, -7)
+texture = SubResource("AtlasTexture_ebj1m")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
+shape = SubResource("RectangleShape2D_el1xi")

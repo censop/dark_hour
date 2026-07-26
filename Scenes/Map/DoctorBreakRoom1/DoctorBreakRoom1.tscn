@@ -4,6 +4,20 @@
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_4uxpe"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_ttdf4"]
 [ext_resource type="PackedScene" uid="uid://d3o2bru1sdb0w" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.tscn" id="4_sug5m"]
+[ext_resource type="PackedScene" uid="uid://cl4fnv4w6p5tq" path="res://Scenes/Props/Furniture/VendingMachines/VendingMachine3/VendingMachine3.tscn" id="5_ofxch"]
+[ext_resource type="PackedScene" uid="uid://5r52rsrfoxcr" path="res://Scenes/Props/Furniture/VendingMachines/CoffeeMachine/CoffeeMachine.tscn" id="7_4uxpe"]
+[ext_resource type="PackedScene" uid="uid://yu7yolwuubjc" path="res://Scenes/Props/Furniture/Tables/GlassTableFull1/GlassTableFull1.tscn" id="8_c1j4a"]
+[ext_resource type="PackedScene" uid="uid://dl58701424wnf" path="res://Scenes/Props/Furniture/Trash/TrashFull1/TrashFull1.tscn" id="8_ttdf4"]
+[ext_resource type="PackedScene" uid="uid://dkj1kqbtgivga" path="res://Scenes/Props/Furniture/Chairs/YellowChairFront/YellowChairFront.tscn" id="9_0d67h"]
+[ext_resource type="PackedScene" uid="uid://bhdpimayik8b3" path="res://Scenes/Props/Furniture/Chairs/YellowChairBack/YellowChairBack.tscn" id="9_mkmtw"]
+[ext_resource type="PackedScene" uid="uid://dc0arts6ykej1" path="res://Scenes/Props/Furniture/Chairs/YellowChairLeft/YellowChairLeft.tscn" id="10_wlyws"]
+[ext_resource type="PackedScene" uid="uid://bos50nl8nuthc" path="res://Scenes/Props/Furniture/Tables/GlassTableEmpty/GlassTableEmpty.tscn" id="12_ptdk8"]
+[ext_resource type="PackedScene" uid="uid://bmgcsifv5vjsp" path="res://Scenes/Props/Furniture/Chairs/YellowChairRight/YellowChairRight.tscn" id="13_o8bcm"]
+[ext_resource type="PackedScene" uid="uid://cixcywfyj1yhj" path="res://Scenes/Props/Furniture/Tables/GlassTableFull2/GlassTableFull2.tscn" id="14_ptdk8"]
+[ext_resource type="PackedScene" uid="uid://didcwqp8c38ts" path="res://Scenes/Props/Furniture/Cupboards/DrawerDeskFull1/DrawerDeskFull1.tscn" id="15_o8bcm"]
+[ext_resource type="PackedScene" uid="uid://cjjpaumogy2sp" path="res://Scenes/Props/Furniture/Cupboards/DoubleBigCupboard/DoubleBigCupboard.tscn" id="16_nlg81"]
+[ext_resource type="PackedScene" uid="uid://cvca1rb5cltdc" path="res://Scenes/Props/Furniture/Shelves/ShelfSide/ShelfSide.tscn" id="16_oaeeq"]
+[ext_resource type="PackedScene" uid="uid://bp4stfk81p48p" path="res://Scenes/Props/Furniture/Decorations/Phone/PhoneLeft/PhoneLeft.tscn" id="17_nlg81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_ttdf4")
@@ -3203,6 +3217,14 @@ terrain_set_0/terrain_0/name = "HospitalWalls"
 terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5fll"]
+atlas = ExtResource("3_ttdf4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oaeeq"]
+atlas = ExtResource("3_ttdf4")
+region = Rect2(0, 592, 16, 32)
+
 [node name="DoctorBreakRoom1" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3217,21 +3239,84 @@ y_sort_enabled = true
 [node name="WallsFront" type="TileMapLayer" parent="Walls" unique_id=1939813532]
 z_index = 2
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAGAAUAAAALADUAAAAGAAQAAAALADQAAAAFAAUAAAAHADUAAAAFAAQAAAAHADQAAAAEAAUAAAAHADUAAAAEAAQAAAAHADQAAAADAAUAAAAHADUAAAADAAQAAAAHADQAAAACAAUAAAAHADUAAAACAAQAAAAHADQAAAABAAUAAAAHADUAAAABAAQAAAAHADQAAAAAAAUAAAAHADUAAAAAAAQAAAAHADQAAAD//wUAAAAGADUAAAD//wQAAAAGADQAAAAAAAEAAAALADUAAAAAAAAAAAALADQAAAD//wEAAAAHADUAAAD//wAAAAAHADQAAAD+/wEAAAAHADUAAAD+/wAAAAAHADQAAAD9/wEAAAAHADUAAAD9/wAAAAAHADQAAAD8/wEAAAAHADUAAAD8/wAAAAAHADQAAAD7/wEAAAAGADUAAAD7/wAAAAAGADQAAAA=")
+tile_map_data = PackedByteArray("AAAGAAUAAAALADUAAAAGAAQAAAALADQAAAAFAAUAAAAHADUAAAAFAAQAAAAHADQAAAAEAAUAAAAHADUAAAAEAAQAAAAHADQAAAADAAUAAAAHADUAAAADAAQAAAAHADQAAAACAAUAAAAHADUAAAACAAQAAAAHADQAAAABAAUAAAAHADUAAAABAAQAAAAHADQAAAAAAAUAAAAHADUAAAAAAAQAAAAHADQAAAD//wUAAAAGADUAAAD//wQAAAAGADQAAAAAAAAAAAALADQAAAD//wEAAAAHADUAAAD//wAAAAAHADQAAAD+/wEAAAAHADUAAAD+/wAAAAAHADQAAAD9/wEAAAAHADUAAAD9/wAAAAAHADQAAAD8/wEAAAAHADUAAAD8/wAAAAAHADQAAAD7/wEAAAAGADUAAAD7/wAAAAAGADQAAAAAAAEAAAALADUAAAA=")
 tile_set = ExtResource("2_4uxpe")
 
 [node name="WallsSide" type="TileMapLayer" parent="Walls" unique_id=127048269]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAAAAMAAAALADUAAAAAAAQAAAALADUAAAAGAP3/AAALADUAAAAGAP7/AAALADUAAAAGAP//AAALADUAAAAGAAAAAAALADUAAAAGAAEAAAALADUAAAAGAAIAAAALADUAAAAGAAMAAAALADUAAAAGAAQAAAALADUAAAAAAAIAAAALADUAAAD///3/AAAGADUAAAD///7/AAAGADUAAAA=")
+tile_map_data = PackedByteArray("AAAAAAMAAAALADUAAAAAAAQAAAALADUAAAAGAP3/AAALADUAAAAGAP7/AAALADUAAAAGAP//AAALADUAAAAGAAAAAAALADUAAAAGAAEAAAALADUAAAAGAAIAAAALADUAAAAGAAMAAAALADUAAAAGAAQAAAALADUAAAAAAAIAAAALADUAAAD///3/AAAGADUAAAA=")
 tile_set = SubResource("TileSet_m6a6t")
 
 [node name="WallsBack" type="TileMapLayer" parent="Walls" unique_id=1053688348]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAAAP7/AAALADUAAAAAAP3/AAALADQAAAD///7/AAAHADUAAAD///3/AAAHADQAAAD+//7/AAAHADUAAAD+//3/AAAHADQAAAD7//7/AAAGADUAAAD7//3/AAAGADQAAAAGAPz/AAALADUAAAAGAPv/AAALADQAAAAFAPz/AAAHADUAAAAFAPv/AAAHADQAAAAEAPz/AAAHADUAAAAEAPv/AAAHADQAAAADAPz/AAAHADUAAAADAPv/AAAHADQAAAACAPz/AAAHADUAAAACAPv/AAAHADQAAAABAPz/AAAHADUAAAABAPv/AAAHADQAAAAAAPz/AAAHADUAAAAAAPv/AAAHADQAAAD///z/AAAGADUAAAD///v/AAAGADQAAAD8//3/AAAJADQAAAD8//7/AAAJADUAAAD9//3/AAAKADQAAAD9//7/AAAKADUAAAA=")
+tile_map_data = PackedByteArray("AAAAAP7/AAALADUAAAAAAP3/AAALADQAAAD///7/AAAHADUAAAD///3/AAAHADQAAAD+//7/AAAHADUAAAD+//3/AAAHADQAAAD7//7/AAAGADUAAAD7//3/AAAGADQAAAAGAPz/AAALADUAAAAGAPv/AAALADQAAAAFAPz/AAAHADUAAAAFAPv/AAAHADQAAAAEAPz/AAAHADUAAAAEAPv/AAAHADQAAAADAPz/AAAHADUAAAADAPv/AAAHADQAAAACAPz/AAAHADUAAAACAPv/AAAHADQAAAABAPz/AAAHADUAAAABAPv/AAAHADQAAAAAAPz/AAAHADUAAAAAAPv/AAAHADQAAAD///z/AAAGADUAAAD///v/AAAGADQAAAD9//3/AAAKADQAAAD9//7/AAAKADUAAAD8//3/AAAJADQAAAD8//7/AAAJADUAAAA=")
 tile_set = SubResource("TileSet_x618o")
 
 [node name="Furniture" type="Node2D" parent="." unique_id=1604458863]
+y_sort_enabled = true
+
+[node name="VendingMachine3" parent="Furniture" unique_id=1953184709 instance=ExtResource("5_ofxch")]
+position = Vector2(23, -44)
+
+[node name="Sprite2D" type="Sprite2D" parent="Furniture" unique_id=941169472]
+position = Vector2(-24, -32)
+texture = SubResource("AtlasTexture_k5fll")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Furniture" unique_id=1796751564]
+position = Vector2(71, -67)
+texture = SubResource("AtlasTexture_oaeeq")
+
+[node name="CoffeeMachine" parent="Furniture" unique_id=48482521 instance=ExtResource("7_4uxpe")]
+position = Vector2(50, -43)
+
+[node name="TrashFull1" parent="Furniture" unique_id=1292822882 instance=ExtResource("8_ttdf4")]
+position = Vector2(89, 65)
+
+[node name="GlassTableFull1" parent="Furniture" unique_id=1463422088 instance=ExtResource("8_c1j4a")]
+position = Vector2(33, -10)
+
+[node name="YellowChairFront" parent="Furniture" unique_id=1187743783 instance=ExtResource("9_0d67h")]
+position = Vector2(72, 3)
+
+[node name="YellowChairLeft" parent="Furniture" unique_id=1948604801 instance=ExtResource("10_wlyws")]
+position = Vector2(48, -15)
+
+[node name="YellowChairLeft2" parent="Furniture" unique_id=1672295638 instance=ExtResource("10_wlyws")]
+position = Vector2(50, 42)
+
+[node name="YellowChairBack" parent="Furniture" unique_id=1611300111 instance=ExtResource("9_mkmtw")]
+position = Vector2(32, -1)
+
+[node name="GlassTableEmpty" parent="Furniture" unique_id=1783958311 instance=ExtResource("12_ptdk8")]
+position = Vector2(35, 42)
+
+[node name="YellowChairRight" parent="Furniture" unique_id=1593631878 instance=ExtResource("13_o8bcm")]
+position = Vector2(55, 10)
+
+[node name="GlassTableFull2" parent="Furniture" unique_id=1320006477 instance=ExtResource("14_ptdk8")]
+position = Vector2(72, 18)
+
+[node name="YellowChairBack2" parent="Furniture" unique_id=1530264918 instance=ExtResource("9_mkmtw")]
+position = Vector2(67, 25)
+
+[node name="DrawerDeskFull1" parent="Furniture" unique_id=764257786 instance=ExtResource("15_o8bcm")]
+position = Vector2(81, -44)
+
+[node name="ShelfSide" parent="Furniture" unique_id=1671793515 instance=ExtResource("16_oaeeq")]
+position = Vector2(91, -3)
+
+[node name="ShelfSide2" parent="Furniture" unique_id=1430354097 instance=ExtResource("16_oaeeq")]
+position = Vector2(91, 29)
+
+[node name="DoubleBigCupboard" parent="Furniture" unique_id=1589231226 instance=ExtResource("16_nlg81")]
+position = Vector2(19, 84)
+
+[node name="DoubleBigCupboard2" parent="Furniture" unique_id=1849694567 instance=ExtResource("16_nlg81")]
+position = Vector2(50, 84)
+
+[node name="PhoneLeft" parent="Furniture" unique_id=1937741802 instance=ExtResource("17_nlg81")]
+position = Vector2(71, -51)
 
 [node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("4_sug5m")]
 y_sort_enabled = true
-position = Vector2(19, -48)
+position = Vector2(11, -41)

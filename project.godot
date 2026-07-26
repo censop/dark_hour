@@ -35,6 +35,10 @@ window/stretch/mode="viewport"
 
 project/assembly_name="DarkHour"
 
+[editor]
+
+naming/scene_name_casing=1
+
 [input]
 
 walk_up={

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b0yuw8pyi0shn"]
+
+[ext_resource type="PackedScene" uid="uid://c5yovcri7s4se" path="res://Scenes/Props/Furniture/VendingMachines/VendingMachine1/VendingMachine1.tscn" id="1_nvmlv"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_875mm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8sfg"]
+atlas = ExtResource("2_875mm")
+region = Rect2(224, 176, 32, 16)
+
+[node name="VendingMachine2" unique_id=1463422088 instance=ExtResource("1_nvmlv")]
+
+[node name="Sprite2D2" parent="." index="1" unique_id=557525825]
+texture = SubResource("AtlasTexture_x8sfg")

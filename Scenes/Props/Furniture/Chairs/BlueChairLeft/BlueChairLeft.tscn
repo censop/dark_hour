@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://d3tj0ndn26r26"]
+
+[ext_resource type="PackedScene" uid="uid://dyv85jeruflo0" path="res://Scenes/Props/Furniture/Chairs/BlueChairRight/BlueChairRight.tscn" id="1_holcr"]
+
+[node name="BlueChairLeft" unique_id=1463422088 instance=ExtResource("1_holcr")]

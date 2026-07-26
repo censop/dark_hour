@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://5r52rsrfoxcr"]
+
+[ext_resource type="PackedScene" uid="uid://kff1pe2dq3rr" path="res://Scenes/Props/Furniture/FurnitureBase/FurnitureBase.tscn" id="1_5vhw7"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_thuyo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmdi3"]
+atlas = ExtResource("2_thuyo")
+region = Rect2(64, 672, 32, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khfmw"]
+size = Vector2(20, 7.5)
+
+[node name="CoffeeMachine" unique_id=1463422088 instance=ExtResource("1_5vhw7")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+texture = SubResource("AtlasTexture_wmdi3")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
+position = Vector2(-1, 1.25)
+shape = SubResource("RectangleShape2D_khfmw")

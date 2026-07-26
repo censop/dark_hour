@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c5yovcri7s4se"]
+
+[ext_resource type="PackedScene" uid="uid://c1rsmynljqvdi" path="res://Scenes/Props/Furniture/VendingMachines/EmptyVendingMachine/EmptyVendingMachine.tscn" id="1_tbbq7"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_xqnj8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym38e"]
+atlas = ExtResource("2_xqnj8")
+region = Rect2(224, 160, 32, 16)
+
+[node name="VendingMachine1" unique_id=1463422088 instance=ExtResource("1_tbbq7")]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1" unique_id=557525825]
+position = Vector2(0, -13)
+texture = SubResource("AtlasTexture_ym38e")
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=440692879]
+position = Vector2(0, 0)

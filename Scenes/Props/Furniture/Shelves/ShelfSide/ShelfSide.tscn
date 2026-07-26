@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cvca1rb5cltdc"]
+
+[ext_resource type="PackedScene" uid="uid://kff1pe2dq3rr" path="res://Scenes/Props/Furniture/FurnitureBase/FurnitureBase.tscn" id="1_xyd08"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_8oone"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tlbv"]
+atlas = ExtResource("2_8oone")
+region = Rect2(176, 144, 16, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7qpe2"]
+size = Vector2(8, 15.25)
+
+[node name="ShelfSide" unique_id=1463422088 instance=ExtResource("1_xyd08")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(-2, -15)
+texture = SubResource("AtlasTexture_2tlbv")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
+position = Vector2(1, -0.625)
+shape = SubResource("RectangleShape2D_7qpe2")

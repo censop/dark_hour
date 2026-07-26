@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bhdpimayik8b3"]
+
+[ext_resource type="PackedScene" uid="uid://dkj1kqbtgivga" path="res://Scenes/Props/Furniture/Chairs/YellowChairFront/YellowChairFront.tscn" id="1_ppek1"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_wgmob"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqw24"]
+atlas = ExtResource("2_wgmob")
+region = Rect2(176, 320, 16, 16)
+
+[node name="YellowChairBack" unique_id=1463422088 instance=ExtResource("1_ppek1")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+texture = SubResource("AtlasTexture_nqw24")

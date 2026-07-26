@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cixcywfyj1yhj"]
+
+[ext_resource type="PackedScene" uid="uid://yu7yolwuubjc" path="res://Scenes/Props/Furniture/Tables/GlassTableFull1/GlassTableFull1.tscn" id="1_6sigf"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_nqtjj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7y31q"]
+atlas = ExtResource("2_nqtjj")
+region = Rect2(128, 960, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sigf"]
+atlas = ExtResource("2_nqtjj")
+region = Rect2(96, 960, 16, 16)
+
+[node name="GlassTableFull2" unique_id=1463422088 instance=ExtResource("1_6sigf")]
+
+[node name="Sprite2D2" parent="." index="1" unique_id=715997774]
+texture = SubResource("AtlasTexture_7y31q")
+
+[node name="Sprite2D3" parent="." index="2" unique_id=709395283]
+texture = SubResource("AtlasTexture_6sigf")

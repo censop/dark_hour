@@ -9,7 +9,7 @@ public partial class LockedDoor001 : StaticBody2D
 	[Export] AnimatedSprite2D _doorLeft;
 	[Export] AnimatedSprite2D _doorRight;
 
-	bool _isOpen = false;
+	[Export] bool _isOpen = false;
 
 	private bool _isBodyInsideArea = false;
 
@@ -50,9 +50,8 @@ public partial class LockedDoor001 : StaticBody2D
     private void LockDoor()
     {
         _interactionShape.SetDeferred(CollisionShape2D.PropertyName.Disabled, false);
-		_doorLeft.Play("closeLeftDoor");
-		_doorRight.Play("closeRightDoor");
-
+		if (_doorLeft != null) _doorLeft.Play("closeLeftDoor");
+		if (_doorRight != null) _doorRight.Play("closeRightDoor");
 
     	GD.Print($"Door {DoorId} Locked!");
     }
@@ -60,8 +59,8 @@ public partial class LockedDoor001 : StaticBody2D
     private void UnlockDoor()
 	{
 		_interactionShape.SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
-		_doorLeft.Play("openLeftDoor");
-		_doorRight.Play("openRightDoor");
+		if (_doorLeft != null) _doorLeft.Play("openLeftDoor");
+		if (_doorRight != null) _doorRight.Play("openRightDoor");
 
 
     	GD.Print($"Door {DoorId} Unlocked!");

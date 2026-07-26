@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://yu7yolwuubjc"]
+
+[ext_resource type="PackedScene" uid="uid://bos50nl8nuthc" path="res://Scenes/Props/Furniture/Tables/GlassTableEmpty/GlassTableEmpty.tscn" id="1_q1k78"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_nl3ab"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ja351"]
+atlas = ExtResource("2_nl3ab")
+region = Rect2(112, 976, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqtnw"]
+atlas = ExtResource("2_nl3ab")
+region = Rect2(144, 976, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1k78"]
+atlas = ExtResource("2_nl3ab")
+region = Rect2(112, 960, 16, 16)
+
+[node name="GlassTableFull1" unique_id=1463422088 instance=ExtResource("1_q1k78")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(-1, 6)
+texture = SubResource("AtlasTexture_ja351")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1" unique_id=715997774]
+position = Vector2(7, -10)
+texture = SubResource("AtlasTexture_iqtnw")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="2" unique_id=709395283]
+position = Vector2(-9, -10)
+texture = SubResource("AtlasTexture_q1k78")

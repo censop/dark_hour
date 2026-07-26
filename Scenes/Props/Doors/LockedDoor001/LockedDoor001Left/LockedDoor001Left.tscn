@@ -1,57 +1,57 @@
-[gd_scene format=3 uid="uid://dcof068357k60"]
+[gd_scene format=3 uid="uid://cwkdicpwhsuad"]
 
-[ext_resource type="Script" uid="uid://difminmldqb81" path="res://Scenes/Props/Doors/LockedDoor001/LockedDoor001.cs" id="1_8735p"]
-[ext_resource type="Texture2D" uid="uid://bbo2ocpiop6yd" path="res://Assets/Sprites/ModernInteriors/Animations/animated_hospital_xraycabin_door.png" id="3_u5jcs"]
+[ext_resource type="Script" uid="uid://difminmldqb81" path="res://Scenes/Props/Doors/LockedDoor001/LockedDoor001.cs" id="1_e1noj"]
+[ext_resource type="Texture2D" uid="uid://bbo2ocpiop6yd" path="res://Assets/Sprites/ModernInteriors/Animations/animated_hospital_xraycabin_door.png" id="2_72f2s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u5jcs"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(80, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d24wm"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(96, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7c0o5"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(112, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jj43e"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(128, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfxpy"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(144, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5jdm4"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(0, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g6nxf"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(0, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6inge"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(16, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hu6ns"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(32, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x6n2q"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(48, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o3wmr"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(64, 0, 16, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofvtl"]
-atlas = ExtResource("3_u5jcs")
+atlas = ExtResource("2_72f2s")
 region = Rect2(80, 0, 16, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_8735p"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_esd77"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -101,90 +101,36 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_u5jcs"]
-resource_local_to_scene = true
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u5jcs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d24wm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7c0o5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jj43e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gfxpy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5jdm4")
-}],
-"loop": false,
-"name": &"closeRightDoor",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g6nxf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6inge")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hu6ns")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x6n2q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o3wmr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ofvtl")
-}],
-"loop": false,
-"name": &"openRightDoor",
-"speed": 10.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8735p"]
-size = Vector2(32, 10.125)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8npdx"]
+size = Vector2(17, 10.125)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hktxa"]
 radius = 17.0
 height = 72.0
 
-[node name="LockedDoor001" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_interactionShape", "_doorLeft", "_doorRight")]
+[node name="LockedDoor001Left" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_interactionShape", "_doorLeft", "_doorRight")]
 collision_layer = 8
 collision_mask = 28
-script = ExtResource("1_8735p")
+script = ExtResource("1_e1noj")
 _interactionArea = NodePath("InteractionArea")
 _interactionShape = NodePath("PhysicalCollisionShape")
 _doorLeft = NodePath("Sprites/LeftAnimatedDoor")
-_doorRight = NodePath("Sprites/RightAnimatedDoor")
+_doorRight = NodePath("")
 
 [node name="Sprites" type="Node2D" parent="." unique_id=1678634123]
 
 [node name="LeftAnimatedDoor" type="AnimatedSprite2D" parent="Sprites" unique_id=1614435581]
-position = Vector2(-9, -21)
-sprite_frames = SubResource("SpriteFrames_8735p")
-animation = &"openLeftDoor"
-
-[node name="RightAnimatedDoor" type="AnimatedSprite2D" parent="Sprites" unique_id=202179862]
-position = Vector2(7, -21)
-sprite_frames = SubResource("SpriteFrames_u5jcs")
-animation = &"openRightDoor"
-flip_h = true
+position = Vector2(0, -21)
+sprite_frames = SubResource("SpriteFrames_esd77")
+animation = &"closeLeftDoor"
+frame = 5
 
 [node name="PhysicalCollisionShape" type="CollisionShape2D" parent="." unique_id=1120102542]
-position = Vector2(-1, -4)
-shape = SubResource("RectangleShape2D_8735p")
+position = Vector2(0.5, -4)
+shape = SubResource("RectangleShape2D_8npdx")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1261220341]
+visible = false
 collision_layer = 9
 collision_mask = 4
 

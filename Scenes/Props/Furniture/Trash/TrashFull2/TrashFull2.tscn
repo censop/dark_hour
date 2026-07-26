@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dsu5rbd1atevc"]
+
+[ext_resource type="PackedScene" uid="uid://dl58701424wnf" path="res://Scenes/Props/Furniture/Trash/TrashFull1/TrashFull1.tscn" id="1_i4obf"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_0hhjj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhp74"]
+atlas = ExtResource("2_0hhjj")
+region = Rect2(16, 704, 16, 16)
+
+[node name="TrashFull2" unique_id=1463422088 instance=ExtResource("1_i4obf")]
+
+[node name="Sprite2D2" parent="." index="1" unique_id=347722116]
+texture = SubResource("AtlasTexture_lhp74")
