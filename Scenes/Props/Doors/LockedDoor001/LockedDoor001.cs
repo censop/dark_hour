@@ -6,7 +6,10 @@ public partial class LockedDoor001 : StaticBody2D
 	[Export] Area2D _interactionArea;
 	[Export] CollisionShape2D _interactionShape;
 	[Export] String DoorId = "Door_001";
-	[Export] Node2D _sprite;
+	[Export] AnimatedSprite2D _doorLeft;
+	[Export] AnimatedSprite2D _doorRight;
+
+	bool _isOpen = false;
 
 	private bool _isBodyInsideArea = false;
 
@@ -32,14 +35,34 @@ public partial class LockedDoor001 : StaticBody2D
     {
         if (@event.IsActionPressed("interact") && _isBodyInsideArea && PlayerHasKey())
 		{
-			UnlockDoor();
+			_isOpen = !_isOpen;
+			if (_isOpen)
+			{
+				UnlockDoor();
+			}
+			else
+			{
+				LockDoor();
+			}
 		}
     }
 
-	private void UnlockDoor()
+    private void LockDoor()
+    {
+        _interactionShape.SetDeferred(CollisionShape2D.PropertyName.Disabled, false);
+		_doorLeft.Play("closeLeftDoor");
+		_doorRight.Play("closeRightDoor");
+
+
+    	GD.Print($"Door {DoorId} Locked!");
+    }
+
+    private void UnlockDoor()
 	{
 		_interactionShape.SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
-		_sprite.Visible = false;
+		_doorLeft.Play("openLeftDoor");
+		_doorRight.Play("openRightDoor");
+
 
     	GD.Print($"Door {DoorId} Unlocked!");
 	}
