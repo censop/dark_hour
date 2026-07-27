@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bd50h4sd3l2oy"]
+
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="1_dsqvh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0yy4"]
+atlas = ExtResource("1_dsqvh")
+region = Rect2(32, 0, 32, 32)
+
+[node name="FullPano" type="Node2D" unique_id=1834497358]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1344060386]
+position = Vector2(0, -43)
+texture = SubResource("AtlasTexture_n0yy4")

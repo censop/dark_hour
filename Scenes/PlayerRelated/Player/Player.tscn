@@ -563,6 +563,7 @@ rotation_smoothing_enabled = true
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D" unique_id=353969182]
 
 [node name="GameUI" parent="Camera2D/CanvasLayer" unique_id=1781965203 instance=ExtResource("6_4wape")]
+visible = false
 
 [node name="PauseMenu" parent="Camera2D/CanvasLayer" unique_id=205763017 instance=ExtResource("6_t26db")]
 visible = false

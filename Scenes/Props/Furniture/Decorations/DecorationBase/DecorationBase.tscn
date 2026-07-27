@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cnchcft7ydosm"]
+
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="1_vnnt1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnnt1"]
+atlas = ExtResource("1_vnnt1")
+
+[node name="DecorationBase" type="Node2D" unique_id=566576977]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=843721400]
+texture = SubResource("AtlasTexture_vnnt1")

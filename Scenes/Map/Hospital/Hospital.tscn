@@ -15,10 +15,8 @@ script = ExtResource("1_35g8a")
 
 [node name="PatientRoom1" parent="." unique_id=1015740257 instance=ExtResource("2_p1612")]
 
-[node name="Player" parent="." unique_id=292045112 instance=ExtResource("1_7441k")]
-position = Vector2(-12, 26)
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
+visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="PatientRoom2" parent="." unique_id=1338243762 instance=ExtResource("4_dfmmv")]
@@ -35,3 +33,6 @@ position = Vector2(256, -169)
 
 [node name="DoctorBreakRoom1" parent="." unique_id=347422612 instance=ExtResource("8_m05l0")]
 position = Vector2(352, -168)
+
+[node name="Player" parent="." unique_id=292045112 instance=ExtResource("1_7441k")]
+position = Vector2(-12, 26)

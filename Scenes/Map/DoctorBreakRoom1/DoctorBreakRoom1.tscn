@@ -17,7 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://didcwqp8c38ts" path="res://Scenes/Props/Furniture/Cupboards/DrawerDeskFull1/DrawerDeskFull1.tscn" id="15_o8bcm"]
 [ext_resource type="PackedScene" uid="uid://cjjpaumogy2sp" path="res://Scenes/Props/Furniture/Cupboards/DoubleBigCupboard/DoubleBigCupboard.tscn" id="16_nlg81"]
 [ext_resource type="PackedScene" uid="uid://cvca1rb5cltdc" path="res://Scenes/Props/Furniture/Shelves/ShelfSide/ShelfSide.tscn" id="16_oaeeq"]
-[ext_resource type="PackedScene" uid="uid://bp4stfk81p48p" path="res://Scenes/Props/Furniture/Decorations/Phone/PhoneLeft/PhoneLeft.tscn" id="17_nlg81"]
+[ext_resource type="PackedScene" uid="uid://cmnjvqosb7fru" path="res://Scenes/Props/Keys/DoorKey/DoorKey.tscn" id="18_nlg81"]
+[ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="19_imhae"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_ttdf4")
@@ -3217,13 +3218,13 @@ terrain_set_0/terrain_0/name = "HospitalWalls"
 terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k5fll"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_imhae"]
 atlas = ExtResource("3_ttdf4")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(0, 32, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oaeeq"]
 atlas = ExtResource("3_ttdf4")
-region = Rect2(0, 592, 16, 32)
+region = Rect2(32, 0, 32, 32)
 
 [node name="DoctorBreakRoom1" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
@@ -3257,14 +3258,6 @@ y_sort_enabled = true
 
 [node name="VendingMachine3" parent="Furniture" unique_id=1953184709 instance=ExtResource("5_ofxch")]
 position = Vector2(23, -44)
-
-[node name="Sprite2D" type="Sprite2D" parent="Furniture" unique_id=941169472]
-position = Vector2(-24, -32)
-texture = SubResource("AtlasTexture_k5fll")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Furniture" unique_id=1796751564]
-position = Vector2(71, -67)
-texture = SubResource("AtlasTexture_oaeeq")
 
 [node name="CoffeeMachine" parent="Furniture" unique_id=48482521 instance=ExtResource("7_4uxpe")]
 position = Vector2(50, -43)
@@ -3300,7 +3293,7 @@ position = Vector2(72, 18)
 position = Vector2(67, 25)
 
 [node name="DrawerDeskFull1" parent="Furniture" unique_id=764257786 instance=ExtResource("15_o8bcm")]
-position = Vector2(81, -44)
+position = Vector2(81, -45)
 
 [node name="ShelfSide" parent="Furniture" unique_id=1671793515 instance=ExtResource("16_oaeeq")]
 position = Vector2(91, -3)
@@ -3314,9 +3307,32 @@ position = Vector2(19, 84)
 [node name="DoubleBigCupboard2" parent="Furniture" unique_id=1849694567 instance=ExtResource("16_nlg81")]
 position = Vector2(50, 84)
 
-[node name="PhoneLeft" parent="Furniture" unique_id=1937741802 instance=ExtResource("17_nlg81")]
-position = Vector2(71, -51)
+[node name="Sprite2D" type="Sprite2D" parent="Furniture" unique_id=929963657]
+position = Vector2(77, -47)
+texture = SubResource("AtlasTexture_imhae")
+offset = Vector2(0, -20)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Furniture" unique_id=1036618456]
+position = Vector2(-21, -21)
+texture = SubResource("AtlasTexture_oaeeq")
+offset = Vector2(0, -10)
 
 [node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("4_sug5m")]
+visible = false
 y_sort_enabled = true
 position = Vector2(11, -41)
+
+[node name="DoorKey" parent="." unique_id=519018229 instance=ExtResource("18_nlg81")]
+position = Vector2(71, -42)
+
+[node name="Battery" parent="." unique_id=72985288 instance=ExtResource("19_imhae")]
+position = Vector2(92, 29)
+
+[node name="Battery2" parent="." unique_id=478410480 instance=ExtResource("19_imhae")]
+position = Vector2(26, 0)
+
+[node name="Sprite2D" parent="Battery2" index="0" unique_id=1931769877]
+position = Vector2(2, -19)
+rotation = 2.3941348
+
+[editable path="Battery2"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ccc87aevbvyh1"]
+
+[ext_resource type="PackedScene" uid="uid://voe26pn25t7x" path="res://Scenes/Props/Furniture/Decorations/Posters/Poster1/Poster1.tscn" id="1_1nfxd"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_g2mku"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilqxj"]
+atlas = ExtResource("2_g2mku")
+region = Rect2(16, 32, 16, 32)
+
+[node name="Poster2" unique_id=566576977 instance=ExtResource("1_1nfxd")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=843721400]
+position = Vector2(0, 1)
+texture = SubResource("AtlasTexture_ilqxj")

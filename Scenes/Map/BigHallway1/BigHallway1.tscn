@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://cdsmiohg1o37h" path="res://Scenes/Props/Furniture/Plants/ThinPlant/ThinPlant.tscn" id="12_6ussb"]
 [ext_resource type="PackedScene" uid="uid://c8grkf0ndt8s1" path="res://Scenes/Props/Doors/SlidingDoor/SlidingDoor.tscn" id="12_gq30a"]
 [ext_resource type="PackedScene" uid="uid://dcof068357k60" path="res://Scenes/Props/Doors/LockedDoor001/LockedDoor001.tscn" id="14_88juf"]
-[ext_resource type="PackedScene" uid="uid://cmnjvqosb7fru" path="res://Scenes/Props/Keys/DoorKey/DoorKey.tscn" id="15_30ep5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("2_jwv1s")
@@ -3250,6 +3249,12 @@ position = Vector2(-79, 46)
 [node name="BlueChairBack2" parent="Furniture" unique_id=1694590031 instance=ExtResource("4_jwv1s")]
 position = Vector2(-33, 46)
 
+[node name="BlueChairBack4" parent="Furniture" unique_id=2139709304 instance=ExtResource("4_jwv1s")]
+position = Vector2(140, 47)
+
+[node name="BlueChairBack5" parent="Furniture" unique_id=1728257980 instance=ExtResource("4_jwv1s")]
+position = Vector2(187, 47)
+
 [node name="BlueChairBack3" parent="Furniture" unique_id=37975094 instance=ExtResource("4_jwv1s")]
 position = Vector2(18, 46)
 
@@ -3283,14 +3288,11 @@ position = Vector2(118, -40)
 [node name="SmallCupboard" parent="Furniture" unique_id=1767205350 instance=ExtResource("10_0dod1")]
 position = Vector2(105, -43)
 
-[node name="Decorations" type="Node2D" parent="Furniture" unique_id=1445634806]
-y_sort_enabled = true
-
-[node name="PhoneLeft" parent="Furniture/Decorations" unique_id=2083310663 instance=ExtResource("11_0dod1")]
-position = Vector2(76, -37)
-
 [node name="ThinPlant" parent="Furniture" unique_id=77281243 instance=ExtResource("12_6ussb")]
 position = Vector2(63, -45)
+
+[node name="PhoneLeft" parent="Furniture" unique_id=566576977 instance=ExtResource("11_0dod1")]
+position = Vector2(77, -40)
 
 [node name="SlidingDoor" parent="." unique_id=1643899151 instance=ExtResource("12_gq30a")]
 position = Vector2(16, -53)
@@ -3301,7 +3303,5 @@ position = Vector2(289, -51)
 [node name="LockedDoor001_2" parent="." unique_id=1933382415 instance=ExtResource("14_88juf")]
 position = Vector2(81, 77)
 
-[node name="DoorKey" parent="." unique_id=519018229 instance=ExtResource("15_30ep5")]
-position = Vector2(49, 0)
-
 [node name="MoveableFurnitureBase" parent="." unique_id=990666621 instance=ExtResource("5_8snl3")]
+position = Vector2(-49, 0)
