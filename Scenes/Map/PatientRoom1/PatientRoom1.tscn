@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dadx20lwjgn5c" path="res://Scenes/Props/LightSources/Lamp/Lamp.tscn" id="7_2eovg"]
 [ext_resource type="PackedScene" uid="uid://cdsmiohg1o37h" path="res://Scenes/Props/Furniture/Plants/ThinPlant/ThinPlant.tscn" id="7_lcvn7"]
 [ext_resource type="PackedScene" uid="uid://2tsnbj83usc6" path="res://Scenes/Props/Furniture/Cupboards/SideSmallCupboard/SideSmallCupboard.tscn" id="9_fbvsr"]
+[ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="10_m6a6t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("4_5u4rw")
@@ -3272,9 +3273,6 @@ position = Vector2(-7, -26)
 [node name="ThinPlant" parent="." unique_id=1997569789 instance=ExtResource("7_lcvn7")]
 position = Vector2(-56, -30)
 
-[node name="SideSmallCupboard" parent="." unique_id=1322213832 instance=ExtResource("9_fbvsr")]
-position = Vector2(-22, -8)
-
 [node name="SideSmallCupboard2" parent="." unique_id=797097544 instance=ExtResource("9_fbvsr")]
 position = Vector2(-22, 17)
 
@@ -3283,3 +3281,12 @@ position = Vector2(-22, 58)
 
 [node name="SideSmallCupboard4" parent="." unique_id=1174539200 instance=ExtResource("9_fbvsr")]
 position = Vector2(-22, 86)
+
+[node name="SideSmallCupboard" parent="." unique_id=1322213832 instance=ExtResource("9_fbvsr")]
+position = Vector2(-22, -8)
+
+[node name="Interactables" type="Node2D" parent="." unique_id=21278764]
+
+[node name="Battery" parent="Interactables" unique_id=72985288 instance=ExtResource("10_m6a6t")]
+position = Vector2(-21, -18)
+rotation = 2.3500395

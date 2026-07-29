@@ -3304,4 +3304,4 @@ position = Vector2(289, -51)
 position = Vector2(81, 77)
 
 [node name="MoveableFurnitureBase" parent="." unique_id=990666621 instance=ExtResource("5_8snl3")]
-position = Vector2(-49, 0)
+position = Vector2(19, -27)

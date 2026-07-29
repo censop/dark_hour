@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bqobpckif6i16"]
+
+[ext_resource type="Texture2D" uid="uid://bjgtmneyvgg8l" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/room_hand_sanitizer.png" id="1_srxa5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ouedi"]
+radius = 7.0
+height = 16.0
+
+[node name="Note" type="Area2D" unique_id=72985288]
+collision_layer = 2
+collision_mask = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1931769877]
+texture = ExtResource("1_srxa5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=667987919]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_ouedi")

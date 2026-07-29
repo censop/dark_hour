@@ -34,6 +34,7 @@ public partial class DoorKey : Area2D
     private void OnCollectDoorKey()
     {
         GlobalVariables.DoorKeysCollected.Add(KeyID);
+        SignalHub.EmitOnDialogueTriggered($"{KeyID} Key Collected");
         QueueFree();
     }
 
