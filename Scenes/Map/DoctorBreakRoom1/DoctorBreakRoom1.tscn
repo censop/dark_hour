@@ -3322,17 +3322,19 @@ visible = false
 y_sort_enabled = true
 position = Vector2(11, -41)
 
-[node name="DoorKey" parent="." unique_id=519018229 instance=ExtResource("18_nlg81")]
-position = Vector2(71, -42)
+[node name="Node2D" type="Node2D" parent="." unique_id=255338179]
 
-[node name="Battery" parent="." unique_id=72985288 instance=ExtResource("19_imhae")]
-position = Vector2(92, 29)
+[node name="DoorKey" parent="Node2D" unique_id=519018229 instance=ExtResource("18_nlg81")]
+position = Vector2(75, -55)
 
-[node name="Battery2" parent="." unique_id=478410480 instance=ExtResource("19_imhae")]
+[node name="Battery2" parent="Node2D" unique_id=478410480 instance=ExtResource("19_imhae")]
 position = Vector2(26, 0)
 
-[node name="Sprite2D" parent="Battery2" index="0" unique_id=1931769877]
+[node name="Sprite2D" parent="Node2D/Battery2" index="0" unique_id=1931769877]
 position = Vector2(2, -19)
 rotation = 2.3941348
 
-[editable path="Battery2"]
+[node name="Battery" parent="Node2D" unique_id=72985288 instance=ExtResource("19_imhae")]
+position = Vector2(92, -25)
+
+[editable path="Node2D/Battery2"]

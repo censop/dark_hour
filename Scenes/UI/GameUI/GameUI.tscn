@@ -2,6 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://recvewos5jxt" path="res://Resources/UI/UIAtlas.tres" id="1_08tb3"]
 [ext_resource type="Script" uid="uid://b8wifvi8qtgdd" path="res://Scenes/UI/GameUI/GameUi.cs" id="1_vw8kl"]
+[ext_resource type="Texture2D" uid="uid://bjgtmneyvgg8l" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/room_hand_sanitizer.png" id="2_i4xn3"]
+[ext_resource type="FontFile" uid="uid://c42etw2frghki" path="res://Assets/Texts/ByteBounce.ttf" id="3_2g0ik"]
+[ext_resource type="Script" uid="uid://7mrq0fia16yw" path="res://Scenes/UI/GameUI/Label.cs" id="4_j0smo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j0smo"]
+font = ExtResource("3_2g0ik")
 
 [node name="GameUI" type="Control" unique_id=1781965203 node_paths=PackedStringArray("_menuButton", "_progressBar")]
 layout_mode = 3
@@ -12,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vw8kl")
 _menuButton = NodePath("MarginContainer/HBoxContainer/TextureButton")
-_progressBar = NodePath("MarginContainer/HBoxContainer/ProgressBar")
+_progressBar = NodePath("MarginContainer/HBoxContainer/VBoxContainer/ProgressBar")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2063976397]
 layout_mode = 1
@@ -33,14 +39,39 @@ size_flags_vertical = 0
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1818236201]
 layout_mode = 2
 
-[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer" unique_id=1941528154]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1274372494]
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1941528154]
 custom_minimum_size = Vector2(60, 10)
 layout_mode = 2
 size_flags_horizontal = 3
 show_percentage = false
 
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=462707463]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=416290749]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_i4xn3")
+stretch_mode = 2
+flip_h = true
+flip_v = true
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=327622605]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "x 0"
+label_settings = SubResource("LabelSettings_j0smo")
+script = ExtResource("4_j0smo")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1422763555]
-custom_minimum_size = Vector2(170, 0)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
 [node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=379684956]

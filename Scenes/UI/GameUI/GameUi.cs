@@ -11,7 +11,6 @@ public partial class GameUi : Control
 	public override void _Ready()
 	{
 		_menuButton.Pressed += OnMenuPressed;
-		
 	}
 
     private void OnMenuPressed()

@@ -13,8 +13,8 @@ public partial class Hospital : Node2D
 
         if (@event.IsActionPressed("consume") && GlobalVariables.NotConsumedBatteries > 0)
 		{
-			SignalHub.EmitOnBatteryUsed();
             GlobalVariables.NotConsumedBatteries --;
+            SignalHub.EmitOnBatteryUsed();
             GD.Print("NotConsumedBatteries: " + GlobalVariables.NotConsumedBatteries);
 		}
     }
