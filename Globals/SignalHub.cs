@@ -5,15 +5,25 @@ public partial class SignalHub : Node
 {
 	public static SignalHub Instance {get; private set;}
 
+	//battery related
 	[Signal] public delegate void OnBatteryUsedEventHandler();
 	[Signal] public delegate void OnBatteryCollectedEventHandler();
     [Signal] public delegate void OnBatteryDeadEventHandler();
+
+	//UI related
 	[Signal] public delegate void OnMenuPressedEventHandler();
+	[Signal] public delegate void OnDialogueTriggeredEventHandler(string dialogue);
+
+	//player related
 	[Signal] public delegate void OnPlayerDeadEventHandler();
 	[Signal] public delegate void OnPlayerEnterredLightEventHandler();
 	[Signal] public delegate void OnPlayerExitedLightEventHandler();
+
+	//game related
 	[Signal] public delegate void OnSaveGameEventHandler();
 	[Signal] public delegate void OnLoadGameEventHandler();
+
+
 	public override void _Ready()
 	{
 		Instance = this;
@@ -62,6 +72,11 @@ public partial class SignalHub : Node
 	public static void EmitOnBatteryCollected()
 	{
 		Instance.EmitSignal(SignalName.OnBatteryCollected);
+	}
+
+	public static void EmitOnDialogueTriggered(string dialogue)
+	{
+		Instance.EmitSignal(SignalName.OnDialogueTriggered, dialogue);
 	}
 
 }

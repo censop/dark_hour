@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bjgtmneyvgg8l" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/room_hand_sanitizer.png" id="2_rij71"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ouedi"]
-radius = 3.0
-height = 8.0
+radius = 7.0
+height = 16.0
 
 [node name="Battery" type="Area2D" unique_id=72985288]
 collision_layer = 2
@@ -16,5 +16,5 @@ script = ExtResource("1_ur01j")
 texture = ExtResource("2_rij71")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=667987919]
-position = Vector2(0, -1)
+position = Vector2(-1, -1)
 shape = SubResource("CapsuleShape2D_ouedi")

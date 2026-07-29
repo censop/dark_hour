@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bjgtmneyvgg8l" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/room_hand_sanitizer.png" id="2_i4xn3"]
 [ext_resource type="FontFile" uid="uid://c42etw2frghki" path="res://Assets/Texts/ByteBounce.ttf" id="3_2g0ik"]
 [ext_resource type="Script" uid="uid://7mrq0fia16yw" path="res://Scenes/UI/GameUI/Label.cs" id="4_j0smo"]
+[ext_resource type="Script" uid="uid://dfcd7sh2eyicj" path="res://Scenes/UI/GameUI/DialogueLabel.cs" id="6_dvsx4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j0smo"]
 font = ExtResource("3_2g0ik")
@@ -59,11 +60,11 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 texture = ExtResource("2_i4xn3")
-stretch_mode = 2
+stretch_mode = 3
 flip_h = true
 flip_v = true
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=327622605]
+[node name="BatteryLeftLabel" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=327622605]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "x 0"
@@ -78,3 +79,16 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 8
 texture_normal = ExtResource("1_08tb3")
+
+[node name="DialogueLabel" type="Label" parent="MarginContainer" unique_id=957865783 node_paths=PackedStringArray("_labelTimer")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+text = "interact"
+label_settings = SubResource("LabelSettings_j0smo")
+script = ExtResource("6_dvsx4")
+_labelTimer = NodePath("../../DialogueLabelTimer")
+
+[node name="DialogueLabelTimer" type="Timer" parent="." unique_id=514858143]
+wait_time = 2.0
+one_shot = true

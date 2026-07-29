@@ -24,7 +24,7 @@ shadow_enabled = true
 texture = SubResource("GradientTexture2D_dao62")
 
 [node name="BatteryTimer" type="Timer" parent="." unique_id=901556816]
-wait_time = 60.0
+wait_time = 30.0
 one_shot = true
 
 [node name="FlickerTimer" type="Timer" parent="." unique_id=854158223]

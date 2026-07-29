@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://wn76v0okix47" path="res://Scenes/Props/Keys/DoorKey/DoorKey.cs" id="1_hgiux"]
 [ext_resource type="Texture2D" uid="uid://dsu7tkwhde1sn" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/room_pills_02.png" id="1_ibr1x"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ibr1x"]
-size = Vector2(8.333333, 10)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_on5pg"]
+radius = 9.583333
+height = 19.166666
 
 [node name="DoorKey" type="Area2D" unique_id=519018229]
 scale = Vector2(1.2, 1.2)
@@ -16,4 +17,4 @@ script = ExtResource("1_hgiux")
 texture = ExtResource("1_ibr1x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=28376047]
-shape = SubResource("RectangleShape2D_ibr1x")
+shape = SubResource("CapsuleShape2D_on5pg")

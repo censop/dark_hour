@@ -1,15 +1,18 @@
 using Godot;
 using System;
+using System.Runtime.CompilerServices;
 
 public partial class LockedDoor001 : StaticBody2D
 {
 	[Export] Area2D _interactionArea;
 	[Export] CollisionShape2D _interactionShape;
-	[Export] String DoorId = "Door_001";
+	[Export] String DoorId = "Level 1 Clearance";
 	[Export] AnimatedSprite2D _doorLeft;
 	[Export] AnimatedSprite2D _doorRight;
 
 	[Export] bool _isOpen = false;
+
+	private string _clearanceType;
 
 	private bool _isBodyInsideArea = false;
 
@@ -18,6 +21,8 @@ public partial class LockedDoor001 : StaticBody2D
 	{
 		_interactionArea.BodyEntered += OnBodyEntered;
 		_interactionArea.BodyExited += OnBodyExited;
+
+		
 	}
 
     private void OnBodyExited(Node2D body)
@@ -33,18 +38,27 @@ public partial class LockedDoor001 : StaticBody2D
 
     public override void _UnhandledInput(InputEvent @event)
     {
-        if (@event.IsActionPressed("interact") && _isBodyInsideArea && PlayerHasKey())
+        if (@event.IsActionPressed("interact") && _isBodyInsideArea)
 		{
-			_isOpen = !_isOpen;
-			if (_isOpen)
+			if (PlayerHasKey())
 			{
-				UnlockDoor();
+				_isOpen = !_isOpen;
+				if (_isOpen)
+				{
+					UnlockDoor();
+				}
+				else
+				{
+					LockDoor();
+				}
 			}
 			else
 			{
-				LockDoor();
+				SignalHub.EmitOnDialogueTriggered($"Need {DoorId} Key");
 			}
+			
 		}
+		
     }
 
     private void LockDoor()
@@ -70,7 +84,7 @@ public partial class LockedDoor001 : StaticBody2D
 	{
 		for (int i = 0; i < GlobalVariables.DoorKeysCollected.Count; i++)
 		{
-			if (DoorId[^3..] == GlobalVariables.DoorKeysCollected[i][^3..])
+			if (DoorId == GlobalVariables.DoorKeysCollected[i])
 			{
 				GD.Print($"Key present");
 				return true;

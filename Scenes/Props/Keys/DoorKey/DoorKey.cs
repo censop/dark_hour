@@ -4,7 +4,7 @@ using System;
 public partial class DoorKey : Area2D
 {
 
-	[Export] String KeyID = "DoorKey_001";
+	[Export] String KeyID = "Level 1 Clearance";
 
 	private bool _isBodyInside = false;
 
