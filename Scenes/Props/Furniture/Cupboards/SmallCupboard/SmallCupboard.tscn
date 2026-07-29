@@ -13,8 +13,9 @@ size = Vector2(11, 5)
 [node name="SmallCupboard" unique_id=1463422088 instance=ExtResource("1_mqrcp")]
 
 [node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(1, -5)
 texture = SubResource("AtlasTexture_u7pab")
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
-position = Vector2(0, -7)
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_8rhho")

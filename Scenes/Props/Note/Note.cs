@@ -3,13 +3,45 @@ using System;
 
 public partial class Note : Area2D
 {
+	[Export] public string NoteId = "note_001";
+
+	private bool _isBodyInside = false;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		BodyEntered += OnBodyEntered;
+		BodyExited += OnBodyExited;
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
+    private void OnBodyExited(Node2D body)
+    {
+        _isBodyInside = false;
+    }
+
+
+    private void OnBodyEntered(Node2D body)
+    {
+        _isBodyInside = true;
+    }
+
+    public override void _UnhandledInput(InputEvent @event)
+    {
+        if (@event.IsActionPressed("interact") && _isBodyInside)
+		{
+			ReadNote();
+		}
+    }
+
+
+    public void ReadNote()
+    {
+        if (NoteDatabaseManager.Instance.Notes.TryGetValue(NoteId, out NoteEntry specificNote))
+        {
+            GD.Print(specificNote.Title);
+        }
+        else
+        {
+            GD.PrintErr($"Could not find a note with ID: {NoteId} in the JSON file.");
+        }
+    }
 }

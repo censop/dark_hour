@@ -22,6 +22,7 @@ SaveManager="*uid://cv7y6dxnweqs"
 SceneManager="*uid://bfnxf1ahewf3m"
 GlobalVariables="*uid://c1ak47ftenv1l"
 ScenePaths="*uid://cjwijylubkfmm"
+NoteDatabaseManager="*uid://des5f76em1cjo"
 
 [display]
 
