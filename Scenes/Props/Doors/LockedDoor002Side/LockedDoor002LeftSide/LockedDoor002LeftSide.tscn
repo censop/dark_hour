@@ -4,51 +4,51 @@
 [ext_resource type="Texture2D" uid="uid://cwypksjf5hlmv" path="res://Assets/Sprites/ModernInteriors/Animations/animated_hospital_door_green.png" id="2_mh7ws"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_hpumr"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cb861"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ix5m3"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(16, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r5l41"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jeoqu"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(48, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6p6nq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_awtsy"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(80, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbmbd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4w64"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(112, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wlyxs"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_itti1"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(144, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4a0sk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_o015e"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(176, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_puyj5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhadd"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(176, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_esxpr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2btu"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(144, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jv5nv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3v6k"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(112, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yq6hy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6lgm"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(80, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t08mb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_28o0a"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(48, 0, 16, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4q6f0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqlkp"]
 atlas = ExtResource("2_mh7ws")
 region = Rect2(16, 0, 16, 48)
 
@@ -57,47 +57,47 @@ resource_local_to_scene = true
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cb861")
+"texture": SubResource("AtlasTexture_ix5m3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_r5l41")
+"texture": SubResource("AtlasTexture_jeoqu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6p6nq")
+"texture": SubResource("AtlasTexture_awtsy")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pbmbd")
+"texture": SubResource("AtlasTexture_j4w64")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wlyxs")
+"texture": SubResource("AtlasTexture_itti1")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4a0sk")
+"texture": SubResource("AtlasTexture_o015e")
 }],
-"loop": true,
+"loop": false,
 "name": &"closeLeftDoor",
 "speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_puyj5")
+"texture": SubResource("AtlasTexture_qhadd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_esxpr")
+"texture": SubResource("AtlasTexture_i2btu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jv5nv")
+"texture": SubResource("AtlasTexture_p3v6k")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yq6hy")
+"texture": SubResource("AtlasTexture_q6lgm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t08mb")
+"texture": SubResource("AtlasTexture_28o0a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4q6f0")
+"texture": SubResource("AtlasTexture_mqlkp")
 }],
-"loop": true,
+"loop": false,
 "name": &"openLeftDoor",
 "speed": 10.0
 }]
@@ -113,7 +113,7 @@ size = Vector2(5.125, 40.0625)
 radius = 17.0
 height = 72.0
 
-[node name="LockedDoor001Left" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_interactionShape", "_doorLeft")]
+[node name="LockedDoor002LeftSide" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_interactionShape", "_doorLeft")]
 collision_layer = 8
 collision_mask = 28
 script = ExtResource("1_mof3b")
@@ -126,7 +126,7 @@ _doorLeft = NodePath("Sprites/LeftAnimatedDoor")
 [node name="LeftAnimatedDoor" type="AnimatedSprite2D" parent="Sprites" unique_id=1614435581]
 position = Vector2(0, -21)
 sprite_frames = SubResource("SpriteFrames_esd77")
-animation = &"openLeftDoor"
+animation = &"closeLeftDoor"
 flip_h = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sprites" unique_id=1792476442]
