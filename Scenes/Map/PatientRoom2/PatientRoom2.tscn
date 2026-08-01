@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dh7xmcajlnwlf" path="res://Scenes/Props/Furniture/Cupboards/SmallCupboard/SmallCupboard.tscn" id="5_2gmpo"]
 [ext_resource type="PackedScene" uid="uid://cjjpaumogy2sp" path="res://Scenes/Props/Furniture/Cupboards/DoubleBigCupboard/DoubleBigCupboard.tscn" id="6_jgcoa"]
 [ext_resource type="PackedScene" uid="uid://tgiiyec0utmw" path="res://Scenes/Props/Furniture/Cupboards/BigCupboard/BigCupboard.tscn" id="7_nxfpy"]
+[ext_resource type="PackedScene" uid="uid://cdsmiohg1o37h" path="res://Scenes/Props/Furniture/Plants/ThinPlant/ThinPlant.tscn" id="8_apeqj"]
 [ext_resource type="PackedScene" uid="uid://bqobpckif6i16" path="res://Scenes/Props/Note/Note.tscn" id="8_nxfpy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_accju"]
@@ -3266,13 +3267,16 @@ texture = SubResource("AtlasTexture_2gmpo")
 [node name="DoubleBigCupboard" parent="Furniture" unique_id=1270836891 instance=ExtResource("6_jgcoa")]
 position = Vector2(46, 5)
 
-[node name="SmallCupboard4" parent="Furniture" unique_id=244925284 instance=ExtResource("7_nxfpy")]
-position = Vector2(71, 5)
+[node name="SmallCupboard4" parent="Furniture" unique_id=1335685078 instance=ExtResource("7_nxfpy")]
+position = Vector2(-41, 0)
 
-[node name="SmallCupboard5" parent="Furniture" unique_id=1135167347 instance=ExtResource("7_nxfpy")]
-position = Vector2(-40, 5)
+[node name="SmallCupboard5" parent="Furniture" unique_id=91064325 instance=ExtResource("7_nxfpy")]
+position = Vector2(71, 0)
+
+[node name="ThinPlant" parent="Furniture" unique_id=695558004 instance=ExtResource("8_apeqj")]
+position = Vector2(74, -72)
 
 [node name="Interactables" type="Node2D" parent="." unique_id=2044553585]
 
 [node name="Note" parent="Interactables" unique_id=72985288 instance=ExtResource("8_nxfpy")]
-position = Vector2(-17, -81)
+position = Vector2(-18, -76)

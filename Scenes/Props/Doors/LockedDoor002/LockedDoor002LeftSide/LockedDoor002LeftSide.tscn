@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://5trpksf0a8aq"]
+
+[ext_resource type="Script" uid="uid://difminmldqb81" path="res://Scenes/Props/Doors/LockedDoor001/LockedDoor001.cs" id="1_mof3b"]
+[ext_resource type="Texture2D" uid="uid://cwypksjf5hlmv" path="res://Assets/Sprites/ModernInteriors/Animations/animated_hospital_door_green.png" id="2_mh7ws"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_hpumr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cb861"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(16, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5l41"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(48, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6p6nq"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(80, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbmbd"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(112, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlyxs"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(144, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a0sk"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(176, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puyj5"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(176, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_esxpr"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(144, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jv5nv"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(112, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq6hy"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(80, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t08mb"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(48, 0, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4q6f0"]
+atlas = ExtResource("2_mh7ws")
+region = Rect2(16, 0, 16, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_esd77"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cb861")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5l41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6p6nq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbmbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlyxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4a0sk")
+}],
+"loop": true,
+"name": &"closeLeftDoor",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puyj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_esxpr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jv5nv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq6hy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t08mb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4q6f0")
+}],
+"loop": true,
+"name": &"openLeftDoor",
+"speed": 10.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1r3b"]
+atlas = ExtResource("3_hpumr")
+region = Rect2(96, 848, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8npdx"]
+size = Vector2(5.125, 40.0625)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hktxa"]
+radius = 17.0
+height = 72.0
+
+[node name="LockedDoor001Left" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_interactionShape", "_doorLeft")]
+collision_layer = 8
+collision_mask = 28
+script = ExtResource("1_mof3b")
+_interactionArea = NodePath("InteractionArea")
+_interactionShape = NodePath("PhysicalCollisionShape")
+_doorLeft = NodePath("Sprites/LeftAnimatedDoor")
+
+[node name="Sprites" type="Node2D" parent="." unique_id=1678634123]
+
+[node name="LeftAnimatedDoor" type="AnimatedSprite2D" parent="Sprites" unique_id=1614435581]
+position = Vector2(0, -21)
+sprite_frames = SubResource("SpriteFrames_esd77")
+animation = &"openLeftDoor"
+flip_h = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprites" unique_id=1792476442]
+position = Vector2(-12, -31)
+texture = SubResource("AtlasTexture_e1r3b")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprites" unique_id=810308477]
+position = Vector2(-12, -14)
+texture = SubResource("AtlasTexture_e1r3b")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprites" unique_id=2065708140]
+position = Vector2(-12, -7)
+texture = SubResource("AtlasTexture_e1r3b")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprites" unique_id=673020819]
+position = Vector2(-12, -32)
+texture = SubResource("AtlasTexture_e1r3b")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="PhysicalCollisionShape" type="CollisionShape2D" parent="." unique_id=1120102542]
+position = Vector2(-6.4375, -18.96875)
+shape = SubResource("RectangleShape2D_8npdx")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1261220341]
+collision_layer = 9
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=755303202]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_hktxa")

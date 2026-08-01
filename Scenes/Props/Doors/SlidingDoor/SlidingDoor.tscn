@@ -15,6 +15,8 @@ region = Rect2(112, 832, 16, 16)
 atlas = ExtResource("2_x3sff")
 region = Rect2(144, 800, 16, 16)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_xnmyn"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8npdx"]
 size = Vector2(31, 10.125)
 
@@ -36,6 +38,10 @@ _sprite = NodePath("Sprites/Sprite2D")
 position = Vector2(0, -13)
 texture = SubResource("AtlasTexture_1lv3k")
 
+[node name="Sprite2D5" type="Sprite2D" parent="Sprites" unique_id=1680431512]
+position = Vector2(0, -13)
+texture = SubResource("AtlasTexture_1lv3k")
+
 [node name="Sprite2D3" type="Sprite2D" parent="Sprites" unique_id=1537910947]
 position = Vector2(-8, -24)
 texture = SubResource("AtlasTexture_x3sff")
@@ -52,6 +58,9 @@ region_rect = Rect2(0, 0, 16, 6)
 position = Vector2(25, -6)
 texture = SubResource("AtlasTexture_xnmyn")
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprites" unique_id=959323338]
+sprite_frames = SubResource("SpriteFrames_xnmyn")
+
 [node name="PhysicalCollisionShape" type="CollisionShape2D" parent="." unique_id=1120102542]
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_8npdx")
@@ -61,6 +70,5 @@ collision_layer = 9
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=755303202]
-visible = false
 position = Vector2(6, -7)
 shape = SubResource("CapsuleShape2D_hktxa")

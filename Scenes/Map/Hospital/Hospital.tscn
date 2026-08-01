@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ciuxdx02nwufu" path="res://Scenes/Map/PatientRoom3/PatientRoom3.tscn" id="6_nakp3"]
 [ext_resource type="PackedScene" uid="uid://d2v1yuwsn58mm" path="res://Scenes/Map/Hallway1/Hallway1.tscn" id="7_58jjc"]
 [ext_resource type="PackedScene" uid="uid://d2jhvhgvj0feo" path="res://Scenes/Map/DoctorBreakRoom1/DoctorBreakRoom1.tscn" id="8_m05l0"]
+[ext_resource type="PackedScene" uid="uid://cnwhkjo3p2mug" path="res://Scenes/Map/SterileCorridor1/SterileCorridor1.tscn" id="9_jdc5w"]
 
 [node name="Hospital" type="Node2D" unique_id=1182434823]
 y_sort_enabled = true
@@ -20,7 +21,7 @@ visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="PatientRoom2" parent="." unique_id=1338243762 instance=ExtResource("4_dfmmv")]
-position = Vector2(528, -88)
+position = Vector2(528, -81)
 
 [node name="BigHallway1" parent="." unique_id=1931291724 instance=ExtResource("4_jw6yd")]
 position = Vector2(240, 8)
@@ -36,3 +37,6 @@ position = Vector2(352, -168)
 
 [node name="Player" parent="." unique_id=292045112 instance=ExtResource("1_7441k")]
 position = Vector2(-12, 26)
+
+[node name="SterileCorridor1" parent="." unique_id=1966386203 instance=ExtResource("9_jdc5w")]
+position = Vector2(144, -280)
