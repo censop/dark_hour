@@ -13,6 +13,8 @@ public partial class SignalHub : Node
 	//UI related
 	[Signal] public delegate void OnMenuPressedEventHandler();
 	[Signal] public delegate void OnDialogueTriggeredEventHandler(string dialogue);
+	[Signal] public delegate void OnInputRequestedEventHandler();
+	[Signal] public delegate void OnInputSubmittedEventHandler(string code);
 
 	//player related
 	[Signal] public delegate void OnPlayerDeadEventHandler();
@@ -78,5 +80,17 @@ public partial class SignalHub : Node
 	{
 		Instance.EmitSignal(SignalName.OnDialogueTriggered, dialogue);
 	}
+
+	public static void EmitOnInputSubmitted(string code)
+	{
+		Instance.EmitSignal(SignalName.OnInputSubmitted, code);
+	}
+
+	public static void EmitOnInputRequested()
+	{
+		Instance.EmitSignal(SignalName.OnInputRequested);
+	}
+
+
 
 }

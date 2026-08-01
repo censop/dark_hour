@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://cxplob46no57i" path="res://Resources/TileSets/PlaceholderBackgroundTileSet.tres" id="1_etoxk"]
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_hey7m"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_wu0il"]
-[ext_resource type="PackedScene" uid="uid://cebby05jtdqna" path="res://Scenes/Props/Doors/LockedDoor002Side/LockedDoor002.tscn" id="4_hey7m"]
+[ext_resource type="PackedScene" uid="uid://b77jbg17ln8f2" path="res://Scenes/Props/Doors/CodedDoor001Side/CodedDoor001Side.tscn" id="4_hey7m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_wu0il")
@@ -3230,5 +3230,5 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAFAP7/AAALADUAAAAFAP3/AAALADQAAAAEAP7/AAAHADUAAAAEAP3/AAAHADQAAAADAP7/AAAHADUAAAADAP3/AAAHADQAAAACAP7/AAAHADUAAAACAP3/AAAHADQAAAABAP7/AAAHADUAAAABAP3/AAAHADQAAAAAAP7/AAAHADUAAAAAAP3/AAAHADQAAAD///7/AAAHADUAAAD///3/AAAHADQAAAD+//7/AAAHADUAAAD+//3/AAAHADQAAAD9//7/AAAHADUAAAD9//3/AAAHADQAAAD8//7/AAAHADUAAAD8//3/AAAHADQAAAD7//7/AAAHADUAAAD7//3/AAAHADQAAAD6//7/AAAHADUAAAD6//3/AAAHADQAAAD5//7/AAAHADUAAAD5//3/AAAHADQAAAD4//7/AAAHADUAAAD4//3/AAAHADQAAAD3//7/AAAHADUAAAD3//3/AAAHADQAAAD2//7/AAAGADUAAAD2//3/AAAGADQAAAA=")
 tile_set = SubResource("TileSet_x618o")
 
-[node name="LockedDoor002" parent="." unique_id=1643899151 instance=ExtResource("4_hey7m")]
-position = Vector2(88, 19)
+[node name="CodedDoor001Side" parent="." unique_id=1643899151 instance=ExtResource("4_hey7m")]
+position = Vector2(88, 27)
