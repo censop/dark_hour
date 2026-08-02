@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bvxxep38sfrvp"]
+
+[ext_resource type="PackedScene" uid="uid://vx3geeaqj66n" path="res://Scenes/Props/Furniture/Bathroom/ToiletCupboard3Tp/ToiletCupboard3Tp.tscn" id="1_dr1n3"]
+[ext_resource type="Texture2D" uid="uid://dh3okj3xdkgyw" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/3_Bathroom_Shadowless.png" id="1_jcnbf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0mwt"]
+atlas = ExtResource("1_jcnbf")
+region = Rect2(208, 656, 16, 16)
+
+[node name="ToiletCupboard1Tp" unique_id=1463422088 instance=ExtResource("1_dr1n3")]
+
+[node name="Sprite2D2" parent="." index="1" unique_id=123791859]
+texture = SubResource("AtlasTexture_q0mwt")

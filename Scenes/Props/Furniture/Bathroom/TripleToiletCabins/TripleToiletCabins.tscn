@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cgf7hw7lacw28"]
+
+[ext_resource type="PackedScene" uid="uid://kff1pe2dq3rr" path="res://Scenes/Props/Furniture/FurnitureBase/FurnitureBase.tscn" id="1_xtvhi"]
+[ext_resource type="Texture2D" uid="uid://dh3okj3xdkgyw" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/3_Bathroom_Shadowless.png" id="2_uijj1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7r8y"]
+atlas = ExtResource("2_uijj1")
+region = Rect2(0, 256, 80, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bygr2"]
+size = Vector2(58, 24)
+
+[node name="TripleToiletCabins" unique_id=1463422088 instance=ExtResource("1_xtvhi")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(1, -19)
+texture = SubResource("AtlasTexture_o7r8y")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
+position = Vector2(3, -7)
+shape = SubResource("RectangleShape2D_bygr2")

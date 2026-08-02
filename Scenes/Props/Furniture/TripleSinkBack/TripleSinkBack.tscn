@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bsx7n181ocx3o"]
+
+[ext_resource type="PackedScene" uid="uid://tuvn54gawld8" path="res://Scenes/Props/Furniture/Sink/Sink.tscn" id="1_ool6r"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bw2md"]
+load_path = "res://.godot/imported/19_Hospital_Shadowless.png-924f78bf8daee77ae6d248d12d6fb7a5.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x58jk"]
+atlas = SubResource("CompressedTexture2D_bw2md")
+region = Rect2(224, 880, 32, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ool6r"]
+size = Vector2(87, 9.25)
+
+[node name="TripleSinkBack" unique_id=1463422088 instance=ExtResource("1_ool6r")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(-18, -13)
+texture = SubResource("AtlasTexture_x58jk")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(0, 18, 32, 15)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="1" unique_id=1689567970]
+position = Vector2(11, -13)
+texture = SubResource("AtlasTexture_x58jk")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(0, 18, 32, 15)
+
+[node name="Sprite2D4" type="Sprite2D" parent="." index="2" unique_id=1794833488]
+position = Vector2(40, -13)
+texture = SubResource("AtlasTexture_x58jk")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(0, 18, 32, 15)
+
+[node name="CollisionShape2D" parent="." index="3" unique_id=440692879]
+position = Vector2(11, -9)
+shape = SubResource("RectangleShape2D_ool6r")

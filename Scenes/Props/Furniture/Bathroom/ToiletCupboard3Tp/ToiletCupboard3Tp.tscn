@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://vx3geeaqj66n"]
+
+[ext_resource type="PackedScene" uid="uid://cgf7hw7lacw28" path="res://Scenes/Props/Furniture/Bathroom/TripleToiletCabins/TripleToiletCabins.tscn" id="1_ksb07"]
+[ext_resource type="Texture2D" uid="uid://dh3okj3xdkgyw" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/3_Bathroom_Shadowless.png" id="2_lyepy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekg42"]
+atlas = ExtResource("2_lyepy")
+region = Rect2(0, 64, 16, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rje4u"]
+atlas = ExtResource("2_lyepy")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4q5p"]
+size = Vector2(14, 8)
+
+[node name="ToiletCupboard3Tp" unique_id=1463422088 instance=ExtResource("1_ksb07")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(1, -14)
+texture = SubResource("AtlasTexture_ekg42")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="1" unique_id=123791859]
+position = Vector2(2, -24)
+texture = SubResource("AtlasTexture_rje4u")
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=440692879]
+position = Vector2(1, -3)
+shape = SubResource("RectangleShape2D_m4q5p")
