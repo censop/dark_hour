@@ -227,8 +227,6 @@ _doorRight = NodePath("Sprites/RightAnimatedDoor")
 position = Vector2(1, -41)
 sprite_frames = SubResource("SpriteFrames_7chqx")
 animation = &"openRightDoor"
-frame = 5
-frame_progress = 1.0
 flip_h = true
 flip_v = true
 

@@ -18,6 +18,13 @@ public partial class CodedDoor001Side : StaticBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		if (GlobalVariables.DoorsUnlocked.Contains(DoorID))
+		{
+			_isOpen = true;
+			UnlockDoor();
+			GlobalVariables.DoorsUnlocked.Add(DoorID);
+		}
+
 		_interactionArea.BodyEntered += OnBodyEntered;
 		_interactionArea.BodyExited += OnBodyExited;
 
@@ -37,6 +44,7 @@ public partial class CodedDoor001Side : StaticBody2D
 		{
 			UnlockDoor();
 			_isOpen = true;
+			GlobalVariables.DoorsUnlocked.Add(DoorID);
 		}
 		else if (code != DoorCode)
 		{
@@ -57,7 +65,7 @@ public partial class CodedDoor001Side : StaticBody2D
 
     public override void _UnhandledInput(InputEvent @event)
     {
-        if (@event.IsActionPressed("interact") && _isBodyInsideArea && _isOpen)
+        if (@event.IsActionPressed("interact") && _isBodyInsideArea && !_isOpen)
 		{
 			SignalHub.EmitOnInputRequested();
 		}

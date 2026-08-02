@@ -19,6 +19,11 @@ public partial class PoweredUpSlidingDoor : StaticBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		if (GlobalVariables.DoorsUnlocked.Contains(DoorID))
+		{
+			_isOpen = true;
+		}
+
 		_interactionArea.BodyEntered += OnBodyEntered;
 		_interactionArea.BodyExited += OnBodyExited;
 
@@ -58,6 +63,7 @@ public partial class PoweredUpSlidingDoor : StaticBody2D
 			if (_isOpen)
 			{
 				UnlockDoor();
+				GlobalVariables.DoorsUnlocked.Add(DoorID);
 			}
 			else
 			{

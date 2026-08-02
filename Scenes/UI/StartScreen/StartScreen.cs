@@ -26,6 +26,7 @@ public partial class StartScreen : Control
             GlobalVariables.CollectedBatteries = data.AllBatteries;
             GlobalVariables.DoorKeysCollected = data.DoorKeyInventory;
             GlobalVariables.TurntOnLights = data.LightSwitchesOn;
+            GlobalVariables.DoorsUnlocked = data.OpenedDoors;
 			GlobalVariables.PlayerPos = new Vector2(data.PlayerPosX, data.PlayerPosY);
         }
 		SceneManager.Instance.ChangeScene(ScenePaths.HospitalPath);

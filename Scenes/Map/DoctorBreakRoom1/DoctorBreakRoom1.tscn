@@ -3318,8 +3318,7 @@ texture = SubResource("AtlasTexture_oaeeq")
 offset = Vector2(0, -10)
 
 [node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("4_sug5m")]
-y_sort_enabled = true
-position = Vector2(16, 40)
+position = Vector2(11, 56)
 
 [node name="Interactables" type="Node2D" parent="." unique_id=255338179]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dyycalsph7r1i" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.cs" id="1_26mvl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4uy43"]
-size = Vector2(12, 6)
+size = Vector2(5.25, 5)
 
 [sub_resource type="Gradient" id="Gradient_vvdyl"]
 offsets = PackedFloat32Array(0, 0.704)
@@ -32,12 +32,12 @@ _flickerTimer = NodePath("FlickerTimer")
 _pointLight = NodePath("PointLight2D")
 _lightArea2D = NodePath("LightArea")
 
-[node name="LampCollisionShape" type="CollisionShape2D" parent="." unique_id=174495371]
-position = Vector2(-6, 13)
-shape = SubResource("RectangleShape2D_4uy43")
-
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1886647636]
+position = Vector2(6, -14)
 texture = ExtResource("1_5tstd")
+
+[node name="LampCollisionShape" type="CollisionShape2D" parent="." unique_id=174495371]
+shape = SubResource("RectangleShape2D_4uy43")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1974558198]
 scale = Vector2(1.5, 1.5)
