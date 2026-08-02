@@ -21,13 +21,13 @@ visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="PatientRoom2" parent="." unique_id=1338243762 instance=ExtResource("4_dfmmv")]
-position = Vector2(528, -81)
-
-[node name="BigHallway1" parent="." unique_id=1931291724 instance=ExtResource("4_jw6yd")]
-position = Vector2(240, 8)
+position = Vector2(528, -88)
 
 [node name="PatientRoom3" parent="." unique_id=1087150507 instance=ExtResource("6_nakp3")]
 position = Vector2(320, 143)
+
+[node name="BigHallway1" parent="." unique_id=1931291724 instance=ExtResource("4_jw6yd")]
+position = Vector2(240, 8)
 
 [node name="Hallway1" parent="." unique_id=767225031 instance=ExtResource("7_58jjc")]
 position = Vector2(256, -169)

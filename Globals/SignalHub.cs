@@ -25,6 +25,9 @@ public partial class SignalHub : Node
 	[Signal] public delegate void OnSaveGameEventHandler();
 	[Signal] public delegate void OnLoadGameEventHandler();
 
+	//others
+	[Signal] public delegate void OnGeneratorWorkingEventHandler(string genCode);
+
 
 	public override void _Ready()
 	{
@@ -91,6 +94,10 @@ public partial class SignalHub : Node
 		Instance.EmitSignal(SignalName.OnInputRequested);
 	}
 
+	public static void EmitOnGeneratorWorking(string genCode)
+	{
+		Instance.EmitSignal(SignalName.OnGeneratorWorking);
+	}
 
 
 }
