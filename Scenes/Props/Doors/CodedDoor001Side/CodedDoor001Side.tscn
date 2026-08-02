@@ -227,6 +227,8 @@ _doorRight = NodePath("Sprites/RightAnimatedDoor")
 position = Vector2(1, -41)
 sprite_frames = SubResource("SpriteFrames_7chqx")
 animation = &"openRightDoor"
+frame = 5
+frame_progress = 1.0
 flip_h = true
 flip_v = true
 
@@ -235,6 +237,7 @@ position = Vector2(1, -22)
 sprite_frames = SubResource("SpriteFrames_mg1pf")
 animation = &"closeLeftDoor"
 frame = 5
+frame_progress = 1.0
 flip_h = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="Sprites" unique_id=2023898535]
@@ -278,7 +281,6 @@ position = Vector2(-6, -30)
 shape = SubResource("RectangleShape2D_8735p")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1261220341]
-visible = false
 collision_layer = 9
 collision_mask = 4
 

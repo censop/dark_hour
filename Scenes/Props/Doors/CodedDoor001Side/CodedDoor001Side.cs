@@ -57,7 +57,7 @@ public partial class CodedDoor001Side : StaticBody2D
 
     public override void _UnhandledInput(InputEvent @event)
     {
-        if (@event.IsActionPressed("interact") && _isBodyInsideArea)
+        if (@event.IsActionPressed("interact") && _isBodyInsideArea && _isOpen)
 		{
 			SignalHub.EmitOnInputRequested();
 		}

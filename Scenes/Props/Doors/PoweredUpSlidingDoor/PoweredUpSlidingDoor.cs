@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class PoweredUpSlidingDoor1 : StaticBody2D
+public partial class PoweredUpSlidingDoor : StaticBody2D
 {
 	[Export] Area2D _interactionArea;
 	[Export] CollisionShape2D _collisionShape;

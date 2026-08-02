@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cytlv3428ujdx"]
 
-[ext_resource type="Script" uid="uid://j8pg6rd4s4k2" path="res://Scenes/Props/Doors/PoweredUpSlidingDoor1/PoweredUpSlidingDoor1.cs" id="1_p3fub"]
+[ext_resource type="Script" uid="uid://j8pg6rd4s4k2" path="res://Scenes/Props/Doors/PoweredUpSlidingDoor/PoweredUpSlidingDoor.cs" id="1_p3fub"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_rysh6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1lv3k"]
