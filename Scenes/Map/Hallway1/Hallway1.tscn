@@ -3,6 +3,7 @@
 [ext_resource type="TileSet" uid="uid://cxplob46no57i" path="res://Resources/TileSets/PlaceholderBackgroundTileSet.tres" id="1_1kkje"]
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_jsmg2"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_h6ugj"]
+[ext_resource type="PackedScene" uid="uid://cytlv3428ujdx" path="res://Scenes/Props/Doors/PoweredUpSlidingDoor1/PoweredUpSlidingDoor1.tscn" id="4_0xhj5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_h6ugj")
@@ -3228,3 +3229,6 @@ y_sort_enabled = true
 tile_set = SubResource("TileSet_x618o")
 
 [node name="Furniture" type="Node2D" parent="." unique_id=495333549]
+
+[node name="PoweredUpSlidingDoor1" parent="." unique_id=1643899151 instance=ExtResource("4_0xhj5")]
+position = Vector2(0, -213)

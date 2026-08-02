@@ -10,5 +10,6 @@ public class SaveData
     public List<String> AllBatteries {get; set;} = new List<string>();
     public int CurrentBatteries {set; get;}
     public List<String> DoorKeyInventory {get; set;} = new List<string>();
+
     public List<String> LightSwitchesOn {get; set;} = new List<string>();
 }

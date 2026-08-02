@@ -96,7 +96,7 @@ public partial class SignalHub : Node
 
 	public static void EmitOnGeneratorWorking(string genCode)
 	{
-		Instance.EmitSignal(SignalName.OnGeneratorWorking);
+		Instance.EmitSignal(SignalName.OnGeneratorWorking, genCode);
 	}
 
 

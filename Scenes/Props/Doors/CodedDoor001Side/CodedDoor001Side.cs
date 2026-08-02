@@ -9,6 +9,8 @@ public partial class CodedDoor001Side : StaticBody2D
 	[Export] AnimatedSprite2D _doorLeft;
 	[Export] AnimatedSprite2D _doorRight;
 
+	[Export] string DoorID = "coded_door_001";
+
 	private bool _isOpen = false;
 
 	private bool _isBodyInsideArea = false;
