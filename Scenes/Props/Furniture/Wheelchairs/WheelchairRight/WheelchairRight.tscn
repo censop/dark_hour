@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://yyhggg23llkc"]
+
+[ext_resource type="PackedScene" uid="uid://c2at45us0dow0" path="res://Scenes/Props/Furniture/Wheelchairs/WheelchairLeft/WheelchairLeft.tscn" id="1_uwgx5"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_1bnx1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spthg"]
+atlas = ExtResource("2_1bnx1")
+region = Rect2(160, 1232, 32, 32)
+
+[node name="WheelchairLeft" unique_id=1463422088 instance=ExtResource("1_uwgx5")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(7, -8)
+texture = SubResource("AtlasTexture_spthg")
+flip_h = true

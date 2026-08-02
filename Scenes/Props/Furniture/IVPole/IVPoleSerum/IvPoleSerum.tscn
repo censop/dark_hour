@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bximg4pegjh31"]
+
+[ext_resource type="PackedScene" uid="uid://ca3dtbasb56l4" path="res://Scenes/Props/Furniture/IVPole/IVPoleBlood/IVPoleBlood.tscn" id="1_wgdho"]
+[ext_resource type="Texture2D" uid="uid://h7lcyxajfas8" path="res://Assets/Sprites/topdown_hospital_Assets/Spritesheets/spritesheet_hospital_01.png" id="2_sgb5w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvpjb"]
+atlas = ExtResource("2_sgb5w")
+region = Rect2(0, 0, 16, 32)
+
+[node name="IVPoleSerum" unique_id=1463422088 instance=ExtResource("1_wgdho")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+texture = SubResource("AtlasTexture_nvpjb")

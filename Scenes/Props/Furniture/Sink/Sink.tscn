@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://tuvn54gawld8"]
+
+[ext_resource type="PackedScene" uid="uid://kff1pe2dq3rr" path="res://Scenes/Props/Furniture/FurnitureBase/FurnitureBase.tscn" id="1_vseya"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bw2md"]
+load_path = "res://.godot/imported/19_Hospital_Shadowless.png-924f78bf8daee77ae6d248d12d6fb7a5.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmlyc"]
+atlas = SubResource("CompressedTexture2D_bw2md")
+region = Rect2(224, 880, 32, 48)
+
+[node name="Sink" unique_id=1463422088 instance=ExtResource("1_vseya")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+texture = SubResource("AtlasTexture_nmlyc")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=440692879]
+position = Vector2(0, 0)
