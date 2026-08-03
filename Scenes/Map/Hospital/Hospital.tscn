@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://d2jhvhgvj0feo" path="res://Scenes/Map/DoctorBreakRoom1/DoctorBreakRoom1.tscn" id="8_m05l0"]
 [ext_resource type="PackedScene" uid="uid://cnwhkjo3p2mug" path="res://Scenes/Map/SterileCorridor1/SterileCorridor1.tscn" id="9_jdc5w"]
 [ext_resource type="PackedScene" uid="uid://b8gdxc8jx7pmd" path="res://Scenes/Map/Bathroom1/Bathroom1.tscn" id="10_bfadb"]
+[ext_resource type="PackedScene" uid="uid://bkxfp5kpe5mg5" path="res://Scenes/Map/OperatingRoom1/OperatingRoom1.tscn" id="11_4365w"]
 
 [node name="Hospital" type="Node2D" unique_id=1182434823]
 y_sort_enabled = true
@@ -44,3 +45,6 @@ position = Vector2(144, -280)
 
 [node name="Bathroom1" parent="." unique_id=1950323170 instance=ExtResource("10_bfadb")]
 position = Vector2(592, 168)
+
+[node name="OperatingRoom1" parent="." unique_id=1144766171 instance=ExtResource("11_4365w")]
+position = Vector2(64, -352)
