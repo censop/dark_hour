@@ -3230,7 +3230,7 @@ tile_set = ExtResource("2_hey7m")
 
 [node name="WallsSide" type="TileMapLayer" parent="Walls" unique_id=127048269]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAFAAEAAAALADUAAAA=")
+tile_map_data = PackedByteArray("AAAFAAEAAAALADUAAADr////AAAGADUAAADr/wAAAAAGADUAAADr/wEAAAAGADUAAAA=")
 tile_set = SubResource("TileSet_m6a6t")
 
 [node name="WallsBack" type="TileMapLayer" parent="Walls" unique_id=1053688348]

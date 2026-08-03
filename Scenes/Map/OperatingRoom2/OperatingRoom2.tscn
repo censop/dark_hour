@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ca3dtbasb56l4" path="res://Scenes/Props/Furniture/IVPole/IVPoleBlood/IVPoleBlood.tscn" id="9_5bi3k"]
 [ext_resource type="PackedScene" uid="uid://cnc4xdnb53p" path="res://Scenes/Props/MovableFurniture/EmergencyCarryBed/EmergencyCarryBed.tscn" id="10_txstj"]
 [ext_resource type="PackedScene" uid="uid://cjjpaumogy2sp" path="res://Scenes/Props/Furniture/Cupboards/DoubleBigCupboard/DoubleBigCupboard.tscn" id="11_3q30p"]
+[ext_resource type="PackedScene" uid="uid://bqobpckif6i16" path="res://Scenes/Props/Note/Note.tscn" id="12_wif8t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_4wnhv")
@@ -3266,3 +3267,7 @@ position = Vector2(-64, -48)
 
 [node name="DoubleBigCupboard" parent="Furniture" unique_id=488400430 instance=ExtResource("11_3q30p")]
 position = Vector2(56, -8)
+
+[node name="Note" parent="." unique_id=72985288 instance=ExtResource("12_wif8t")]
+position = Vector2(64, -80)
+NoteId = "note_002"
