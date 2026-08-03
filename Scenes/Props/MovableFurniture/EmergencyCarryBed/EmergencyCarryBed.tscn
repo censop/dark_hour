@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cnc4xdnb53p"]
+
+[ext_resource type="PackedScene" uid="uid://dhr6buajtas0u" path="res://Scenes/Props/MovableFurniture/MovableFurnitureBase/MoveableFurnitureBase.tscn" id="1_o5hw6"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_tkwy7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh1ic"]
+atlas = ExtResource("2_tkwy7")
+region = Rect2(128, 432, 32, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ns6n"]
+size = Vector2(19, 22.5)
+
+[node name="EmergencyCarryBed" unique_id=990666621 instance=ExtResource("1_o5hw6")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+texture = SubResource("AtlasTexture_kh1ic")
+
+[node name="PhysicalCollisionShape" parent="." index="1" unique_id=440692879]
+shape = SubResource("RectangleShape2D_3ns6n")
+
+[node name="Area2D" parent="." index="2" unique_id=2143934371]
+visible = true

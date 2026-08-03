@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d77an4oemjgt" path="res://Scenes/Map/PatientRoom1/PatientRoom1.tscn" id="2_p1612"]
 [ext_resource type="PackedScene" uid="uid://c1kw7jnwkfpwp" path="res://Scenes/Map/PatientRoom2/PatientRoom2.tscn" id="4_dfmmv"]
 [ext_resource type="PackedScene" uid="uid://b3ueqw5vlyed8" path="res://Scenes/Map/BigHallway1/BigHallway1.tscn" id="4_jw6yd"]
+[ext_resource type="PackedScene" uid="uid://bo5cixjufthff" path="res://Scenes/Map/OperatingRoom2/OperatingRoom2.tscn" id="6_62hll"]
 [ext_resource type="PackedScene" uid="uid://ciuxdx02nwufu" path="res://Scenes/Map/PatientRoom3/PatientRoom3.tscn" id="6_nakp3"]
 [ext_resource type="PackedScene" uid="uid://d2v1yuwsn58mm" path="res://Scenes/Map/Hallway1/Hallway1.tscn" id="7_58jjc"]
 [ext_resource type="PackedScene" uid="uid://d2jhvhgvj0feo" path="res://Scenes/Map/DoctorBreakRoom1/DoctorBreakRoom1.tscn" id="8_m05l0"]
@@ -31,6 +32,12 @@ position = Vector2(320, 143)
 [node name="BigHallway1" parent="." unique_id=1931291724 instance=ExtResource("4_jw6yd")]
 position = Vector2(240, 8)
 
+[node name="OperatingRoom2" parent="." unique_id=1196542799 instance=ExtResource("6_62hll")]
+position = Vector2(-96, -328)
+
+[node name="OperatingRoom1" parent="." unique_id=1144766171 instance=ExtResource("11_4365w")]
+position = Vector2(64, -328)
+
 [node name="Hallway1" parent="." unique_id=767225031 instance=ExtResource("7_58jjc")]
 position = Vector2(256, -169)
 
@@ -45,6 +52,3 @@ position = Vector2(144, -280)
 
 [node name="Bathroom1" parent="." unique_id=1950323170 instance=ExtResource("10_bfadb")]
 position = Vector2(592, 168)
-
-[node name="OperatingRoom1" parent="." unique_id=1144766171 instance=ExtResource("11_4365w")]
-position = Vector2(64, -336)
