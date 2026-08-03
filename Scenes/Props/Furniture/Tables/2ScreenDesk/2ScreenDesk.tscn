@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dl2qbj48b12t0"]
+
+[ext_resource type="PackedScene" uid="uid://cdi8pd8m7aag8" path="res://Scenes/Props/Furniture/Tables/SurgeryTable2/SurgeryTable2.tscn" id="1_mns70"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_ouoh0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41g3e"]
+atlas = ExtResource("2_ouoh0")
+region = Rect2(224, 832, 32, 48)
+
+[node name="2ScreenDesk" unique_id=1463422088 instance=ExtResource("1_mns70")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1954714297]
+position = Vector2(1, -7)
+texture = SubResource("AtlasTexture_41g3e")

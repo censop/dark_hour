@@ -3,6 +3,10 @@
 [ext_resource type="TileSet" uid="uid://cxplob46no57i" path="res://Resources/TileSets/PlaceholderBackgroundTileSet.tres" id="1_mn1pu"]
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_bxqna"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_nv5jm"]
+[ext_resource type="PackedScene" uid="uid://dnpawbls0q2e4" path="res://Scenes/Props/Furniture/SurgeryBed/SurgeryBedLeft/SurgeryBedLeft.tscn" id="4_bxqna"]
+[ext_resource type="PackedScene" uid="uid://bmgpc4533wbkn" path="res://Scenes/Props/Furniture/Tables/SurgeryTableSmall1/SurgeryTableSmall1.tscn" id="5_nv5jm"]
+[ext_resource type="PackedScene" uid="uid://dl2qbj48b12t0" path="res://Scenes/Props/Furniture/Tables/2ScreenDesk/2ScreenDesk.tscn" id="6_4uwjf"]
+[ext_resource type="PackedScene" uid="uid://7trgp3qn8u3u" path="res://Scenes/Props/Furniture/ComplexMonitorDesk/ComplexMonitorDeskFull/ComplexMonitorDeskFull.tscn" id="7_dhwgn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_nv5jm")
@@ -3207,7 +3211,7 @@ y_sort_enabled = true
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=994807191]
 z_index = -1
-tile_map_data = PackedByteArray("AAD+//z/AAABAAYAAAD+//3/AAAAAAYAAAD///z/AAAAAAgAAAD///3/AAAAAAgAAAAAAPz/AAAAAAcAAAAAAP3/AAABAAgAAAABAPz/AAAAAAcAAAABAP3/AAABAAcAAAD+//7/AAAAAAgAAAD+////AAABAAcAAAD+/wAAAAAAAAcAAAD+/wEAAAABAAYAAAD///7/AAABAAgAAAD/////AAAAAAYAAAD//wAAAAAAAAcAAAD//wEAAAABAAYAAAAAAP7/AAAAAAcAAAAAAP//AAAAAAcAAAAAAAAAAAAAAAYAAAAAAAEAAAABAAgAAAABAP7/AAAAAAcAAAABAP//AAAAAAYAAAABAAAAAAABAAgAAAABAAEAAAAAAAcAAAD8//v/AAAAAAgAAAD8//z/AAABAAcAAAD8//3/AAAAAAcAAAD8//7/AAAAAAgAAAD9//v/AAABAAgAAAD9//z/AAAAAAYAAAD9//3/AAABAAYAAAD9//7/AAABAAYAAAD+//v/AAABAAcAAAD///v/AAABAAYAAAAAAPv/AAABAAgAAAABAPv/AAAAAAYAAAACAPv/AAABAAcAAAACAPz/AAAAAAYAAAACAP3/AAABAAYAAAACAP7/AAABAAYAAAADAPv/AAABAAcAAAADAPz/AAABAAgAAAADAP3/AAAAAAcAAAADAP7/AAABAAcAAAA=")
+tile_map_data = PackedByteArray("AAD+//z/AAABAAYAAAD+//3/AAAAAAYAAAD///z/AAAAAAgAAAD///3/AAAAAAgAAAAAAPz/AAAAAAcAAAAAAP3/AAABAAgAAAABAPz/AAAAAAcAAAABAP3/AAABAAcAAAD+//7/AAAAAAgAAAD+////AAABAAcAAAD///7/AAABAAgAAAD/////AAAAAAYAAAAAAP7/AAAAAAcAAAAAAP//AAAAAAcAAAABAP7/AAAAAAcAAAABAP//AAAAAAYAAAD8//v/AAAAAAgAAAD8//z/AAABAAcAAAD8//3/AAAAAAcAAAD8//7/AAAAAAgAAAD9//v/AAABAAgAAAD9//z/AAAAAAYAAAD9//3/AAABAAYAAAD9//7/AAABAAYAAAD+//v/AAABAAcAAAD///v/AAABAAYAAAAAAPv/AAABAAgAAAABAPv/AAAAAAYAAAACAPv/AAABAAcAAAACAPz/AAAAAAYAAAACAP3/AAABAAYAAAACAP7/AAABAAYAAAADAPv/AAABAAcAAAADAPz/AAABAAgAAAADAP3/AAAAAAcAAAADAP7/AAABAAcAAAD+/wAAAAAAAAYAAAD//wAAAAABAAcAAAAAAAAAAAAAAAcAAAABAAAAAAABAAcAAAA=")
 tile_set = ExtResource("1_mn1pu")
 
 [node name="Walls" type="Node2D" parent="." unique_id=428934353]
@@ -3221,7 +3225,7 @@ tile_set = ExtResource("2_bxqna")
 
 [node name="WallsSide" type="TileMapLayer" parent="Walls" unique_id=127048269]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD+/wAAAAALADUAAAD+/wEAAAALADUAAAABAAEAAAAGADUAAAABAAAAAAAGADUAAAD7//z/AAAGADUAAAD7//3/AAAGADUAAAD7//7/AAAGADUAAAAEAPz/AAALADUAAAAEAP3/AAALADUAAAAEAP7/AAALADUAAAA=")
+tile_map_data = PackedByteArray("AAD7//z/AAAGADUAAAD7//3/AAAGADUAAAD7//7/AAAGADUAAAAEAPz/AAALADUAAAAEAP3/AAALADUAAAAEAP7/AAALADUAAAABAAAAAAAGADUAAAD+/wAAAAALADUAAAA=")
 tile_set = SubResource("TileSet_m6a6t")
 
 [node name="WallsBack" type="TileMapLayer" parent="Walls" unique_id=1053688348]
@@ -3231,3 +3235,15 @@ tile_set = SubResource("TileSet_x618o")
 
 [node name="Furniture" type="Node2D" parent="." unique_id=1119300619]
 y_sort_enabled = true
+
+[node name="SurgeryBedLeft" parent="Furniture" unique_id=1463422088 instance=ExtResource("4_bxqna")]
+position = Vector2(-1, -36)
+
+[node name="SurgeryTableSmall1" parent="Furniture" unique_id=573356223 instance=ExtResource("5_nv5jm")]
+position = Vector2(25, -40)
+
+[node name="2ScreenDesk" parent="Furniture" unique_id=908875404 instance=ExtResource("6_4uwjf")]
+position = Vector2(47, -64)
+
+[node name="ComplexMonitorDeskFull" parent="Furniture" unique_id=1392044727 instance=ExtResource("7_dhwgn")]
+position = Vector2(-45, -57)
