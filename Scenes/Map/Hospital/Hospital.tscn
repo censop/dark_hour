@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bkxfp5kpe5mg5" path="res://Scenes/Map/OperatingRoom1/OperatingRoom1.tscn" id="11_4365w"]
 [ext_resource type="PackedScene" uid="uid://drx4oo0222ai4" path="res://Scenes/Map/OperatingRoom3/OperatingRoom3.tscn" id="13_4c6sw"]
 [ext_resource type="PackedScene" uid="uid://dh6yyxwuev2hj" path="res://Scenes/Map/OperatingRoom4/OperatingRoom4.tscn" id="14_87tdx"]
+[ext_resource type="PackedScene" uid="uid://by4q2672fv5e4" path="res://Scenes/Map/Hallway2/Hallway2.tscn" id="15_753w1"]
 
 [node name="Hospital" type="Node2D" unique_id=1182434823]
 y_sort_enabled = true
@@ -60,3 +61,6 @@ position = Vector2(144, -227)
 
 [node name="Player" parent="." unique_id=292045112 instance=ExtResource("1_7441k")]
 position = Vector2(-12, 26)
+
+[node name="Hallway2" parent="." unique_id=621905458 instance=ExtResource("15_753w1")]
+position = Vector2(752, 8)
