@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://tgiiyec0utmw" path="res://Scenes/Props/Furniture/Cupboards/BigCupboard/BigCupboard.tscn" id="7_nxfpy"]
 [ext_resource type="PackedScene" uid="uid://cdsmiohg1o37h" path="res://Scenes/Props/Furniture/Plants/ThinPlant/ThinPlant.tscn" id="8_apeqj"]
 [ext_resource type="PackedScene" uid="uid://bqobpckif6i16" path="res://Scenes/Props/Note/Note.tscn" id="8_nxfpy"]
+[ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="10_muiwy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_accju"]
 texture = ExtResource("2_lm8b3")
@@ -3268,13 +3269,21 @@ texture = SubResource("AtlasTexture_2gmpo")
 position = Vector2(46, 5)
 
 [node name="SmallCupboard4" parent="Furniture" unique_id=1335685078 instance=ExtResource("7_nxfpy")]
-position = Vector2(-41, 0)
+position = Vector2(-41, 5)
 
 [node name="SmallCupboard5" parent="Furniture" unique_id=91064325 instance=ExtResource("7_nxfpy")]
-position = Vector2(71, 0)
+position = Vector2(71, 5)
 
 [node name="ThinPlant" parent="Furniture" unique_id=695558004 instance=ExtResource("8_apeqj")]
 position = Vector2(74, -72)
 
 [node name="Note" parent="." unique_id=72985288 instance=ExtResource("8_nxfpy")]
-position = Vector2(-18, -76)
+position = Vector2(-16, -55)
+
+[node name="Battery" parent="." unique_id=1156129449 instance=ExtResource("10_muiwy")]
+position = Vector2(19, -22)
+UniqueID = "Battery_002"
+
+[node name="Battery2" parent="." unique_id=1986583431 instance=ExtResource("10_muiwy")]
+position = Vector2(-16, -13)
+UniqueID = "Battery_003"

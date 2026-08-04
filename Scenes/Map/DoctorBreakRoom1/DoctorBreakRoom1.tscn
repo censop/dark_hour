@@ -3325,6 +3325,7 @@ position = Vector2(69, -25)
 
 [node name="Battery2" parent="." unique_id=478410480 instance=ExtResource("19_imhae")]
 position = Vector2(26, 0)
+UniqueID = "Battery_004"
 
 [node name="Sprite2D" parent="Battery2" index="0" unique_id=1931769877]
 position = Vector2(2, -19)
@@ -3335,6 +3336,7 @@ position = Vector2(3, -20)
 
 [node name="Battery" parent="." unique_id=72985288 instance=ExtResource("19_imhae")]
 position = Vector2(20, 21)
+UniqueID = "Battery_005"
 
 [node name="Interactables" type="Node2D" parent="." unique_id=255338179]
 

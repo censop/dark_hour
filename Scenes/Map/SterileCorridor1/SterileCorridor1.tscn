@@ -3243,6 +3243,7 @@ position = Vector2(88, 27)
 
 [node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("5_wu0il")]
 position = Vector2(-307, -8)
+SwitchLightID = "SwitchLight_002"
 
 [node name="LockedDoor001" parent="." unique_id=1050804484 instance=ExtResource("6_wweug")]
 position = Vector2(-239, -19)
