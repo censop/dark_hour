@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ca3dtbasb56l4" path="res://Scenes/Props/Furniture/IVPole/IVPoleBlood/IVPoleBlood.tscn" id="9_5bi3k"]
 [ext_resource type="PackedScene" uid="uid://cnc4xdnb53p" path="res://Scenes/Props/MovableFurniture/EmergencyCarryBed/EmergencyCarryBed.tscn" id="10_txstj"]
 [ext_resource type="PackedScene" uid="uid://cjjpaumogy2sp" path="res://Scenes/Props/Furniture/Cupboards/DoubleBigCupboard/DoubleBigCupboard.tscn" id="11_3q30p"]
-[ext_resource type="PackedScene" uid="uid://bqobpckif6i16" path="res://Scenes/Props/Note/Note.tscn" id="12_wif8t"]
+[ext_resource type="PackedScene" uid="uid://cmnjvqosb7fru" path="res://Scenes/Props/Keys/DoorKey/DoorKey.tscn" id="12_wif8t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_4wnhv")
@@ -3245,7 +3245,7 @@ y_sort_enabled = true
 position = Vector2(-56, -96)
 
 [node name="ComplexMonitorDeskFull" parent="Furniture" unique_id=1392044727 instance=ExtResource("5_5bi3k")]
-position = Vector2(32, -88)
+position = Vector2(56, -88)
 
 [node name="SurgeryBedFront1" parent="Furniture" unique_id=1463422088 instance=ExtResource("6_8au5g")]
 position = Vector2(0, -48)
@@ -3254,20 +3254,20 @@ position = Vector2(0, -48)
 position = Vector2(-48, -8)
 
 [node name="SmallMonitorDeskEmpty2" parent="Furniture" unique_id=1419750358 instance=ExtResource("7_4wnhv")]
-position = Vector2(-16, -88)
+position = Vector2(24, -88)
 
 [node name="SurgeryTable1" parent="Furniture" unique_id=216918758 instance=ExtResource("8_gl8oe")]
 position = Vector2(24, -64)
 
 [node name="IVPoleBlood" parent="Furniture" unique_id=19318403 instance=ExtResource("9_5bi3k")]
-position = Vector2(-16, -64)
+position = Vector2(-24, -64)
 
 [node name="EmergencyCarryBed" parent="Furniture" unique_id=990666621 instance=ExtResource("10_txstj")]
-position = Vector2(-64, -48)
+position = Vector2(-64, -56)
 
 [node name="DoubleBigCupboard" parent="Furniture" unique_id=488400430 instance=ExtResource("11_3q30p")]
 position = Vector2(56, -8)
 
-[node name="Note" parent="." unique_id=72985288 instance=ExtResource("12_wif8t")]
-position = Vector2(64, -80)
-NoteId = "note_002"
+[node name="DoorKey" parent="." unique_id=519018229 instance=ExtResource("12_wif8t")]
+position = Vector2(-72, -96)
+KeyID = "Maintenance"

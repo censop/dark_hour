@@ -1,20 +1,15 @@
-[gd_scene format=4 uid="uid://cnwhkjo3p2mug"]
+[gd_scene format=4 uid="uid://dh6yyxwuev2hj"]
 
-[ext_resource type="TileSet" uid="uid://cxplob46no57i" path="res://Resources/TileSets/PlaceholderBackgroundTileSet.tres" id="1_etoxk"]
-[ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_hey7m"]
-[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_wu0il"]
-[ext_resource type="PackedScene" uid="uid://b77jbg17ln8f2" path="res://Scenes/Props/Doors/CodedDoor001Side/CodedDoor001Side.tscn" id="4_hey7m"]
-[ext_resource type="PackedScene" uid="uid://d3o2bru1sdb0w" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.tscn" id="5_wu0il"]
-[ext_resource type="PackedScene" uid="uid://dcof068357k60" path="res://Scenes/Props/Doors/LockedDoor001/LockedDoor001.tscn" id="6_wweug"]
-[ext_resource type="PackedScene" uid="uid://c2at45us0dow0" path="res://Scenes/Props/Furniture/Wheelchairs/WheelchairLeft/WheelchairLeft.tscn" id="7_j2gfh"]
-[ext_resource type="PackedScene" uid="uid://ca3dtbasb56l4" path="res://Scenes/Props/Furniture/IVPole/IVPoleBlood/IVPoleBlood.tscn" id="8_g1da1"]
-[ext_resource type="PackedScene" uid="uid://bximg4pegjh31" path="res://Scenes/Props/Furniture/IVPole/IVPoleSerum/IvPoleSerum.tscn" id="9_j587l"]
-[ext_resource type="PackedScene" uid="uid://tgiiyec0utmw" path="res://Scenes/Props/Furniture/Cupboards/BigCupboard/BigCupboard.tscn" id="10_70on4"]
-[ext_resource type="PackedScene" uid="uid://tuvn54gawld8" path="res://Scenes/Props/Furniture/Sink/Sink.tscn" id="11_nlr71"]
-[ext_resource type="PackedScene" uid="uid://yyhggg23llkc" path="res://Scenes/Props/Furniture/Wheelchairs/WheelchairRight/WheelchairRight.tscn" id="12_adala"]
+[ext_resource type="TileSet" uid="uid://cxplob46no57i" path="res://Resources/TileSets/PlaceholderBackgroundTileSet.tres" id="1_dbn7e"]
+[ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_bgx86"]
+[ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_gyih1"]
+[ext_resource type="PackedScene" uid="uid://dl2qbj48b12t0" path="res://Scenes/Props/Furniture/Tables/2ScreenDesk/2ScreenDesk.tscn" id="6_0vr11"]
+[ext_resource type="PackedScene" uid="uid://b2tui50thdwhc" path="res://Scenes/Props/Furniture/Tables/SurgeryTableSmall2/SurgeryTableSmall2.tscn" id="7_bgx86"]
+[ext_resource type="PackedScene" uid="uid://dyo53k1m5m1i7" path="res://Scenes/Props/Furniture/SurgeryBed/SurgeryBedRight/SurgeryBedRight.tscn" id="7_dbn7e"]
+[ext_resource type="PackedScene" uid="uid://7trgp3qn8u3u" path="res://Scenes/Props/Furniture/ComplexMonitorDesk/ComplexMonitorDeskFull/ComplexMonitorDeskFull.tscn" id="7_q4ujy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
-texture = ExtResource("3_wu0il")
+texture = ExtResource("3_gyih1")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1612,7 +1607,7 @@ terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_fbvsr")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_accju"]
-texture = ExtResource("3_wu0il")
+texture = ExtResource("3_gyih1")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -3211,13 +3206,13 @@ terrain_set_0/terrain_0/name = "HospitalWalls"
 terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
-[node name="SterileCorridor1" type="Node2D" unique_id=1015740257]
+[node name="OperatingRoom4" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=994807191]
 z_index = -1
-tile_map_data = PackedByteArray("AAD3//7/AAABAAYAAAD3////AAAAAAgAAAD3/wAAAAAAAAcAAAD3/wEAAAABAAcAAAD4//7/AAAAAAYAAAD4////AAAAAAcAAAD4/wAAAAAAAAcAAAD4/wEAAAAAAAcAAAD5//7/AAAAAAcAAAD5////AAABAAgAAAD5/wAAAAABAAgAAAD5/wEAAAAAAAcAAAD6//7/AAAAAAcAAAD6////AAAAAAgAAAD6/wAAAAAAAAYAAAD6/wEAAAAAAAYAAAD7//7/AAAAAAYAAAD7////AAABAAYAAAD7/wAAAAABAAgAAAD7/wEAAAABAAgAAAD8//7/AAABAAcAAAD8////AAABAAgAAAD8/wAAAAAAAAYAAAD8/wEAAAABAAYAAAD9//7/AAABAAcAAAD9////AAABAAYAAAD9/wAAAAAAAAYAAAD9/wEAAAAAAAYAAAD+//7/AAAAAAYAAAD+////AAABAAgAAAD+/wAAAAABAAcAAAD+/wEAAAAAAAgAAAD///7/AAAAAAcAAAD/////AAABAAYAAAD//wAAAAABAAYAAAD//wEAAAABAAcAAAAAAP7/AAAAAAYAAAAAAP//AAAAAAcAAAAAAAAAAAAAAAgAAAAAAAEAAAAAAAcAAAABAP7/AAAAAAYAAAABAP//AAAAAAgAAAABAAAAAAABAAcAAAABAAEAAAABAAYAAAACAP7/AAABAAcAAAACAP//AAABAAYAAAACAAAAAAABAAYAAAACAAEAAAABAAYAAAADAP7/AAABAAYAAAADAP//AAABAAgAAAADAAAAAAAAAAcAAAADAAEAAAAAAAgAAAAEAP7/AAABAAgAAAAEAP//AAAAAAcAAAAEAAAAAAABAAgAAAAEAAEAAAAAAAgAAADz//7/AAAAAAYAAADz////AAABAAYAAADz/wAAAAABAAcAAADz/wEAAAABAAYAAAD0//7/AAABAAYAAAD0////AAABAAYAAAD0/wAAAAABAAgAAAD0/wEAAAAAAAcAAAD1//7/AAAAAAYAAAD1////AAAAAAcAAAD1/wAAAAAAAAgAAAD1/wEAAAAAAAcAAAD2//7/AAAAAAYAAAD2////AAAAAAYAAAD2/wAAAAAAAAYAAAD2/wEAAAABAAgAAADw//7/AAABAAgAAADw////AAABAAgAAADw/wAAAAAAAAYAAADw/wEAAAAAAAYAAADx//7/AAABAAYAAADx////AAAAAAYAAADx/wAAAAAAAAgAAADx/wEAAAABAAgAAADy//7/AAABAAYAAADy////AAAAAAYAAADy/wAAAAABAAYAAADy/wEAAAAAAAgAAADs//7/AAAAAAgAAADs////AAABAAYAAADs/wAAAAABAAYAAADt//7/AAABAAYAAADt////AAABAAcAAADt/wAAAAAAAAgAAADu//7/AAABAAcAAADu////AAAAAAYAAADu/wAAAAAAAAgAAADv//7/AAAAAAcAAADv////AAAAAAYAAADv/wAAAAAAAAgAAADs/wEAAAABAAgAAADt/wEAAAAAAAgAAADu/wEAAAABAAcAAADv/wEAAAAAAAgAAAD1/wIAAAABAAYAAAD2/wIAAAAAAAYAAAAAAAIAAAABAAYAAAABAAIAAAAAAAYAAAA=")
-tile_set = ExtResource("1_etoxk")
+tile_map_data = PackedByteArray("AAD+////AAABAAcAAAD/////AAAAAAYAAAAAAP//AAAAAAcAAAABAP//AAAAAAYAAAD+/wAAAAAAAAYAAAD//wAAAAABAAcAAAAAAAAAAAAAAAcAAAABAAAAAAABAAcAAAD8/wEAAAAAAAgAAAD8/wIAAAABAAcAAAD8/wMAAAAAAAcAAAD8/wQAAAAAAAgAAAD9/wEAAAABAAgAAAD9/wIAAAAAAAYAAAD9/wMAAAABAAYAAAD9/wQAAAABAAYAAAD+/wEAAAABAAcAAAD+/wIAAAABAAYAAAD+/wMAAAAAAAYAAAD+/wQAAAAAAAgAAAD//wEAAAABAAYAAAD//wIAAAAAAAgAAAD//wMAAAAAAAgAAAD//wQAAAABAAgAAAAAAAEAAAABAAgAAAAAAAIAAAAAAAcAAAAAAAMAAAABAAgAAAAAAAQAAAAAAAcAAAABAAEAAAAAAAYAAAABAAIAAAAAAAcAAAABAAMAAAABAAcAAAABAAQAAAAAAAcAAAACAAEAAAABAAcAAAACAAIAAAAAAAYAAAACAAMAAAABAAYAAAACAAQAAAABAAYAAAADAAEAAAABAAcAAAADAAIAAAABAAgAAAADAAMAAAAAAAcAAAADAAQAAAABAAcAAAA=")
+tile_set = ExtResource("1_dbn7e")
 
 [node name="Walls" type="Node2D" parent="." unique_id=428934353]
 y_sort_enabled = true
@@ -3225,66 +3220,30 @@ y_sort_enabled = true
 [node name="WallsFront" type="TileMapLayer" parent="Walls" unique_id=1939813532]
 z_index = 2
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD0/wIAAAAHADUAAAD0/wEAAAAHADQAAADz/wIAAAAHADUAAADz/wEAAAAHADQAAADy/wIAAAAHADUAAADy/wEAAAAHADQAAADx/wIAAAAHADUAAADx/wEAAAAHADQAAADw/wIAAAAHADUAAADw/wEAAAAHADQAAADv/wIAAAAHADUAAADv/wEAAAAHADQAAAD9/wIAAAAHADUAAAD9/wEAAAAHADQAAAD8/wIAAAAHADUAAAD8/wEAAAAHADQAAAD7/wIAAAAHADUAAAD7/wEAAAAHADQAAAD6/wIAAAAHADUAAAD6/wEAAAAHADQAAAD5/wIAAAAHADUAAAD5/wEAAAAHADQAAAD4/wIAAAAHADUAAAD4/wEAAAAHADQAAAD3/wIAAAAHADUAAAD3/wEAAAAHADQAAAAFAAIAAAALADUAAAAFAAEAAAALADQAAAAEAAIAAAAHADUAAAAEAAEAAAAHADQAAAADAAIAAAAHADUAAAADAAEAAAAHADQAAAACAAIAAAAHADUAAAACAAEAAAAHADQAAADu/wIAAAAHADUAAADu/wEAAAAHADQAAADt/wIAAAAHADUAAADt/wEAAAAHADQAAADs/wIAAAAHADUAAADs/wEAAAAHADQAAADr/wIAAAAGADUAAADr/wEAAAAGADQAAAD+/wEAAAAIADQAAAD+/wIAAAAIADUAAAABAAEAAAAIADQAABABAAIAAAAIADUAABA=")
-tile_set = ExtResource("2_hey7m")
+tile_map_data = PackedByteArray("AAABAP//AAAGADUAAAABAP7/AAAGADUAAAD+////AAALADUAAAD+//7/AAALADUAAAD7/wQAAAAGADQAAAD8/wQAAAAHADQAAAD9/wQAAAAHADQAAAD+/wQAAAAHADQAAAD//wQAAAAHADQAAAAAAAQAAAAHADQAAAABAAQAAAAHADQAAAACAAQAAAAHADQAAAADAAQAAAAHADQAAAAEAAQAAAALADQAAAD7/wUAAAAGADUAAAD8/wUAAAAHADUAAAD9/wUAAAAHADUAAAD+/wUAAAAHADUAAAD//wUAAAAHADUAAAAAAAUAAAAHADUAAAABAAUAAAAHADUAAAACAAUAAAAHADUAAAADAAUAAAAHADUAAAAEAAUAAAALADUAAAA=")
+tile_set = ExtResource("2_bgx86")
 
 [node name="WallsSide" type="TileMapLayer" parent="Walls" unique_id=127048269]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAFAAEAAAALADUAAADr////AAAGADUAAADr/wAAAAAGADUAAADr/wEAAAAGADUAAAA=")
+tile_map_data = PackedByteArray("AAABAAAAAAAGADUAAAD+/wAAAAALADUAAAD7/wIAAAAGADUAAAD7/wMAAAAGADUAAAAEAAIAAAALADUAAAAEAAMAAAALADUAAAD7/wQAAAAGADUAAAAEAAQAAAALADUAAAA=")
 tile_set = SubResource("TileSet_m6a6t")
 
 [node name="WallsBack" type="TileMapLayer" parent="Walls" unique_id=1053688348]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAFAP7/AAALADUAAAAFAP3/AAALADQAAAAEAP7/AAAHADUAAAAEAP3/AAAHADQAAAADAP7/AAAHADUAAAADAP3/AAAHADQAAAACAP7/AAAHADUAAAACAP3/AAAHADQAAAABAP7/AAAHADUAAAABAP3/AAAHADQAAAAAAP7/AAAHADUAAAAAAP3/AAAHADQAAAD///7/AAAHADUAAAD///3/AAAHADQAAAD+//7/AAAHADUAAAD+//3/AAAHADQAAAD9//7/AAAHADUAAAD9//3/AAAHADQAAAD8//7/AAAHADUAAAD8//3/AAAHADQAAAD5//7/AAAHADUAAAD5//3/AAAHADQAAAD4//7/AAAHADUAAAD4//3/AAAHADQAAAD3//7/AAAHADUAAAD3//3/AAAHADQAAAD2//7/AAAHADUAAAD2//3/AAAHADQAAAD1//7/AAAHADUAAAD1//3/AAAHADQAAAD0//7/AAAHADUAAAD0//3/AAAHADQAAADz//7/AAAHADUAAADz//3/AAAHADQAAADv//7/AAAHADUAAADv//3/AAAHADQAAADu//7/AAAHADUAAADu//3/AAAHADQAAADt//7/AAAHADUAAADt//3/AAAHADQAAADs//7/AAAHADUAAADs//3/AAAHADQAAADr//7/AAAGADUAAADr//3/AAAGADQAAADy//3/AAAHADQAAADy//7/AAAHADUAAAA=")
+tile_map_data = PackedByteArray("AAD7/wAAAAAGADQAAAD7/wEAAAAGADUAAAD8/wAAAAAHADQAAAD8/wEAAAAHADUAAAD9/wAAAAAHADQAAAD9/wEAAAAHADUAAAD+/wAAAAALADQAAAD+/wEAAAALADUAAAABAAAAAAAGADQAAAABAAEAAAAGADUAAAACAAAAAAAHADQAAAACAAEAAAAHADUAAAADAAAAAAAHADQAAAADAAEAAAAHADUAAAAEAAAAAAALADQAAAAEAAEAAAALADUAAAA=")
 tile_set = SubResource("TileSet_x618o")
 
-[node name="CodedDoor001Side" parent="." unique_id=1643899151 instance=ExtResource("4_hey7m")]
-position = Vector2(88, 27)
-
-[node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("5_wu0il")]
-position = Vector2(-307, -8)
-
-[node name="LockedDoor001" parent="." unique_id=1050804484 instance=ExtResource("6_wweug")]
-position = Vector2(-239, -19)
-
-[node name="LockedDoor002" parent="." unique_id=1402050957 instance=ExtResource("6_wweug")]
-position = Vector2(-159, 45)
-
-[node name="LockedDoor003" parent="." unique_id=610067829 instance=ExtResource("6_wweug")]
-position = Vector2(-79, -19)
-
-[node name="LockedDoor004" parent="." unique_id=1016178996 instance=ExtResource("6_wweug")]
-position = Vector2(1, 45)
-
-[node name="Furnitures" type="Node2D" parent="." unique_id=600453853]
+[node name="Furniture" type="Node2D" parent="." unique_id=1119300619]
 y_sort_enabled = true
 
-[node name="WheelchairLeft" parent="Furnitures" unique_id=1463422088 instance=ExtResource("7_j2gfh")]
-position = Vector2(-48, -9)
+[node name="2ScreenDesk" parent="Furniture" unique_id=908875404 instance=ExtResource("6_0vr11")]
+position = Vector2(45, 87)
 
-[node name="IVPoleSerum" parent="Furnitures" unique_id=1841640815 instance=ExtResource("9_j587l")]
-position = Vector2(-191, -11)
+[node name="ComplexMonitorDeskFull" parent="Furniture" unique_id=1392044727 instance=ExtResource("7_q4ujy")]
+position = Vector2(-47, 36)
 
-[node name="IVPoleSerum2" parent="Furnitures" unique_id=847029007 instance=ExtResource("9_j587l")]
-position = Vector2(-183, -17)
+[node name="SurgeryBedRight" parent="Furniture" unique_id=1463422088 instance=ExtResource("7_dbn7e")]
+position = Vector2(1, 62)
 
-[node name="IVPoleBlood" parent="Furnitures" unique_id=2096925650 instance=ExtResource("8_g1da1")]
-position = Vector2(-201, -16)
-
-[node name="IVPoleBlood2" parent="Furnitures" unique_id=1683265696 instance=ExtResource("8_g1da1")]
-position = Vector2(-167, -15)
-
-[node name="SmallCupboard" parent="Furnitures" unique_id=592738641 instance=ExtResource("10_70on4")]
-position = Vector2(71, -21)
-
-[node name="SmallCupboard3" parent="Furnitures" unique_id=463400977 instance=ExtResource("10_70on4")]
-position = Vector2(71, -21)
-
-[node name="SmallCupboard2" parent="Furnitures" unique_id=1512437503 instance=ExtResource("10_70on4")]
-position = Vector2(52, 32)
-
-[node name="Sink" parent="Furnitures" unique_id=1874169035 instance=ExtResource("11_nlr71")]
-position = Vector2(47, -11)
-
-[node name="WheelchairLeft2" parent="Furnitures" unique_id=681153364 instance=ExtResource("12_adala")]
-position = Vector2(-192, 26)
+[node name="SurgeryTableSmall2" parent="Furniture" unique_id=449124348 instance=ExtResource("7_bgx86")]
+position = Vector2(-24, 58)

@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cnwhkjo3p2mug" path="res://Scenes/Map/SterileCorridor1/SterileCorridor1.tscn" id="9_jdc5w"]
 [ext_resource type="PackedScene" uid="uid://b8gdxc8jx7pmd" path="res://Scenes/Map/Bathroom1/Bathroom1.tscn" id="10_bfadb"]
 [ext_resource type="PackedScene" uid="uid://bkxfp5kpe5mg5" path="res://Scenes/Map/OperatingRoom1/OperatingRoom1.tscn" id="11_4365w"]
+[ext_resource type="PackedScene" uid="uid://drx4oo0222ai4" path="res://Scenes/Map/OperatingRoom3/OperatingRoom3.tscn" id="13_4c6sw"]
+[ext_resource type="PackedScene" uid="uid://dh6yyxwuev2hj" path="res://Scenes/Map/OperatingRoom4/OperatingRoom4.tscn" id="14_87tdx"]
 
 [node name="Hospital" type="Node2D" unique_id=1182434823]
 y_sort_enabled = true
@@ -20,6 +22,7 @@ script = ExtResource("1_35g8a")
 [node name="PatientRoom1" parent="." unique_id=1015740257 instance=ExtResource("2_p1612")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
+visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="PatientRoom2" parent="." unique_id=1338243762 instance=ExtResource("4_dfmmv")]
@@ -49,5 +52,11 @@ position = Vector2(-12, 26)
 [node name="SterileCorridor1" parent="." unique_id=1966386203 instance=ExtResource("9_jdc5w")]
 position = Vector2(144, -280)
 
+[node name="OperatingRoom3" parent="." unique_id=319840177 instance=ExtResource("13_4c6sw")]
+position = Vector2(-16, -179)
+
 [node name="Bathroom1" parent="." unique_id=1950323170 instance=ExtResource("10_bfadb")]
 position = Vector2(592, 168)
+
+[node name="OperatingRoom4" parent="." unique_id=1645641523 instance=ExtResource("14_87tdx")]
+position = Vector2(144, -227)
