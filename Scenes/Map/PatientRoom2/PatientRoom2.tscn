@@ -3276,7 +3276,5 @@ position = Vector2(71, 0)
 [node name="ThinPlant" parent="Furniture" unique_id=695558004 instance=ExtResource("8_apeqj")]
 position = Vector2(74, -72)
 
-[node name="Interactables" type="Node2D" parent="." unique_id=2044553585]
-
-[node name="Note" parent="Interactables" unique_id=72985288 instance=ExtResource("8_nxfpy")]
+[node name="Note" parent="." unique_id=72985288 instance=ExtResource("8_nxfpy")]
 position = Vector2(-18, -76)

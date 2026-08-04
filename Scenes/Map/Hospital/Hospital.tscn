@@ -46,9 +46,6 @@ position = Vector2(256, -169)
 [node name="DoctorBreakRoom1" parent="." unique_id=347422612 instance=ExtResource("8_m05l0")]
 position = Vector2(352, -168)
 
-[node name="Player" parent="." unique_id=292045112 instance=ExtResource("1_7441k")]
-position = Vector2(-12, 26)
-
 [node name="SterileCorridor1" parent="." unique_id=1966386203 instance=ExtResource("9_jdc5w")]
 position = Vector2(144, -280)
 
@@ -60,3 +57,6 @@ position = Vector2(592, 168)
 
 [node name="OperatingRoom4" parent="." unique_id=1645641523 instance=ExtResource("14_87tdx")]
 position = Vector2(144, -227)
+
+[node name="Player" parent="." unique_id=292045112 instance=ExtResource("1_7441k")]
+position = Vector2(-12, 26)

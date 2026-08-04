@@ -3320,22 +3320,22 @@ offset = Vector2(0, -10)
 [node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("4_sug5m")]
 position = Vector2(11, 56)
 
-[node name="Interactables" type="Node2D" parent="." unique_id=255338179]
+[node name="DoorKey" parent="." unique_id=519018229 instance=ExtResource("18_nlg81")]
+position = Vector2(69, -25)
 
-[node name="DoorKey" parent="Interactables" unique_id=519018229 instance=ExtResource("18_nlg81")]
-position = Vector2(62, -31)
-
-[node name="Battery2" parent="Interactables" unique_id=478410480 instance=ExtResource("19_imhae")]
+[node name="Battery2" parent="." unique_id=478410480 instance=ExtResource("19_imhae")]
 position = Vector2(26, 0)
 
-[node name="Sprite2D" parent="Interactables/Battery2" index="0" unique_id=1931769877]
+[node name="Sprite2D" parent="Battery2" index="0" unique_id=1931769877]
 position = Vector2(2, -19)
 rotation = 2.3941348
 
-[node name="CollisionShape2D" parent="Interactables/Battery2" index="1" unique_id=667987919]
+[node name="CollisionShape2D" parent="Battery2" index="1" unique_id=667987919]
 position = Vector2(3, -20)
 
-[node name="Battery" parent="Interactables" unique_id=72985288 instance=ExtResource("19_imhae")]
+[node name="Battery" parent="." unique_id=72985288 instance=ExtResource("19_imhae")]
 position = Vector2(20, 21)
 
-[editable path="Interactables/Battery2"]
+[node name="Interactables" type="Node2D" parent="." unique_id=255338179]
+
+[editable path="Battery2"]
