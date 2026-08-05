@@ -43,7 +43,7 @@ region = Rect2(48, 0, 16, 48)
 atlas = ExtResource("2_es8ht")
 region = Rect2(64, 0, 16, 48)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_iysvr"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_es8ht"]
 resource_local_to_scene = true
 animations = [{
 "frames": [{
@@ -91,6 +91,9 @@ animations = [{
 DoorId = "Maintenance"
 
 [node name="LeftAnimatedDoor" parent="Sprites" parent_id_path=PackedInt32Array(1678634123) index="0" unique_id=1614435581]
-sprite_frames = SubResource("SpriteFrames_iysvr")
+sprite_frames = SubResource("SpriteFrames_es8ht")
 animation = &"openLeftDoor"
 frame = 0
+
+[node name="InteractionArea" parent="." index="2" unique_id=1261220341]
+visible = true

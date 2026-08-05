@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://drx4oo0222ai4" path="res://Scenes/Map/OperatingRoom3/OperatingRoom3.tscn" id="13_4c6sw"]
 [ext_resource type="PackedScene" uid="uid://dh6yyxwuev2hj" path="res://Scenes/Map/OperatingRoom4/OperatingRoom4.tscn" id="14_87tdx"]
 [ext_resource type="PackedScene" uid="uid://by4q2672fv5e4" path="res://Scenes/Map/Hallway2/Hallway2.tscn" id="15_753w1"]
+[ext_resource type="PackedScene" uid="uid://bmeu8678dphep" path="res://Scenes/Map/GeneratorRoom1/GeneratorRoom1.tscn" id="16_agkiy"]
 
 [node name="Hospital" type="Node2D" unique_id=1182434823]
 y_sort_enabled = true
@@ -52,14 +53,17 @@ position = Vector2(144, -280)
 [node name="OperatingRoom3" parent="." unique_id=319840177 instance=ExtResource("13_4c6sw")]
 position = Vector2(-16, -179)
 
-[node name="Bathroom1" parent="." unique_id=1950323170 instance=ExtResource("10_bfadb")]
-position = Vector2(592, 168)
-
-[node name="OperatingRoom4" parent="." unique_id=1645641523 instance=ExtResource("14_87tdx")]
-position = Vector2(144, -227)
-
 [node name="Player" parent="." unique_id=292045112 instance=ExtResource("1_7441k")]
 position = Vector2(-12, 26)
 
 [node name="Hallway2" parent="." unique_id=621905458 instance=ExtResource("15_753w1")]
 position = Vector2(752, 8)
+
+[node name="OperatingRoom4" parent="." unique_id=1645641523 instance=ExtResource("14_87tdx")]
+position = Vector2(144, -227)
+
+[node name="GeneratorRoom1" parent="." unique_id=1516150850 instance=ExtResource("16_agkiy")]
+position = Vector2(768, -73)
+
+[node name="Bathroom1" parent="." unique_id=1950323170 instance=ExtResource("10_bfadb")]
+position = Vector2(592, 168)

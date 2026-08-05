@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bvxxep38sfrvp" path="res://Scenes/Props/Furniture/Bathroom/ToiletCupboard1Tp/ToiletCupboard1Tp.tscn" id="8_735fn"]
 [ext_resource type="Texture2D" uid="uid://dh3okj3xdkgyw" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/3_Bathroom_Shadowless.png" id="9_13ryv"]
 [ext_resource type="PackedScene" uid="uid://bsx7n181ocx3o" path="res://Scenes/Props/Furniture/TripleSinkBack/TripleSinkBack.tscn" id="10_gnwi6"]
+[ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="11_hmbq4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_mr5do")
@@ -3287,3 +3288,7 @@ position = Vector2(-151, 30)
 
 [node name="TripleSinkBack2" parent="Furniture" unique_id=394072454 instance=ExtResource("10_gnwi6")]
 position = Vector2(129, 30)
+
+[node name="Battery" parent="." unique_id=72985288 instance=ExtResource("11_hmbq4")]
+position = Vector2(-81, -26)
+UniqueID = "Battery_006"
