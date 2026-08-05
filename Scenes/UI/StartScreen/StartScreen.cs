@@ -15,6 +15,10 @@ public partial class StartScreen : Control
         SignalHub.Instance.OnLoadGame += OnLoadPressed;
 	}
 
+    public override void _ExitTree()
+    {
+        SignalHub.Instance.OnLoadGame -= OnLoadPressed;
+    }
 
     private void OnLoadPressed()
     {

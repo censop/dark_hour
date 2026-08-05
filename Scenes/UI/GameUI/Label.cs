@@ -8,6 +8,15 @@ public partial class Label : Godot.Label
 	{
 		SignalHub.Instance.OnBatteryCollected += OnRemainingBatteryChange;
 		SignalHub.Instance.OnBatteryUsed += OnRemainingBatteryChange;
+		SignalHub.Instance.OnLoadGame += OnRemainingBatteryChange;
+		Text = $"x {GlobalVariables.NotConsumedBatteries}";
+	}
+
+	public override void _ExitTree()
+	{
+		SignalHub.Instance.OnBatteryCollected -= OnRemainingBatteryChange;
+		SignalHub.Instance.OnBatteryUsed -= OnRemainingBatteryChange;
+		SignalHub.Instance.OnLoadGame -= OnRemainingBatteryChange;
 	}
 
     private void OnRemainingBatteryChange()
