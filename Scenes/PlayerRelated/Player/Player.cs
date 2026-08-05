@@ -29,7 +29,16 @@ public partial class Player : CharacterBody2D
 
     private void OnSaveGame()
     {
-        SaveManager.Instance.SaveGame(GlobalPosition, GlobalVariables.BatteryTimePercentage, GlobalVariables.CollectedBatteries, GlobalVariables.NotConsumedBatteries, GlobalVariables.DoorKeysCollected, GlobalVariables.TurntOnLights, GlobalVariables.DoorsUnlocked);
+        SaveManager.Instance.SaveGame(
+            GlobalPosition, 
+            GlobalVariables.BatteryTimePercentage, 
+            GlobalVariables.CollectedBatteries, 
+            GlobalVariables.NotConsumedBatteries, 
+            GlobalVariables.DoorKeysCollected, 
+            GlobalVariables.TurntOnLights, 
+            GlobalVariables.DoorsUnlocked,
+            GlobalVariables.GeneratorsWorking
+        );
     }
 
     public override void _PhysicsProcess(double delta)

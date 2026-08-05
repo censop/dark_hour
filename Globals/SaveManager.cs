@@ -13,7 +13,7 @@ public partial class SaveManager : Node
         Instance = this;
     }
 
-    public void SaveGame(Vector2 playerPos, float batteryPercent, List<String> collectedBatteries, int notUsedBatteries, List<String> collectedDoorKeys, List<String> lightsOn, List<String> unlockedDoors)
+    public void SaveGame(Vector2 playerPos, float batteryPercent, List<String> collectedBatteries, int notUsedBatteries, List<String> collectedDoorKeys, List<String> lightsOn, List<String> unlockedDoors, List<String> generatorCodes)
     {
         SaveData data = new SaveData
         {
@@ -23,6 +23,7 @@ public partial class SaveManager : Node
             AllBatteries = collectedBatteries,
             CurrentBatteries = notUsedBatteries,
             DoorKeyInventory = collectedDoorKeys,
+            WorkingGenerators = generatorCodes,
             OpenedDoors = unlockedDoors,
             LightSwitchesOn = lightsOn,
         };

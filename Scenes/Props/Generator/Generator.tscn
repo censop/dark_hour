@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://t8t208yocldm"]
+
+[ext_resource type="Script" uid="uid://tbe2vsudpsrq" path="res://Scenes/Props/Generator/Generator.cs" id="1_3ojo4"]
+[ext_resource type="Texture2D" uid="uid://bnjxaptgy3hv3" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/5_Classroom_and_library_Shadowless.png" id="1_j8xo3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ojo4"]
+atlas = ExtResource("1_j8xo3")
+region = Rect2(192, 80, 16, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23v5y"]
+size = Vector2(15, 10)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bic76"]
+radius = 13.0
+height = 50.0
+
+[node name="Generator" type="StaticBody2D" unique_id=1463422088 node_paths=PackedStringArray("_disabledColor", "_enabledColor", "_interactableArea")]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_3ojo4")
+_disabledColor = NodePath("DisabledColor")
+_enabledColor = NodePath("EnabledColor")
+_interactableArea = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1954714297]
+position = Vector2(0, -13)
+texture = SubResource("AtlasTexture_3ojo4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=440692879]
+position = Vector2(-0.5, -3)
+shape = SubResource("RectangleShape2D_23v5y")
+
+[node name="DisabledColor" type="ColorRect" parent="." unique_id=1796474724]
+visible = false
+offset_left = -3.0
+offset_top = -10.0
+offset_right = -2.0
+offset_bottom = -9.0
+color = Color(0.9372549, 0.07450981, 0, 1)
+
+[node name="EnabledColor" type="ColorRect" parent="." unique_id=1162910408]
+offset_left = -4.0
+offset_top = -10.0
+offset_right = -3.0
+offset_bottom = -9.0
+color = Color(0.3647059, 0.95686275, 0.2, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=819414444]
+collision_layer = 8
+collision_mask = 4
+
+[node name="InteractionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=414026745]
+position = Vector2(0, -10)
+shape = SubResource("CapsuleShape2D_bic76")
