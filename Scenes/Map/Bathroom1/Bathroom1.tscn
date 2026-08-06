@@ -3278,19 +3278,14 @@ position = Vector2(77, 20)
 position = Vector2(199, 31)
 
 [node name="Sprite2D" type="Sprite2D" parent="Furniture" unique_id=1878653529]
-position = Vector2(60, -30)
+position = Vector2(60, -39)
 texture = SubResource("AtlasTexture_gnwi6")
-offset = Vector2(0, -20)
+offset = Vector2(0, -10)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Furniture" unique_id=1223185597]
-position = Vector2(-59, -30)
+position = Vector2(-60, -39)
 texture = SubResource("AtlasTexture_gnwi6")
-offset = Vector2(0, -20)
-
-[node name="Sprite2D3" type="Sprite2D" parent="Furniture" unique_id=369838879]
-position = Vector2(-59, -30)
-texture = SubResource("AtlasTexture_gnwi6")
-offset = Vector2(0, -20)
+offset = Vector2(0, -10)
 
 [node name="TripleSinkBack" parent="Furniture" unique_id=9588056 instance=ExtResource("10_gnwi6")]
 position = Vector2(-151, 30)

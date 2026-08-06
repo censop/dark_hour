@@ -3231,7 +3231,7 @@ y_sort_enabled = true
 
 [node name="WallsSide" type="TileMapLayer" parent="Walls" unique_id=127048269]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD7//3/AAAGADUAAAD7//7/AAAGADUAAAD7////AAAGADUAAAD7/wAAAAAGADUAAAD7/wEAAAAGADUAAAD7/wIAAAAGADUAAAD7/wMAAAAGADUAAAD7/wQAAAAGADUAAAD7/wUAAAAGADUAAAD7/wYAAAAGADUAAAAEAP3/AAALADUAAAAEAP7/AAALADUAAAADAAMAAAAGADUAAAADAAQAAAAGADUAAAADAAUAAAAGADUAAAADAAYAAAAGADUAAAA=")
+tile_map_data = PackedByteArray("AAD7//3/AAAGADUAAAD7//7/AAAGADUAAAD7////AAAGADUAAAD7/wAAAAAGADUAAAD7/wEAAAAGADUAAAD7/wIAAAAGADUAAAD7/wMAAAAGADUAAAD7/wQAAAAGADUAAAD7/wUAAAAGADUAAAD7/wYAAAAGADUAAAAEAP3/AAALADUAAAAEAP7/AAALADUAAAADAAMAAAAGADUAAAADAAQAAAAGADUAAAADAAUAAAAGADUAAAADAAYAAAAGADUAAAAGAP7/AAAGADUAAAA=")
 tile_set = SubResource("TileSet_m6a6t")
 
 [node name="WallsFront" type="TileMapLayer" parent="Walls" unique_id=1939813532]
@@ -3294,9 +3294,19 @@ position = Vector2(-22, 86)
 [node name="SideSmallCupboard" parent="." unique_id=1322213832 instance=ExtResource("9_fbvsr")]
 position = Vector2(-22, -8)
 
+[node name="Battery2" parent="." unique_id=72985288 instance=ExtResource("10_m6a6t")]
+position = Vector2(-21, -18)
+rotation = 2.3500395
+UniqueID = "Battery_007"
+
+[node name="Battery3" parent="." unique_id=1264338761 instance=ExtResource("10_m6a6t")]
+position = Vector2(-21, -18)
+rotation = 2.3500395
+UniqueID = "Battery_008"
+
 [node name="Interactables" type="Node2D" parent="." unique_id=21278764]
 
-[node name="Battery" parent="Interactables" unique_id=72985288 instance=ExtResource("10_m6a6t")]
+[node name="Battery" parent="Interactables" unique_id=1383335843 instance=ExtResource("10_m6a6t")]
 position = Vector2(-21, -18)
 rotation = 2.3500395
 
@@ -3312,8 +3322,8 @@ shape = SubResource("RectangleShape2D_nne2l")
 [node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=291589066]
 z_index = 10
 material = SubResource("ShaderMaterial_5l3t7")
-offset_left = -88.0
-offset_top = -78.0
-offset_right = 116.0
-offset_bottom = 142.0
+offset_left = -72.0
+offset_top = -67.0
+offset_right = 104.0
+offset_bottom = 120.0
 color = Color(0, 0, 0, 0.84705883)

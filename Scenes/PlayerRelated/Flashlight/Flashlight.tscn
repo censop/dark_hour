@@ -19,6 +19,7 @@ _deathTimer = NodePath("DeathTimer")
 _pointLight = NodePath("PointLight2D")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=362092162]
+visibility_layer = 2
 scale = Vector2(1.5, 1.5)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_dao62")

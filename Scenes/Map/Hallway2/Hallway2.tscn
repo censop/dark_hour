@@ -3232,6 +3232,7 @@ tile_set = ExtResource("2_ugxds")
 
 [node name="WallsSide" type="TileMapLayer" parent="Walls" unique_id=127048269]
 y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAGAP//AAALADUAAAAGAAAAAAALADUAAAA=")
 tile_set = SubResource("TileSet_m6a6t")
 
 [node name="WallsBack" type="TileMapLayer" parent="Walls" unique_id=1053688348]

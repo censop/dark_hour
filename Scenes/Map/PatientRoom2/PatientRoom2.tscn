@@ -3216,7 +3216,7 @@ atlas = ExtResource("2_lm8b3")
 region = Rect2(176, 1072, 16, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rc5ie"]
-size = Vector2(135.375, 139.625)
+size = Vector2(135.375, 132.8125)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lioe0"]
 shader = ExtResource("12_q67rv")
@@ -3303,7 +3303,7 @@ script = ExtResource("11_q67rv")
 _blackoutSquare = NodePath("ColorRect")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=137918700]
-position = Vector2(17.3125, -38.8125)
+position = Vector2(15, -43.40625)
 shape = SubResource("RectangleShape2D_rc5ie")
 
 [node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1712055129]
@@ -3312,5 +3312,5 @@ material = SubResource("ShaderMaterial_lioe0")
 offset_left = -53.0
 offset_top = -111.0
 offset_right = 82.0
-offset_bottom = 31.0
+offset_bottom = 10.0
 color = Color(0, 0, 0, 0.84705883)
