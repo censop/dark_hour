@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://cvca1rb5cltdc" path="res://Scenes/Props/Furniture/Shelves/ShelfSide/ShelfSide.tscn" id="16_oaeeq"]
 [ext_resource type="PackedScene" uid="uid://cmnjvqosb7fru" path="res://Scenes/Props/Keys/DoorKey/DoorKey.tscn" id="18_nlg81"]
 [ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="19_imhae"]
+[ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="20_pd48e"]
+[ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="21_qpr5u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_ttdf4")
@@ -3226,6 +3228,13 @@ region = Rect2(0, 32, 16, 32)
 atlas = ExtResource("3_ttdf4")
 region = Rect2(32, 0, 32, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mfvmm"]
+size = Vector2(159, 167)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rqv1u"]
+shader = ExtResource("21_qpr5u")
+shader_parameter/edge_softness = 0.1
+
 [node name="DoctorBreakRoom1" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3339,5 +3348,23 @@ position = Vector2(20, 21)
 UniqueID = "Battery_005"
 
 [node name="Interactables" type="Node2D" parent="." unique_id=255338179]
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=918269236 node_paths=PackedStringArray("_blackoutSquare")]
+collision_mask = 4
+script = ExtResource("20_pd48e")
+_blackoutSquare = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=18472412]
+position = Vector2(24.5, 7.5)
+shape = SubResource("RectangleShape2D_mfvmm")
+
+[node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1846827147]
+z_index = 10
+material = SubResource("ShaderMaterial_rqv1u")
+offset_left = -69.0
+offset_top = -83.0
+offset_right = 114.0
+offset_bottom = 98.0
+color = Color(0, 0, 0, 0.84705883)
 
 [editable path="Battery2"]

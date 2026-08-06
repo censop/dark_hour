@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cdsmiohg1o37h" path="res://Scenes/Props/Furniture/Plants/ThinPlant/ThinPlant.tscn" id="8_apeqj"]
 [ext_resource type="PackedScene" uid="uid://bqobpckif6i16" path="res://Scenes/Props/Note/Note.tscn" id="8_nxfpy"]
 [ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="10_muiwy"]
+[ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="11_q67rv"]
+[ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="12_q67rv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_accju"]
 texture = ExtResource("2_lm8b3")
@@ -3213,6 +3215,13 @@ sources/0 = SubResource("TileSetAtlasSource_fbvsr")
 atlas = ExtResource("2_lm8b3")
 region = Rect2(176, 1072, 16, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rc5ie"]
+size = Vector2(135.375, 139.625)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lioe0"]
+shader = ExtResource("12_q67rv")
+shader_parameter/edge_softness = 0.1
+
 [node name="PatientRoom2" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3287,3 +3296,21 @@ UniqueID = "Battery_002"
 [node name="Battery2" parent="." unique_id=1986583431 instance=ExtResource("10_muiwy")]
 position = Vector2(-16, -13)
 UniqueID = "Battery_003"
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=724555447 node_paths=PackedStringArray("_blackoutSquare")]
+collision_mask = 4
+script = ExtResource("11_q67rv")
+_blackoutSquare = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=137918700]
+position = Vector2(17.3125, -38.8125)
+shape = SubResource("RectangleShape2D_rc5ie")
+
+[node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1712055129]
+z_index = 10
+material = SubResource("ShaderMaterial_lioe0")
+offset_left = -53.0
+offset_top = -111.0
+offset_right = 82.0
+offset_bottom = 31.0
+color = Color(0, 0, 0, 0.84705883)

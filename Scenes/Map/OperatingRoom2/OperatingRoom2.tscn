@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cnc4xdnb53p" path="res://Scenes/Props/MovableFurniture/EmergencyCarryBed/EmergencyCarryBed.tscn" id="10_txstj"]
 [ext_resource type="PackedScene" uid="uid://cjjpaumogy2sp" path="res://Scenes/Props/Furniture/Cupboards/DoubleBigCupboard/DoubleBigCupboard.tscn" id="11_3q30p"]
 [ext_resource type="PackedScene" uid="uid://cmnjvqosb7fru" path="res://Scenes/Props/Keys/DoorKey/DoorKey.tscn" id="12_wif8t"]
+[ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="13_pumx5"]
+[ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="14_vyupq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_4wnhv")
@@ -3211,6 +3213,13 @@ terrain_set_0/terrain_0/name = "HospitalWalls"
 terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5n8oq"]
+size = Vector2(160, 134)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a2ag6"]
+shader = ExtResource("14_vyupq")
+shader_parameter/edge_softness = 0.1
+
 [node name="OperatingRoom2" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3271,3 +3280,21 @@ position = Vector2(56, -8)
 [node name="DoorKey" parent="." unique_id=519018229 instance=ExtResource("12_wif8t")]
 position = Vector2(-72, -96)
 KeyID = "Maintenance"
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=1921755074 node_paths=PackedStringArray("_blackoutSquare")]
+collision_mask = 4
+script = ExtResource("13_pumx5")
+_blackoutSquare = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=1255986093]
+position = Vector2(0, -64)
+shape = SubResource("RectangleShape2D_5n8oq")
+
+[node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1046363927]
+z_index = 10
+material = SubResource("ShaderMaterial_a2ag6")
+offset_left = -88.0
+offset_top = -128.0
+offset_right = 80.0
+offset_bottom = 8.0
+color = Color(0, 0, 0, 0.84705883)

@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dh3okj3xdkgyw" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/3_Bathroom_Shadowless.png" id="9_13ryv"]
 [ext_resource type="PackedScene" uid="uid://bsx7n181ocx3o" path="res://Scenes/Props/Furniture/TripleSinkBack/TripleSinkBack.tscn" id="10_gnwi6"]
 [ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="11_hmbq4"]
+[ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="12_28qiw"]
+[ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="13_yjn6p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_mr5do")
@@ -3214,6 +3216,13 @@ sources/0 = SubResource("TileSetAtlasSource_accju")
 atlas = ExtResource("9_13ryv")
 region = Rect2(240, 416, 16, 32)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2be7y"]
+size = Vector2(423.5, 115)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vxbof"]
+shader = ExtResource("13_yjn6p")
+shader_parameter/edge_softness = 0.1
+
 [node name="Bathroom1" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3292,3 +3301,21 @@ position = Vector2(129, 30)
 [node name="Battery" parent="." unique_id=72985288 instance=ExtResource("11_hmbq4")]
 position = Vector2(-81, -26)
 UniqueID = "Battery_006"
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=1046645913 node_paths=PackedStringArray("_blackoutSquare")]
+collision_mask = 4
+script = ExtResource("12_28qiw")
+_blackoutSquare = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=307370853]
+position = Vector2(0.25, -10.5)
+shape = SubResource("RectangleShape2D_2be7y")
+
+[node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1633148984]
+z_index = 10
+material = SubResource("ShaderMaterial_vxbof")
+offset_left = -213.0
+offset_top = -61.0
+offset_right = 211.0
+offset_bottom = 46.0
+color = Color(0, 0, 0, 0.84705883)

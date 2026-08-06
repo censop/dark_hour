@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://b2tui50thdwhc" path="res://Scenes/Props/Furniture/Tables/SurgeryTableSmall2/SurgeryTableSmall2.tscn" id="7_bgx86"]
 [ext_resource type="PackedScene" uid="uid://dyo53k1m5m1i7" path="res://Scenes/Props/Furniture/SurgeryBed/SurgeryBedRight/SurgeryBedRight.tscn" id="7_dbn7e"]
 [ext_resource type="PackedScene" uid="uid://7trgp3qn8u3u" path="res://Scenes/Props/Furniture/ComplexMonitorDesk/ComplexMonitorDeskFull/ComplexMonitorDeskFull.tscn" id="7_q4ujy"]
+[ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="8_gyih1"]
+[ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="9_a0j28"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_gyih1")
@@ -3206,6 +3208,13 @@ terrain_set_0/terrain_0/name = "HospitalWalls"
 terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2jwx"]
+size = Vector2(135, 101)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0vr11"]
+shader = ExtResource("9_a0j28")
+shader_parameter/edge_softness = 0.1
+
 [node name="OperatingRoom4" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3247,3 +3256,21 @@ position = Vector2(1, 62)
 
 [node name="SurgeryTableSmall2" parent="Furniture" unique_id=449124348 instance=ExtResource("7_bgx86")]
 position = Vector2(-24, 58)
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=2067807771 node_paths=PackedStringArray("_blackoutSquare")]
+collision_mask = 4
+script = ExtResource("8_gyih1")
+_blackoutSquare = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=60664117]
+position = Vector2(0.5, 43.5)
+shape = SubResource("RectangleShape2D_w2jwx")
+
+[node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1227772382]
+z_index = 10
+material = SubResource("ShaderMaterial_0vr11")
+offset_left = -65.0
+offset_top = 2.0
+offset_right = 67.0
+offset_bottom = 92.0
+color = Color(0, 0, 0, 0.84705883)

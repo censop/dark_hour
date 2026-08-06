@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bmgpc4533wbkn" path="res://Scenes/Props/Furniture/Tables/SurgeryTableSmall1/SurgeryTableSmall1.tscn" id="5_nv5jm"]
 [ext_resource type="PackedScene" uid="uid://dl2qbj48b12t0" path="res://Scenes/Props/Furniture/Tables/2ScreenDesk/2ScreenDesk.tscn" id="6_4uwjf"]
 [ext_resource type="PackedScene" uid="uid://7trgp3qn8u3u" path="res://Scenes/Props/Furniture/ComplexMonitorDesk/ComplexMonitorDeskFull/ComplexMonitorDeskFull.tscn" id="7_dhwgn"]
+[ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="8_202vt"]
+[ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="9_4xsg4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_nv5jm")
@@ -3206,6 +3208,13 @@ terrain_set_0/terrain_0/name = "HospitalWalls"
 terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ac1jj"]
+size = Vector2(134.5, 103)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iexa3"]
+shader = ExtResource("9_4xsg4")
+shader_parameter/edge_softness = 0.1
+
 [node name="OperatingRoom1" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3247,3 +3256,21 @@ position = Vector2(47, -64)
 
 [node name="ComplexMonitorDeskFull" parent="Furniture" unique_id=1392044727 instance=ExtResource("7_dhwgn")]
 position = Vector2(-45, -57)
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=479739297 node_paths=PackedStringArray("_blackoutSquare")]
+collision_mask = 4
+script = ExtResource("8_202vt")
+_blackoutSquare = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=1635117490]
+position = Vector2(1.75, -42.5)
+shape = SubResource("RectangleShape2D_ac1jj")
+
+[node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1358770229]
+z_index = 10
+material = SubResource("ShaderMaterial_iexa3")
+offset_left = -88.0
+offset_top = -95.0
+offset_right = 84.0
+offset_bottom = 3.0
+color = Color(0, 0, 0, 0.84705883)

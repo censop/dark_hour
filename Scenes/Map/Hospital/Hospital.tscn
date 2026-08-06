@@ -21,10 +21,17 @@
 y_sort_enabled = true
 script = ExtResource("1_35g8a")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=114326617]
+z_index = -5
+offset_left = -829.0
+offset_top = -954.0
+offset_right = 1511.0
+offset_bottom = 670.0
+color = Color(0, 0, 0, 1)
+
 [node name="PatientRoom1" parent="." unique_id=1015740257 instance=ExtResource("2_p1612")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
-visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="PatientRoom2" parent="." unique_id=1338243762 instance=ExtResource("4_dfmmv")]

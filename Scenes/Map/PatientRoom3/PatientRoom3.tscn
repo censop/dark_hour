@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c63do8eq2x6gy" path="res://Scenes/Props/Furniture/Beds/BedLeft/BedLeft.tscn" id="5_h4wmk"]
 [ext_resource type="PackedScene" uid="uid://bwnxnc0ehvdon" path="res://Scenes/Props/Furniture/Beds/BedRight/BedRight.tscn" id="6_kdek6"]
 [ext_resource type="PackedScene" uid="uid://2tsnbj83usc6" path="res://Scenes/Props/Furniture/Cupboards/SideSmallCupboard/SideSmallCupboard.tscn" id="7_5ud5c"]
+[ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="8_3khn5"]
+[ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="9_5xopx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_h4wmk")
@@ -3206,6 +3208,13 @@ terrain_set_0/terrain_0/name = "HospitalWalls"
 terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wua5b"]
+size = Vector2(102, 113)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gge4a"]
+shader = ExtResource("9_5xopx")
+shader_parameter/edge_softness = 0.1
+
 [node name="PatientRoom3" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3253,3 +3262,21 @@ position = Vector2(-42, 27)
 
 [node name="SideSmallCupboard2" parent="Furnitures" unique_id=689596438 instance=ExtResource("7_5ud5c")]
 position = Vector2(42, 27)
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=1184953863 node_paths=PackedStringArray("_blackoutSquare")]
+collision_mask = 4
+script = ExtResource("8_3khn5")
+_blackoutSquare = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=203871091]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_wua5b")
+
+[node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1541454041]
+z_index = 10
+material = SubResource("ShaderMaterial_gge4a")
+offset_left = -51.0
+offset_top = -48.0
+offset_right = 51.0
+offset_bottom = 72.0
+color = Color(0, 0, 0, 0.84705883)

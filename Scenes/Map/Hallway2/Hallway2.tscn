@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_yixhq"]
 [ext_resource type="PackedScene" uid="uid://ca081dmj30r8y" path="res://Scenes/Props/Doors/LockedDoorMaintenance/LockedDoorMaintenance.tscn" id="5_m5hgw"]
 [ext_resource type="PackedScene" uid="uid://ba2y7ba4yg2fa" path="res://Scenes/Props/Doors/LockedDoorMaintenanceDouble/LockedDoorMaintenanceDouble.tscn" id="5_yixhq"]
+[ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="6_g31cg"]
+[ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="7_wuiwt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_yixhq")
@@ -3204,6 +3206,13 @@ terrain_set_0/terrain_0/name = "HospitalWalls"
 terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6upp"]
+size = Vector2(182, 75)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bltkk"]
+shader = ExtResource("7_wuiwt")
+shader_parameter/edge_softness = 0.1
+
 [node name="Hallway2" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3237,3 +3246,21 @@ position = Vector2(-24, 27)
 
 [node name="LockedDoorMaintenanceDouble" parent="." unique_id=2044136251 instance=ExtResource("5_yixhq")]
 position = Vector2(18, -21)
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=1572706994 node_paths=PackedStringArray("_blackoutSquare")]
+collision_mask = 4
+script = ExtResource("6_g31cg")
+_blackoutSquare = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=1640755108]
+position = Vector2(8, -7.5)
+shape = SubResource("RectangleShape2D_w6upp")
+
+[node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1211386885]
+z_index = 10
+material = SubResource("ShaderMaterial_bltkk")
+offset_left = -83.0
+offset_top = -46.0
+offset_right = 99.0
+offset_bottom = 29.0
+color = Color(0, 0, 0, 0.84705883)

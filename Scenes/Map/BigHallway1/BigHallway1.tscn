@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cdsmiohg1o37h" path="res://Scenes/Props/Furniture/Plants/ThinPlant/ThinPlant.tscn" id="12_6ussb"]
 [ext_resource type="PackedScene" uid="uid://c8grkf0ndt8s1" path="res://Scenes/Props/Doors/SlidingDoor/SlidingDoor.tscn" id="12_gq30a"]
 [ext_resource type="PackedScene" uid="uid://dcof068357k60" path="res://Scenes/Props/Doors/LockedDoor001/LockedDoor001.tscn" id="14_88juf"]
+[ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="16_8snl3"]
+[ext_resource type="Shader" uid="uid://jqdypy6gb7id" path="res://Scenes/Map/BigHallway1/BigHallway1.gdshader" id="17_lx021"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("2_jwv1s")
@@ -3214,6 +3216,13 @@ terrain_set_0/terrain_0/name = "HospitalWalls"
 terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30ep5"]
+size = Vector2(563, 149)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ywhyr"]
+shader = ExtResource("17_lx021")
+shader_parameter/edge_softness = 0.1
+
 [node name="BigHallway1" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3305,3 +3314,21 @@ position = Vector2(81, 77)
 
 [node name="MoveableFurnitureBase" parent="." unique_id=990666621 instance=ExtResource("5_8snl3")]
 position = Vector2(19, -27)
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=76697054 node_paths=PackedStringArray("_blackoutSquare")]
+collision_mask = 4
+script = ExtResource("16_8snl3")
+_blackoutSquare = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=1858122040]
+position = Vector2(150.5, -1.5)
+shape = SubResource("RectangleShape2D_30ep5")
+
+[node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=346369246]
+z_index = 10
+material = SubResource("ShaderMaterial_ywhyr")
+offset_left = -133.0
+offset_top = -79.0
+offset_right = 435.0
+offset_bottom = 76.0
+color = Color(0, 0, 0, 0.84705883)

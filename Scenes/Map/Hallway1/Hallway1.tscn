@@ -4,6 +4,8 @@
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_jsmg2"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_h6ugj"]
 [ext_resource type="PackedScene" uid="uid://cytlv3428ujdx" path="res://Scenes/Props/Doors/PoweredUpSlidingDoor/PoweredUpSlidingDoor.tscn" id="4_0xhj5"]
+[ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="5_yoypj"]
+[ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="6_yoypj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_h6ugj")
@@ -3203,6 +3205,13 @@ terrain_set_0/terrain_0/name = "HospitalWalls"
 terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3g6p"]
+size = Vector2(75, 361)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0tx0b"]
+shader = ExtResource("6_yoypj")
+shader_parameter/edge_softness = 0.1
+
 [node name="PatientRoom3" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3232,3 +3241,21 @@ tile_set = SubResource("TileSet_x618o")
 
 [node name="PoweredUpSlidingDoor1" parent="." unique_id=1643899151 instance=ExtResource("4_0xhj5")]
 position = Vector2(0, -213)
+
+[node name="RoomArea" type="Area2D" parent="." unique_id=1404390444 node_paths=PackedStringArray("_blackoutSquare")]
+collision_mask = 4
+script = ExtResource("5_yoypj")
+_blackoutSquare = NodePath("ColorRect")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=1957499731]
+position = Vector2(-0.5, -58.5)
+shape = SubResource("RectangleShape2D_c3g6p")
+
+[node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=657368582]
+z_index = 10
+material = SubResource("ShaderMaterial_0tx0b")
+offset_left = -36.0
+offset_top = -242.0
+offset_right = 43.0
+offset_bottom = 135.0
+color = Color(0, 0, 0, 0.84705883)
