@@ -11,6 +11,9 @@ public partial class Player : CharacterBody2D
     private bool _isGrabbing = false;
     [Export] private float _pushPullSpeed = 20.0f;
 
+    [Export] private AudioStreamPlayer2D _footstepAudio;
+    private ulong _lastStepTime = 0;
+
 
 	public bool IsInteracting = false;
 
@@ -106,6 +109,23 @@ public partial class Player : CharacterBody2D
         
         //PLACEHOLDER FOR NOW
         GetTree().CreateTimer(0.4f).Timeout += () => IsInteracting = false;
+    }
+
+    public void PlayFootstep()
+    {
+        ulong currentTime = Time.GetTicksMsec();
+    
+        // If less than 100 milliseconds have passed since the last step, ignore this call!
+        // This blocks the "double step" glitch when walking diagonally.
+        if (currentTime - _lastStepTime < 100) 
+        {
+            return; 
+        }
+        
+        // Save this time for the next step
+        _lastStepTime = currentTime;
+        _footstepAudio.PitchScale = (float)GD.RandRange(0.8, 1.2);
+        _footstepAudio.Play();
     }
 	
 }
