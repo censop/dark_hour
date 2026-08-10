@@ -41,6 +41,7 @@ public partial class Generator : StaticBody2D
         if (@event.IsActionPressed("interact") && _isBodyInside && !_isWorking)
 		{
 			SignalHub.EmitOnGeneratorWorking(GeneratorCode);
+			SignalHub.EmitOnDialogueTriggered("Generator On");
 			SpriteEnabled();
 
 		}

@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bqobpckif6i16" path="res://Scenes/Props/Note/Note.tscn" id="12_bx50e"]
 [ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="13_s1xfb"]
 [ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="14_41eln"]
+[ext_resource type="PackedScene" uid="uid://d3o2bru1sdb0w" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.tscn" id="15_41eln"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_uuaeo")
@@ -3275,7 +3276,7 @@ position = Vector2(64, 72)
 position = Vector2(0, 16)
 
 [node name="IVPoleSerum" parent="Furniture" unique_id=347875964 instance=ExtResource("11_bx50e")]
-position = Vector2(-72, 0)
+position = Vector2(69, 46)
 
 [node name="SurgeryTable1" parent="Furniture" unique_id=356317780 instance=ExtResource("8_3wsyl")]
 position = Vector2(0, 32)
@@ -3301,3 +3302,7 @@ offset_top = -49.0
 offset_right = 88.0
 offset_bottom = 77.0
 color = Color(0, 0, 0, 0.84705883)
+
+[node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("15_41eln")]
+position = Vector2(-76, 3)
+SwitchLightID = "SwitchLight_002"

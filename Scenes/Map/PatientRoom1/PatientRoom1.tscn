@@ -3268,7 +3268,7 @@ position = Vector2(-48, 38)
 position = Vector2(-45, 61)
 
 [node name="DoubleBigCupboard" parent="." unique_id=1428791992 instance=ExtResource("3_egpu8")]
-position = Vector2(24, -26)
+position = Vector2(25, -30)
 
 [node name="DoubleBigCupboard3" parent="." unique_id=1919537774 instance=ExtResource("3_egpu8")]
 position = Vector2(25, 117)
@@ -3277,7 +3277,7 @@ position = Vector2(25, 117)
 position = Vector2(-8, 117)
 
 [node name="DoubleBigCupboard2" parent="." unique_id=1246977073 instance=ExtResource("3_egpu8")]
-position = Vector2(-7, -26)
+position = Vector2(-8, -30)
 
 [node name="ThinPlant" parent="." unique_id=1997569789 instance=ExtResource("7_lcvn7")]
 position = Vector2(-56, -30)
@@ -3294,16 +3294,6 @@ position = Vector2(-22, 86)
 [node name="SideSmallCupboard" parent="." unique_id=1322213832 instance=ExtResource("9_fbvsr")]
 position = Vector2(-22, -8)
 
-[node name="Battery2" parent="." unique_id=72985288 instance=ExtResource("10_m6a6t")]
-position = Vector2(-21, -18)
-rotation = 2.3500395
-UniqueID = "Battery_007"
-
-[node name="Battery3" parent="." unique_id=1264338761 instance=ExtResource("10_m6a6t")]
-position = Vector2(-21, -18)
-rotation = 2.3500395
-UniqueID = "Battery_008"
-
 [node name="Interactables" type="Node2D" parent="." unique_id=21278764]
 
 [node name="Battery" parent="Interactables" unique_id=1383335843 instance=ExtResource("10_m6a6t")]
@@ -3311,6 +3301,7 @@ position = Vector2(-21, -18)
 rotation = 2.3500395
 
 [node name="RoomArea" type="Area2D" parent="." unique_id=873038400 node_paths=PackedStringArray("_blackoutSquare")]
+visible = false
 collision_mask = 4
 script = ExtResource("11_x618o")
 _blackoutSquare = NodePath("ColorRect")

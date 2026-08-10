@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://t8t208yocldm" path="res://Scenes/Props/Generator/Generator.tscn" id="4_prpug"]
 [ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="5_3ngxu"]
 [ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="6_4lo71"]
+[ext_resource type="PackedScene" uid="uid://d3o2bru1sdb0w" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.tscn" id="7_4lo71"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_x8j8m")
@@ -3258,3 +3259,7 @@ offset_top = -29.0
 offset_right = 37.0
 offset_bottom = 35.0
 color = Color(0, 0, 0, 0.84705883)
+
+[node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("7_4lo71")]
+position = Vector2(-28, 6)
+SwitchLightID = "SwitchLight_003"

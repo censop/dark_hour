@@ -3249,6 +3249,7 @@ position = Vector2(-24, 27)
 position = Vector2(18, -21)
 
 [node name="RoomArea" type="Area2D" parent="." unique_id=1572706994 node_paths=PackedStringArray("_blackoutSquare")]
+visible = false
 collision_mask = 4
 script = ExtResource("6_g31cg")
 _blackoutSquare = NodePath("ColorRect")

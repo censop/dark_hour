@@ -4,7 +4,6 @@
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_hey7m"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_wu0il"]
 [ext_resource type="PackedScene" uid="uid://b77jbg17ln8f2" path="res://Scenes/Props/Doors/CodedDoor001Side/CodedDoor001Side.tscn" id="4_hey7m"]
-[ext_resource type="PackedScene" uid="uid://d3o2bru1sdb0w" path="res://Scenes/Props/LightSources/SwitchLight/SwitchLight.tscn" id="5_wu0il"]
 [ext_resource type="PackedScene" uid="uid://dcof068357k60" path="res://Scenes/Props/Doors/LockedDoor001/LockedDoor001.tscn" id="6_wweug"]
 [ext_resource type="PackedScene" uid="uid://c2at45us0dow0" path="res://Scenes/Props/Furniture/Wheelchairs/WheelchairLeft/WheelchairLeft.tscn" id="7_j2gfh"]
 [ext_resource type="PackedScene" uid="uid://ca3dtbasb56l4" path="res://Scenes/Props/Furniture/IVPole/IVPoleBlood/IVPoleBlood.tscn" id="8_g1da1"]
@@ -3250,10 +3249,6 @@ tile_set = SubResource("TileSet_x618o")
 [node name="CodedDoor001Side" parent="." unique_id=1643899151 instance=ExtResource("4_hey7m")]
 position = Vector2(88, 27)
 
-[node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("5_wu0il")]
-position = Vector2(-307, -8)
-SwitchLightID = "SwitchLight_002"
-
 [node name="LockedDoor001" parent="." unique_id=1050804484 instance=ExtResource("6_wweug")]
 position = Vector2(-239, -19)
 
@@ -3285,13 +3280,13 @@ position = Vector2(-201, -16)
 position = Vector2(-167, -15)
 
 [node name="SmallCupboard" parent="Furnitures" unique_id=592738641 instance=ExtResource("10_70on4")]
-position = Vector2(71, -21)
+position = Vector2(71, -15)
 
 [node name="SmallCupboard3" parent="Furnitures" unique_id=463400977 instance=ExtResource("10_70on4")]
-position = Vector2(71, -21)
+position = Vector2(70, 37)
 
 [node name="SmallCupboard2" parent="Furnitures" unique_id=1512437503 instance=ExtResource("10_70on4")]
-position = Vector2(52, 32)
+position = Vector2(53, 37)
 
 [node name="Sink" parent="Furnitures" unique_id=1874169035 instance=ExtResource("11_nlr71")]
 position = Vector2(47, -11)
@@ -3300,6 +3295,7 @@ position = Vector2(47, -11)
 position = Vector2(-192, 26)
 
 [node name="RoomArea" type="Area2D" parent="." unique_id=209841681 node_paths=PackedStringArray("_blackoutSquare")]
+visible = false
 collision_mask = 4
 script = ExtResource("13_8khsq")
 _blackoutSquare = NodePath("ColorRect")
