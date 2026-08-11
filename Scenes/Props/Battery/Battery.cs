@@ -10,6 +10,8 @@ public partial class Battery : Area2D
 	private bool _isBodyInside = false;
 	public override void _Ready()
 	{
+		GD.Print("Battery ID: " + UniqueID);
+
 		if (GlobalVariables.CollectedBatteries.Contains(UniqueID))
 		{
 			QueueFree();
@@ -18,6 +20,7 @@ public partial class Battery : Area2D
 
 		BodyEntered += OnBodyEntered;
 		BodyExited += OnBodyExited;
+
 	}
 
     private void OnBodyExited(Node2D body)

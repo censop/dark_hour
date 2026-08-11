@@ -4,7 +4,12 @@
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_wo0vo"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_enu3c"]
 [ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="4_l6tnn"]
+[ext_resource type="PackedScene" uid="uid://cdc7tdgxrcygu" path="res://Scenes/Props/Furniture/Boxes/Boxes1/Boxes1.tscn" id="4_wo0vo"]
+[ext_resource type="PackedScene" uid="uid://cxivh4h4wc21i" path="res://Scenes/Props/Furniture/Boxes/Boxes2/Boxes2.tscn" id="5_enu3c"]
 [ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="5_kib0a"]
+[ext_resource type="PackedScene" uid="uid://cjjpaumogy2sp" path="res://Scenes/Props/Furniture/Cupboards/DoubleBigCupboard/DoubleBigCupboard.tscn" id="6_l6tnn"]
+[ext_resource type="PackedScene" uid="uid://cvca1rb5cltdc" path="res://Scenes/Props/Furniture/Shelves/ShelfSide/ShelfSide.tscn" id="7_mpx2n"]
+[ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="9_kib0a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_enu3c")
@@ -3205,7 +3210,7 @@ terrain_set_0/terrain_0/color = Color(0, 0.47212946, 0.010099372, 1)
 sources/0 = SubResource("TileSetAtlasSource_accju")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2jwx"]
-size = Vector2(135, 101)
+size = Vector2(59, 60)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0vr11"]
 shader = ExtResource("5_kib0a")
@@ -3237,21 +3242,56 @@ tile_set = SubResource("TileSet_m6a6t")
 y_sort_enabled = true
 tile_set = SubResource("TileSet_x618o")
 
+[node name="Furnitures" type="Node2D" parent="." unique_id=1485879645]
+y_sort_enabled = true
+
+[node name="Boxes1" parent="Furnitures" unique_id=1463422088 instance=ExtResource("4_wo0vo")]
+position = Vector2(11, 32)
+
+[node name="Boxes1_2" parent="Furnitures" unique_id=1528357128 instance=ExtResource("4_wo0vo")]
+position = Vector2(-18, 21)
+
+[node name="Boxes1_3" parent="Furnitures" unique_id=113679405 instance=ExtResource("4_wo0vo")]
+position = Vector2(-20, 24)
+
+[node name="Boxes2" parent="Furnitures" unique_id=1717874636 instance=ExtResource("5_enu3c")]
+position = Vector2(-20, 6)
+
+[node name="DoubleBigCupboard" parent="Furnitures" unique_id=1398254988 instance=ExtResource("6_l6tnn")]
+position = Vector2(-14, 39)
+
+[node name="ShelfSide" parent="Furnitures" unique_id=84247331 instance=ExtResource("7_mpx2n")]
+position = Vector2(22, 27)
+
 [node name="RoomArea" type="Area2D" parent="." unique_id=2067807771 node_paths=PackedStringArray("_blackoutSquare")]
-visible = false
 collision_mask = 4
 script = ExtResource("4_l6tnn")
 _blackoutSquare = NodePath("ColorRect")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RoomArea" unique_id=60664117]
-position = Vector2(0.5, 43.5)
+position = Vector2(0.5, 10)
 shape = SubResource("RectangleShape2D_w2jwx")
 
 [node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1227772382]
 z_index = 10
 material = SubResource("ShaderMaterial_0vr11")
-offset_left = -65.0
-offset_top = 2.0
-offset_right = 67.0
-offset_bottom = 92.0
+offset_left = -32.0
+offset_top = -14.0
+offset_right = 30.0
+offset_bottom = 43.0
 color = Color(0, 0, 0, 0.84705883)
+
+[node name="Battery" parent="." unique_id=72985288 instance=ExtResource("9_kib0a")]
+position = Vector2(-5.000002, 3.0000005)
+rotation = 0.62157154
+UniqueID = "Battery_007"
+
+[node name="Battery2" parent="." unique_id=1598842364 instance=ExtResource("9_kib0a")]
+position = Vector2(-10, -6)
+rotation = -1.1149865
+UniqueID = "Battery_008"
+
+[node name="Battery3" parent="." unique_id=1877533851 instance=ExtResource("9_kib0a")]
+position = Vector2(6.0000005, -7.0000005)
+rotation = -0.78309095
+UniqueID = "Battery_009"

@@ -33,7 +33,6 @@ color = Color(0, 0, 0, 1)
 [node name="PatientRoom1" parent="." unique_id=1015740257 instance=ExtResource("2_p1612")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1751802918]
-visible = false
 color = Color(0.07815645, 0.078156464, 0.078156434, 1)
 
 [node name="PatientRoom2" parent="." unique_id=1338243762 instance=ExtResource("4_dfmmv")]
@@ -79,4 +78,4 @@ position = Vector2(768, -73)
 position = Vector2(592, 168)
 
 [node name="StorageRoom1" parent="." unique_id=1540048015 instance=ExtResource("17_3gj1j")]
-position = Vector2(729, 46)
+position = Vector2(729, 48)
