@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cmdajh13ydp3q"]
+
+[ext_resource type="AudioStream" uid="uid://sfcfe87pbda2" path="res://Assets/Audios/UI/JDSherbert - Ultimate UI SFX Pack - Cursor - 4.wav" id="1_ci6o8"]
+[ext_resource type="Script" uid="uid://d0mhg8siu81u" path="res://Globals/AudioManager/AudioManager.cs" id="1_gfrt4"]
+
+[node name="AudioManager" type="Node" unique_id=541916872 node_paths=PackedStringArray("_uiClickSound")]
+script = ExtResource("1_gfrt4")
+_uiClickSound = NodePath("AudioStreamPlayer2D")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=961567409]
+stream = ExtResource("1_ci6o8")

@@ -6,15 +6,11 @@ public partial class StartScreen : Control
 	[Export] TextureButton _loadButton;
 	[Export] TextureButton _restartButton;
 
-    [Export] AudioStreamPlayer2D _clickSound;
-
 	private string _hospitalPath = "";
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-        _loadButton.Pressed += PressSound;
 		_loadButton.Pressed += OnLoadPressed;
-        _restartButton.Pressed += PressSound;
 		_restartButton.Pressed += OnRestartPressed;
         SignalHub.Instance.OnLoadGame += OnLoadPressed;
 	}
@@ -24,13 +20,9 @@ public partial class StartScreen : Control
         SignalHub.Instance.OnLoadGame -= OnLoadPressed;
     }
 
-    private void PressSound()
-    {
-        _clickSound.Play();
-    }
-
     private void OnLoadPressed()
     {
+        AudioManager.Instance.PlayUIClickSound();
         SaveData data = SaveManager.Instance.LoadGame();
 
         if (data != null)
@@ -50,6 +42,7 @@ public partial class StartScreen : Control
 
     private void OnRestartPressed()
     {
+        AudioManager.Instance.PlayUIClickSound();
         SceneManager.Instance.ChangeScene(ScenePaths.HospitalPath);
     }
 

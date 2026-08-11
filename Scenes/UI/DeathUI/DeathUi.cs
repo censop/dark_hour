@@ -4,13 +4,10 @@ using System;
 public partial class DeathUi : Control
 {
 	[Export] private TextureButton _respawnButton;
-
-    [Export] AudioStreamPlayer2D _clickSound;
 	public override void _Ready()
 	{
 		Hide();
 		SignalHub.Instance.OnPlayerDead += OnPlayerDead;
-        _respawnButton.Pressed += PressSound;
 		_respawnButton.Pressed += OnRespawnPressed;
 	}
 
@@ -22,6 +19,7 @@ public partial class DeathUi : Control
 
     private void OnRespawnPressed()
     {
+        AudioManager.Instance.PlayUIClickSound();
 		Hide();
 		GetTree().Paused = false;
         SignalHub.EmitOnLoadGame();
@@ -32,11 +30,6 @@ public partial class DeathUi : Control
     {
 		GetTree().Paused = true;
         Show();
-    }
-
-    private void PressSound()
-    {
-        _clickSound.Play();
     }
 
 }
