@@ -646,3 +646,4 @@ position = Vector2(0, -7)
 [node name="FootstepAudio" type="AudioStreamPlayer2D" parent="." unique_id=1025464738]
 stream = ExtResource("9_dylj0")
 volume_db = -5.0
+metadata/_edit_group_ = true
