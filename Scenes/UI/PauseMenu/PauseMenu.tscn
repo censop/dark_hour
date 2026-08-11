@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://igvf6ff64t0y" path="res://Scenes/UI/PauseMenu/PauseMenu.cs" id="1_4bayv"]
 [ext_resource type="Texture2D" uid="uid://b8aojm041oy7s" path="res://Assets/Sprites/UIIcons_#1_Update 3/Better Text Area (1).png" id="1_kgxba"]
 [ext_resource type="Texture2D" uid="uid://l7llhdd4hao" path="res://Assets/Sprites/UIIcons_#1_Update 3/UIIcons_1 (2).png" id="2_f1kpg"]
+[ext_resource type="AudioStream" uid="uid://sfcfe87pbda2" path="res://Assets/Audios/UI/JDSherbert - Ultimate UI SFX Pack - Cursor - 4.wav" id="4_0nva5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1kpg"]
 atlas = ExtResource("1_kgxba")
@@ -19,7 +20,7 @@ region = Rect2(16, 144, 16, 16)
 atlas = ExtResource("2_f1kpg")
 region = Rect2(64, 112, 16, 16)
 
-[node name="PauseMenu" type="Control" unique_id=205763017 node_paths=PackedStringArray("_resumeButton", "_saveButton")]
+[node name="PauseMenu" type="Control" unique_id=205763017 node_paths=PackedStringArray("_resumeButton", "_saveButton", "_clickSound")]
 process_mode = 2
 layout_mode = 3
 anchors_preset = 15
@@ -30,6 +31,7 @@ grow_vertical = 2
 script = ExtResource("1_4bayv")
 _resumeButton = NodePath("MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/ContinueButton")
 _saveButton = NodePath("MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/SaveButton")
+_clickSound = NodePath("AudioStreamPlayer2D")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=422069987]
 layout_mode = 1
@@ -81,3 +83,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_7g5nr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1721305257]
+stream = ExtResource("4_0nva5")
+volume_db = -5.0

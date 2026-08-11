@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dlhhuvv538nsm"]
 
-[ext_resource type="Texture2D" uid="uid://recvewos5jxt" path="res://Resources/UI/UIAtlas.tres" id="1_08tb3"]
 [ext_resource type="Script" uid="uid://b8wifvi8qtgdd" path="res://Scenes/UI/GameUI/GameUi.cs" id="1_vw8kl"]
 [ext_resource type="Texture2D" uid="uid://bjgtmneyvgg8l" path="res://Assets/Sprites/topdown_hospital_Assets/Pngs/room_hand_sanitizer.png" id="2_i4xn3"]
 [ext_resource type="FontFile" uid="uid://c42etw2frghki" path="res://Assets/Texts/ByteBounce.ttf" id="3_2g0ik"]
@@ -19,7 +18,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vw8kl")
-_menuButton = NodePath("MarginContainer/HBoxContainer/TextureButton")
+_menuButton = NodePath("")
 _progressBar = NodePath("MarginContainer/HBoxContainer/VBoxContainer/ProgressBar")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2063976397]
@@ -75,11 +74,6 @@ script = ExtResource("4_j0smo")
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1422763555]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/HBoxContainer" unique_id=379684956]
-layout_mode = 2
-size_flags_horizontal = 8
-texture_normal = ExtResource("1_08tb3")
 
 [node name="DialogueLabel" type="Label" parent="MarginContainer" unique_id=957865783 node_paths=PackedStringArray("_labelTimer")]
 layout_mode = 2

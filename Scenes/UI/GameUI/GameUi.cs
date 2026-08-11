@@ -3,20 +3,7 @@ using System;
 
 public partial class GameUi : Control
 {
-	[Export] private TextureButton _menuButton;
-
 	[Export] private ProgressBar _progressBar;
-
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		_menuButton.Pressed += OnMenuPressed;
-	}
-
-    private void OnMenuPressed()
-    {
-        SignalHub.EmitOnMenuPressed();
-    }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
