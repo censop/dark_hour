@@ -3213,6 +3213,21 @@ size = Vector2(72, 76)
 shader = ExtResource("6_4lo71")
 shader_parameter/edge_softness = 0.1
 
+[sub_resource type="Gradient" id="Gradient_4lo71"]
+offsets = PackedFloat32Array(0, 0.704)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l8mvv"]
+gradient = SubResource("Gradient_4lo71")
+width = 176
+height = 176
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4lo71"]
+closed = false
+polygon = PackedVector2Array(-68, 2, -23, 3, -23, -63, -99, -63, -99, -9, -99, 2, -68, 2)
+
 [node name="GeneratorRoom1" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
@@ -3254,12 +3269,24 @@ shape = SubResource("RectangleShape2D_l8mvv")
 [node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=535501127]
 z_index = 10
 material = SubResource("ShaderMaterial_mfdud")
-offset_left = -38.0
-offset_top = -29.0
-offset_right = 37.0
-offset_bottom = 35.0
+offset_left = -45.0
+offset_top = -36.0
+offset_right = 43.0
+offset_bottom = 39.0
 color = Color(0, 0, 0, 0.84705883)
 
 [node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("7_4lo71")]
 position = Vector2(-28, 6)
 SwitchLightID = "SwitchLight_003"
+
+[node name="PointLight2D" parent="SwitchLight" index="2" unique_id=1974558198]
+light_mask = 2
+shadow_item_cull_mask = 3
+texture = SubResource("GradientTexture2D_l8mvv")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1789142161]
+position = Vector2(61, 32)
+occluder = SubResource("OccluderPolygon2D_4lo71")
+occluder_light_mask = 2
+
+[editable path="SwitchLight"]

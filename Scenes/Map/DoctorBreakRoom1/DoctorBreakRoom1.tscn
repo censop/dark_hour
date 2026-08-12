@@ -3237,7 +3237,7 @@ shader_parameter/edge_softness = 0.1
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pd48e"]
 closed = false
-polygon = PackedVector2Array(-49, 40, -30, 42, -7, 97, 104, 97, 104, -80, -7, -80, -7, -49, -45, -49)
+polygon = PackedVector2Array(-69, -48, -69, 33, -64, 33, -64, 30, -28, 42, -7, 97, 104, 97, 104, -80, -7, -80, -7, -49, -69, -48)
 
 [node name="DoctorBreakRoom1" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
@@ -3333,6 +3333,9 @@ offset = Vector2(0, -10)
 [node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("4_sug5m")]
 position = Vector2(11, 56)
 
+[node name="PointLight2D" parent="SwitchLight" index="2" unique_id=1974558198]
+shadow_item_cull_mask = 3
+
 [node name="DoorKey" parent="." unique_id=519018229 instance=ExtResource("18_nlg81")]
 position = Vector2(69, -25)
 
@@ -3365,13 +3368,15 @@ shape = SubResource("RectangleShape2D_mfvmm")
 [node name="ColorRect" type="ColorRect" parent="RoomArea" unique_id=1846827147]
 z_index = 10
 material = SubResource("ShaderMaterial_rqv1u")
-offset_left = -69.0
-offset_top = -92.0
-offset_right = 114.0
-offset_bottom = 108.0
+offset_left = -80.0
+offset_top = -97.0
+offset_right = 116.0
+offset_bottom = 113.0
 color = Color(0, 0, 0, 0.84705883)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=2062336150]
 occluder = SubResource("OccluderPolygon2D_pd48e")
+occluder_light_mask = 2
 
+[editable path="SwitchLight"]
 [editable path="Battery2"]
