@@ -3230,12 +3230,12 @@ y_sort_enabled = true
 [node name="WallsFront" type="TileMapLayer" parent="Walls" unique_id=1939813532]
 z_index = 2
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAABAP//AAAGADUAAAABAP7/AAAGADUAAAD+////AAALADUAAAD+//7/AAALADUAAAACAAIAAAALADUAAAACAAEAAAALADQAAAABAAIAAAAHADUAAAABAAEAAAAHADQAAAAAAAIAAAAHADUAAAAAAAEAAAAHADQAAAD//wIAAAAHADUAAAD//wEAAAAHADQAAAD+/wIAAAAHADUAAAD+/wEAAAAHADQAAAD9/wIAAAAGADUAAAD9/wEAAAAGADQAAAA=")
+tile_map_data = PackedByteArray("AAACAAIAAAALADUAAAACAAEAAAALADQAAAABAAIAAAAHADUAAAABAAEAAAAHADQAAAAAAAIAAAAHADUAAAAAAAEAAAAHADQAAAD//wIAAAAHADUAAAD//wEAAAAHADQAAAD+/wIAAAAHADUAAAD9/wIAAAAGADUAAAD9/wEAAAAGADQAAAD9////AAAGADUAAAD9/wAAAAAGADUAAAACAP//AAALADUAAAACAAAAAAALADUAAAACAP7/AAALADUAAAD9//7/AAAGADUAAAD+/wEAAAAHADQAAAA=")
 tile_set = ExtResource("2_wo0vo")
 
 [node name="WallsSide" type="TileMapLayer" parent="Walls" unique_id=127048269]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAABAAAAAAAGADUAAAD+/wAAAAALADUAAAD+/wEAAAALADUAAAA=")
+tile_map_data = PackedByteArray("AAD9/wEAAAAGADUAAAACAAEAAAALADUAAAA=")
 tile_set = SubResource("TileSet_m6a6t")
 
 [node name="WallsBack" type="TileMapLayer" parent="Walls" unique_id=1053688348]
@@ -3252,16 +3252,16 @@ position = Vector2(11, 32)
 position = Vector2(-18, 21)
 
 [node name="Boxes1_3" parent="Furnitures" unique_id=113679405 instance=ExtResource("4_wo0vo")]
-position = Vector2(-20, 24)
+position = Vector2(-24, 24)
 
 [node name="Boxes2" parent="Furnitures" unique_id=1717874636 instance=ExtResource("5_enu3c")]
-position = Vector2(-20, 6)
+position = Vector2(-23, 2)
 
 [node name="DoubleBigCupboard" parent="Furnitures" unique_id=1398254988 instance=ExtResource("6_l6tnn")]
 position = Vector2(-14, 39)
 
 [node name="ShelfSide" parent="Furnitures" unique_id=84247331 instance=ExtResource("7_mpx2n")]
-position = Vector2(22, 27)
+position = Vector2(28, 28)
 
 [node name="RoomArea" type="Area2D" parent="." unique_id=2067807771 node_paths=PackedStringArray("_blackoutSquare")]
 collision_mask = 4
@@ -3287,7 +3287,7 @@ rotation = 0.62157154
 UniqueID = "Battery_007"
 
 [node name="Battery2" parent="." unique_id=1598842364 instance=ExtResource("9_kib0a")]
-position = Vector2(-10, -6)
+position = Vector2(7, 5)
 rotation = -1.1149865
 UniqueID = "Battery_008"
 

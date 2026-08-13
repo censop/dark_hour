@@ -1,26 +1,22 @@
 [gd_scene format=3 uid="uid://b24onv1yrkgj8"]
 
 [ext_resource type="Script" uid="uid://igvf6ff64t0y" path="res://Scenes/UI/PauseMenu/PauseMenu.cs" id="1_4bayv"]
-[ext_resource type="Texture2D" uid="uid://b8aojm041oy7s" path="res://Assets/Sprites/UIIcons_#1_Update 3/Better Text Area (1).png" id="1_kgxba"]
-[ext_resource type="Texture2D" uid="uid://l7llhdd4hao" path="res://Assets/Sprites/UIIcons_#1_Update 3/UIIcons_1 (2).png" id="2_f1kpg"]
+[ext_resource type="Texture2D" uid="uid://omhthw7jbby2" path="res://Assets/Sprites/UIIcons_#1_Update 3/UIIcons_1 (3).png" id="2_0nva5"]
+[ext_resource type="LabelSettings" uid="uid://dhdv2mnuq4qq" path="res://Resources/Fonts/PopUpMenuFont.tres" id="3_cshyb"]
 [ext_resource type="AudioStream" uid="uid://sfcfe87pbda2" path="res://Assets/Audios/UI/JDSherbert - Ultimate UI SFX Pack - Cursor - 4.wav" id="4_0nva5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1kpg"]
-atlas = ExtResource("1_kgxba")
-region = Rect2(32, 0, 32, 32)
+atlas = ExtResource("2_0nva5")
+region = Rect2(97, 0, 30, 31)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d7lcw"]
 texture = SubResource("AtlasTexture_f1kpg")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4bayv"]
-atlas = ExtResource("2_f1kpg")
-region = Rect2(16, 144, 16, 16)
+atlas = ExtResource("2_0nva5")
+region = Rect2(0, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7g5nr"]
-atlas = ExtResource("2_f1kpg")
-region = Rect2(64, 112, 16, 16)
-
-[node name="PauseMenu" type="Control" unique_id=205763017 node_paths=PackedStringArray("_resumeButton", "_saveButton", "_clickSound")]
+[node name="PauseMenu" type="Control" unique_id=205763017 node_paths=PackedStringArray("_resumeButton", "_saveButton")]
 process_mode = 2
 layout_mode = 3
 anchors_preset = 15
@@ -29,9 +25,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4bayv")
-_resumeButton = NodePath("MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/ContinueButton")
-_saveButton = NodePath("MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer/SaveButton")
-_clickSound = NodePath("AudioStreamPlayer2D")
+_resumeButton = NodePath("MarginContainer/Panel/MarginContainer/VBoxContainer/ContinueButton")
+_saveButton = NodePath("")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=422069987]
 layout_mode = 1
@@ -59,30 +54,21 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel/MarginContainer" unique_id=452042131]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1720257465]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "game paused. click 
-button to unpause
+text = "Game Paused
 "
+label_settings = ExtResource("3_cshyb")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1205774908]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="ContinueButton" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1979326553]
+[node name="ContinueButton" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer" unique_id=1979326553]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = SubResource("AtlasTexture_4bayv")
-
-[node name="SaveButton" type="TextureButton" parent="MarginContainer/Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1757866361]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture_normal = SubResource("AtlasTexture_7g5nr")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1721305257]
 stream = ExtResource("4_0nva5")

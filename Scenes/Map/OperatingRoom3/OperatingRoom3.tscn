@@ -3319,7 +3319,6 @@ offset_bottom = 92.0
 color = Color(0, 0, 0, 0.84705883)
 
 [node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("15_41eln")]
-visible = false
 position = Vector2(-76, 3)
 SwitchLightID = "SwitchLight_002"
 

@@ -78,4 +78,4 @@ position = Vector2(768, -73)
 position = Vector2(592, 168)
 
 [node name="StorageRoom1" parent="." unique_id=1540048015 instance=ExtResource("17_3gj1j")]
-position = Vector2(729, 48)
+position = Vector2(728, 49)
