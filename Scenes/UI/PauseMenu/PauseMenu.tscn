@@ -2,15 +2,9 @@
 
 [ext_resource type="Script" uid="uid://igvf6ff64t0y" path="res://Scenes/UI/PauseMenu/PauseMenu.cs" id="1_4bayv"]
 [ext_resource type="Texture2D" uid="uid://omhthw7jbby2" path="res://Assets/Sprites/UIIcons_#1_Update 3/UIIcons_1 (3).png" id="2_0nva5"]
+[ext_resource type="StyleBox" uid="uid://5vn2xlatbelu" path="res://Resources/UI/UIPanelStyleBox.tres" id="2_cshyb"]
 [ext_resource type="LabelSettings" uid="uid://dhdv2mnuq4qq" path="res://Resources/Fonts/PopUpMenuFont.tres" id="3_cshyb"]
 [ext_resource type="AudioStream" uid="uid://sfcfe87pbda2" path="res://Assets/Audios/UI/JDSherbert - Ultimate UI SFX Pack - Cursor - 4.wav" id="4_0nva5"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f1kpg"]
-atlas = ExtResource("2_0nva5")
-region = Rect2(97, 0, 30, 31)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d7lcw"]
-texture = SubResource("AtlasTexture_f1kpg")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4bayv"]
 atlas = ExtResource("2_0nva5")
@@ -42,7 +36,7 @@ theme_override_constants/margin_bottom = 32
 
 [node name="Panel" type="Panel" parent="MarginContainer" unique_id=1517832148]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_d7lcw")
+theme_override_styles/panel = ExtResource("2_cshyb")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Panel" unique_id=902693395]
 layout_mode = 1

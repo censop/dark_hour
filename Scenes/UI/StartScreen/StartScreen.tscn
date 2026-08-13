@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://j4qy24a7gq7e"]
 
-[ext_resource type="Texture2D" uid="uid://l7llhdd4hao" path="res://Assets/Sprites/UIIcons_#1_Update 3/UIIcons_1 (2).png" id="1_pkxmt"]
 [ext_resource type="Script" uid="uid://c4gg1o8obgryr" path="res://Scenes/UI/StartScreen/StartScreen.cs" id="1_u0jah"]
+[ext_resource type="Texture2D" uid="uid://omhthw7jbby2" path="res://Assets/Sprites/UIIcons_#1_Update 3/UIIcons_1 (3).png" id="2_ws81a"]
 [ext_resource type="AudioStream" uid="uid://sfcfe87pbda2" path="res://Assets/Audios/UI/JDSherbert - Ultimate UI SFX Pack - Cursor - 4.wav" id="3_ws81a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u0jah"]
-atlas = ExtResource("1_pkxmt")
-region = Rect2(96, 112, 16, 16)
+atlas = ExtResource("2_ws81a")
+region = Rect2(16, 144, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ws81a"]
-atlas = ExtResource("1_pkxmt")
+atlas = ExtResource("2_ws81a")
 region = Rect2(32, 80, 16, 16)
 
-[node name="StartScreen" type="Control" unique_id=12636505 node_paths=PackedStringArray("_loadButton", "_restartButton", "_clickSound")]
+[node name="StartScreen" type="Control" unique_id=12636505 node_paths=PackedStringArray("_loadButton", "_restartButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,6 @@ grow_vertical = 2
 script = ExtResource("1_u0jah")
 _loadButton = NodePath("CenterContainer/VBoxContainer/LoadButton")
 _restartButton = NodePath("CenterContainer/VBoxContainer/RestartButton")
-_clickSound = NodePath("AudioStreamPlayer2D")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2135620079]
 layout_mode = 1
@@ -31,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.66355777, 0.54648304, 0.48852962, 1)
+color = Color(0.47961646, 0.4678375, 0.44462487, 1)
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1691339717]
 layout_mode = 1
