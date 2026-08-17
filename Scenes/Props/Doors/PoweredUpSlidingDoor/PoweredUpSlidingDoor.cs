@@ -5,7 +5,7 @@ public partial class PoweredUpSlidingDoor : StaticBody2D
 {
 	[Export] Area2D _interactionArea;
 	[Export] CollisionShape2D _collisionShape;
-	[Export] Node2D _sprite;
+	[Export] AnimationPlayer _animationPlayer;
 
 	[Export] string GeneratorCode = "gen_001";
 
@@ -75,7 +75,7 @@ public partial class PoweredUpSlidingDoor : StaticBody2D
 	private void UnlockDoor()
 	{
 		_collisionShape.SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
-		_sprite.Visible = false;
+		_animationPlayer.Play("door_open");
 
 	}
 }

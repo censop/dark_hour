@@ -5,7 +5,8 @@ public partial class SlidingDoor : StaticBody2D
 {
 	[Export] Area2D _interactionArea;
 	[Export] CollisionShape2D _collisionShape;
-	[Export] Node2D _sprite;
+
+	[Export] AnimationPlayer _animationPlayer;
 
 	private bool _isBodyInsideArea = false;
 
@@ -38,7 +39,7 @@ public partial class SlidingDoor : StaticBody2D
 	private void UnlockDoor()
 	{
 		_collisionShape.SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
-		_sprite.Visible = false;
+		_animationPlayer.Play("door_open");
 
 	}
 }

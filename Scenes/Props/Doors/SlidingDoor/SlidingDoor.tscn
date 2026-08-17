@@ -3,19 +3,23 @@
 [ext_resource type="Script" uid="uid://uls0bxyjvutc" path="res://Scenes/Props/Doors/SlidingDoor/SlidingDoor.cs" id="1_xnmyn"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="2_x3sff"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1lv3k"]
-atlas = ExtResource("2_x3sff")
-region = Rect2(112, 784, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x3sff"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnmyn"]
 atlas = ExtResource("2_x3sff")
 region = Rect2(112, 832, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xnmyn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3sff"]
 atlas = ExtResource("2_x3sff")
 region = Rect2(144, 800, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_xnmyn"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_1lv3k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvjuo"]
+atlas = ExtResource("2_x3sff")
+region = Rect2(112, 784, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvw88"]
+atlas = ExtResource("2_x3sff")
+region = Rect2(112, 784, 32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8npdx"]
 size = Vector2(31, 10.125)
@@ -24,42 +28,255 @@ size = Vector2(31, 10.125)
 radius = 29.0
 height = 64.0
 
-[node name="SlidingDoor" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_collisionShape", "_sprite")]
+[sub_resource type="Animation" id="Animation_x3sff"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites2/DoorAnimationSprites/DoorClosed:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites2/DoorAnimationSprites/DoorOpening1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprites2/DoorAnimationSprites/DoorOpening2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprites2/DoorAnimationSprites/DoorOpening3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprites2/DoorAnimationSprites/DoorOpening4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_xnmyn"]
+resource_name = "door_open"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites2/DoorAnimationSprites/DoorClosed:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.50407267),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, false, false, false, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites2/DoorAnimationSprites/DoorOpening1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.20105189, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, false, false, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprites2/DoorAnimationSprites/DoorOpening2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.19912791, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, false, false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprites2/DoorAnimationSprites/DoorOpening3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.10004495, 0.20105188, 0.3049447, 0.4030657, 0.49926278),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, true, false, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprites2/DoorAnimationSprites/DoorOpening4:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.10196889, 0.20105188, 0.30302078, 0.39921784, 0.49830082),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, false, false, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x3sff"]
+_data = {
+&"RESET": SubResource("Animation_x3sff"),
+&"door_open": SubResource("Animation_xnmyn")
+}
+
+[node name="SlidingDoor" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_collisionShape", "_animationPlayer")]
 collision_layer = 8
 collision_mask = 28
 script = ExtResource("1_xnmyn")
 _interactionArea = NodePath("InteractionArea")
 _collisionShape = NodePath("PhysicalCollisionShape")
-_sprite = NodePath("Sprites/Sprite2D")
+_animationPlayer = NodePath("AnimationPlayer")
 
-[node name="Sprites" type="Node2D" parent="." unique_id=1678634123]
+[node name="Sprites2" type="Node2D" parent="." unique_id=266164796]
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprites" unique_id=1521458141]
-position = Vector2(0, -13)
-texture = SubResource("AtlasTexture_1lv3k")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Sprites" unique_id=1680431512]
-position = Vector2(0, -13)
-texture = SubResource("AtlasTexture_1lv3k")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Sprites" unique_id=1537910947]
+[node name="Sprite2D3" type="Sprite2D" parent="Sprites2" unique_id=1413194914]
 position = Vector2(-8, -24)
-texture = SubResource("AtlasTexture_x3sff")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 6)
-
-[node name="Sprite2D4" type="Sprite2D" parent="Sprites" unique_id=1473265710]
-position = Vector2(8, -24)
-texture = SubResource("AtlasTexture_x3sff")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 6)
-
-[node name="Sprite2D2" type="Sprite2D" parent="Sprites" unique_id=1774683619]
-position = Vector2(25, -6)
 texture = SubResource("AtlasTexture_xnmyn")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 6)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprites" unique_id=959323338]
-sprite_frames = SubResource("SpriteFrames_xnmyn")
+[node name="Sprite2D4" type="Sprite2D" parent="Sprites2" unique_id=430190245]
+position = Vector2(8, -24)
+texture = SubResource("AtlasTexture_xnmyn")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 6)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprites2" unique_id=1266176293]
+position = Vector2(25, -6)
+texture = SubResource("AtlasTexture_x3sff")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprites2" unique_id=2096894720]
+sprite_frames = SubResource("SpriteFrames_1lv3k")
+
+[node name="DoorAnimationSprites" type="Node2D" parent="Sprites2" unique_id=1329765244]
+
+[node name="DoorClosed" type="Sprite2D" parent="Sprites2/DoorAnimationSprites" unique_id=1017304544]
+position = Vector2(0, -9)
+texture = SubResource("AtlasTexture_yvjuo")
+region_enabled = true
+region_rect = Rect2(3, 10, 26, 21)
+
+[node name="DoorOpening1" type="Node2D" parent="Sprites2/DoorAnimationSprites" unique_id=1225428696]
+visible = false
+
+[node name="DoorClosed2" type="Sprite2D" parent="Sprites2/DoorAnimationSprites/DoorOpening1" unique_id=1951540953]
+position = Vector2(-8, -9)
+texture = SubResource("AtlasTexture_yvjuo")
+region_enabled = true
+region_rect = Rect2(5, 10, 11, 21)
+
+[node name="DoorClosed3" type="Sprite2D" parent="Sprites2/DoorAnimationSprites/DoorOpening1" unique_id=11859547]
+position = Vector2(8, -9)
+texture = SubResource("AtlasTexture_yvjuo")
+region_enabled = true
+region_rect = Rect2(16, 10, 11, 21)
+
+[node name="DoorOpening2" type="Node2D" parent="Sprites2/DoorAnimationSprites" unique_id=1266769539]
+visible = false
+
+[node name="DoorClosed2" type="Sprite2D" parent="Sprites2/DoorAnimationSprites/DoorOpening2" unique_id=314965559]
+position = Vector2(-9, -9)
+texture = SubResource("AtlasTexture_yvjuo")
+region_enabled = true
+region_rect = Rect2(7, 10, 9, 21)
+
+[node name="DoorClosed3" type="Sprite2D" parent="Sprites2/DoorAnimationSprites/DoorOpening2" unique_id=2012687320]
+position = Vector2(9, -9)
+texture = SubResource("AtlasTexture_yvjuo")
+region_enabled = true
+region_rect = Rect2(16, 10, 9, 21)
+
+[node name="DoorOpening3" type="Node2D" parent="Sprites2/DoorAnimationSprites" unique_id=1789630961]
+visible = false
+
+[node name="DoorClosed2" type="Sprite2D" parent="Sprites2/DoorAnimationSprites/DoorOpening3" unique_id=1512621119]
+position = Vector2(-10, -9)
+texture = SubResource("AtlasTexture_yvjuo")
+region_enabled = true
+region_rect = Rect2(10, 10, 6, 21)
+
+[node name="DoorClosed3" type="Sprite2D" parent="Sprites2/DoorAnimationSprites/DoorOpening3" unique_id=1649268435]
+position = Vector2(10, -9)
+texture = SubResource("AtlasTexture_yvjuo")
+region_enabled = true
+region_rect = Rect2(16, 10, 6, 21)
+
+[node name="DoorOpening4" type="Node2D" parent="Sprites2/DoorAnimationSprites" unique_id=1484265855]
+visible = false
+
+[node name="DoorClosed2" type="Sprite2D" parent="Sprites2/DoorAnimationSprites/DoorOpening4" unique_id=1296094538]
+position = Vector2(-11, -9)
+texture = SubResource("AtlasTexture_yvjuo")
+region_enabled = true
+region_rect = Rect2(12, 10, 4, 21)
+
+[node name="DoorClosed3" type="Sprite2D" parent="Sprites2/DoorAnimationSprites/DoorOpening4" unique_id=150317183]
+position = Vector2(11, -9)
+texture = SubResource("AtlasTexture_yvjuo")
+region_enabled = true
+region_rect = Rect2(16, 10, 4, 21)
+
+[node name="DoorOuterPart" type="Node2D" parent="Sprites2" unique_id=1389541006]
+
+[node name="LeftColon" type="Sprite2D" parent="Sprites2/DoorOuterPart" unique_id=1082356883]
+position = Vector2(-15, -9)
+texture = SubResource("AtlasTexture_pvw88")
+region_enabled = true
+region_rect = Rect2(-1, 10, 4, 22)
+
+[node name="UpperColon" type="Sprite2D" parent="Sprites2/DoorOuterPart" unique_id=1036979055]
+position = Vector2(0, -21)
+texture = SubResource("AtlasTexture_pvw88")
+region_enabled = true
+region_rect = Rect2(0, 7, 32, 3)
+
+[node name="RightColon" type="Sprite2D" parent="Sprites2/DoorOuterPart" unique_id=1897225798]
+position = Vector2(15, -9)
+texture = SubResource("AtlasTexture_pvw88")
+region_enabled = true
+region_rect = Rect2(29, 10, 4, 22)
 
 [node name="PhysicalCollisionShape" type="CollisionShape2D" parent="." unique_id=1120102542]
 position = Vector2(0, -3)
@@ -72,3 +289,6 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=755303202]
 position = Vector2(6, -7)
 shape = SubResource("CapsuleShape2D_hktxa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1905862736]
+libraries/ = SubResource("AnimationLibrary_x3sff")
