@@ -3226,14 +3226,14 @@ fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_4lo71"]
 closed = false
-polygon = PackedVector2Array(-68, 2, -23, 3, -23, -63, -99, -63, -99, -9, -99, 2, -68, 2)
+polygon = PackedVector2Array(-23, 34, -23, 3, -23, -63, -99, -63, -99, -9, -99, 2, -100, 33, -23, 34)
 
 [node name="GeneratorRoom1" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true
 
 [node name="Floor" type="TileMapLayer" parent="." unique_id=994807191]
 z_index = -1
-tile_map_data = PackedByteArray("AAD+////AAABAAYAAAD+/wAAAAABAAgAAAD/////AAABAAcAAAD//wAAAAABAAYAAAAAAP//AAABAAYAAAAAAAAAAAABAAcAAAABAP//AAABAAYAAAABAAAAAAABAAgAAAD+/wEAAAAAAAgAAAD+/wIAAAABAAgAAAD//wEAAAABAAcAAAD//wIAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAIAAAABAAYAAAABAAEAAAABAAYAAAABAAIAAAAAAAgAAAA=")
+tile_map_data = PackedByteArray("AAD+////AAABAAYAAAD+/wAAAAABAAgAAAD/////AAABAAcAAAD//wAAAAABAAYAAAAAAP//AAABAAYAAAAAAAAAAAABAAcAAAABAP//AAABAAYAAAABAAAAAAABAAgAAAD+/wEAAAAAAAgAAAD+/wIAAAABAAgAAAD//wEAAAABAAcAAAD//wIAAAAAAAcAAAAAAAEAAAAAAAgAAAAAAAIAAAABAAYAAAABAAEAAAABAAYAAAABAAIAAAAAAAgAAAD//wMAAAAAAAcAAAD//wQAAAAAAAcAAAAAAAQAAAAAAAcAAAAAAAMAAAAAAAYAAAA=")
 tile_set = ExtResource("1_t2k5g")
 
 [node name="Walls" type="Node2D" parent="." unique_id=428934353]
@@ -3242,16 +3242,17 @@ y_sort_enabled = true
 [node name="WallsFront" type="TileMapLayer" parent="Walls" unique_id=1939813532]
 z_index = 2
 y_sort_enabled = true
+tile_map_data = PackedByteArray("AAD//wMAAAALADUAAAD//wIAAAALADQAAAD+/wMAAAAHADUAAAD+/wIAAAAHADQAAAD9/wMAAAAGADUAAAD9/wIAAAAGADQAAAACAAMAAAALADUAAAACAAIAAAALADQAAAABAAMAAAAHADUAAAABAAIAAAAHADQAAAAAAAMAAAAGADUAAAAAAAIAAAAGADQAAAA=")
 tile_set = ExtResource("2_prpug")
 
 [node name="WallsSide" type="TileMapLayer" parent="Walls" unique_id=127048269]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAD9////AAAGADUAAAD9/wAAAAAGADUAAAD9/wEAAAAGADUAAAACAAAAAAALADUAAAACAAEAAAALADUAAAA=")
+tile_map_data = PackedByteArray("AAD9////AAAGADUAAAD9/wAAAAAGADUAAAD9/wEAAAAGADUAAAACAAAAAAALADUAAAACAAEAAAALADUAAAD9/wIAAAAGADUAAAACAAIAAAALADUAAAAAAAMAAAAGADUAAAAAAAQAAAAGADUAAAD//wQAAAALADUAAAD//wMAAAALADUAAAA=")
 tile_set = SubResource("TileSet_m6a6t")
 
 [node name="WallsBack" type="TileMapLayer" parent="Walls" unique_id=1053688348]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAACAP//AAALADUAAAACAP7/AAALADQAAAABAP//AAAHADUAAAABAP7/AAAHADQAAAAAAP//AAAHADUAAAAAAP7/AAAHADQAAAD/////AAAHADUAAAD///7/AAAHADQAAAD+////AAAHADUAAAD+//7/AAAHADQAAAD9////AAAGADUAAAD9//7/AAAGADQAAAD9/wIAAAAGADUAAAACAAIAAAALADUAAAA=")
+tile_map_data = PackedByteArray("AAACAP//AAALADUAAAACAP7/AAALADQAAAABAP//AAAHADUAAAABAP7/AAAHADQAAAAAAP//AAAHADUAAAAAAP7/AAAHADQAAAD/////AAAHADUAAAD///7/AAAHADQAAAD+////AAAHADUAAAD+//7/AAAHADQAAAD9////AAAGADUAAAD9//7/AAAGADQAAAA=")
 tile_set = SubResource("TileSet_x618o")
 
 [node name="Generator" parent="." unique_id=1463422088 instance=ExtResource("4_prpug")]
@@ -3272,7 +3273,7 @@ material = SubResource("ShaderMaterial_mfdud")
 offset_left = -45.0
 offset_top = -36.0
 offset_right = 43.0
-offset_bottom = 39.0
+offset_bottom = 75.0
 color = Color(0, 0, 0, 0.84705883)
 
 [node name="SwitchLight" parent="." unique_id=1462218562 instance=ExtResource("7_4lo71")]
@@ -3285,6 +3286,11 @@ shadow_item_cull_mask = 3
 texture = SubResource("GradientTexture2D_l8mvv")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=1789142161]
+position = Vector2(61, 32)
+occluder = SubResource("OccluderPolygon2D_4lo71")
+occluder_light_mask = 2
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="." unique_id=1383703233]
 position = Vector2(61, 32)
 occluder = SubResource("OccluderPolygon2D_4lo71")
 occluder_light_mask = 2
