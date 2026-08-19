@@ -1,10 +1,10 @@
 {
   "note_001": {
 	"Title": "Code For Sterile Corridor",
-	"Body": "Mr. Harolds, I am so sorry. I tried to wake you. I can’t carry you out alone and I don’t have any time left to wait. I don’t know what’s happening but you can’t stay in this room.  All remaining staff and patients are falling back to the Sterile Corridor. The door code is 4458. When you wake up from the anesthesia, come find us immediately. -Dr Shayla"
+	"Body": "You can’t stay in this room. All remaining people are falling back to the Sterile Corridor. The door code is 4458. When you wake up from the anesthesia, come find us immediately."
   },
 "note_002": {
 	"Title": "Backup Generator",
-	"Body": "I’m going to power up the generator since no one else will do it. I can’t find my Maintenance Key, I must have dropped it around here somewhere. In case anyone sees it please put it here, I will be back after finding some batteries. -Martin"
+	"Body": "I’m going to power up the generator. I can’t find my Maintenance Key, it must be around here somewhere. In case anyone sees it please put it here, I will be back after finding some batteries."
 }
 }
