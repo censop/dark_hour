@@ -32,7 +32,7 @@ public partial class NoteUi : Control
 		if (NoteDatabaseManager.Instance.Notes.TryGetValue(noteCode, out NoteEntry specificNote))
 		{
 
-            _note.Text = specificNote.Body;
+            _note.Text = specificNote.Body.Trim().Replace("\n", " ").Replace("  ", " ");
 			FreezeAndShow();
 			
 		}

@@ -69,7 +69,8 @@ offset_top = 32.0
 offset_right = 247.0
 offset_bottom = 127.0
 size_flags_horizontal = 4
-text = "You can’t stay in this room. All remaining people are falling back to the Sterile Corridor. The door code is 4458. When you wake up from the anesthesia, come find us immediately."
+text = "labl
+"
 label_settings = SubResource("LabelSettings_qgxa6")
 horizontal_alignment = 1
 autowrap_mode = 2
