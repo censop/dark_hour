@@ -28,21 +28,9 @@ public partial class Note : Area2D
     {
         if (@event.IsActionPressed("interact") && _isBodyInside)
 		{
-			ReadNote();
+			SignalHub.EmitOnNoteInteracted(NoteId);
+            GD.Print($"Interacted with note {NoteId}");
 		}
     }
 
-
-    public void ReadNote()
-    {
-        if (NoteDatabaseManager.Instance.Notes.TryGetValue(NoteId, out NoteEntry specificNote))
-        {
-            GD.Print(specificNote.Title);
-            SignalHub.EmitOnNoteInteracted(NoteId);
-        }
-        else
-        {
-            GD.PrintErr($"Could not find a note with ID: {NoteId} in the JSON file.");
-        }
-    }
 }

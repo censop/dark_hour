@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b1vlvh7x3p4tw"]
 
 [ext_resource type="Texture2D" uid="uid://behy2ss78n865" path="res://Assets/Sprites/UIIcons_#1_Update 3/UIIcons_1 (1).png" id="1_ahett"]
+[ext_resource type="Script" uid="uid://ikee7iqroa70" path="res://Scenes/UI/NoteUI/NoteUi.cs" id="1_qgxa6"]
 [ext_resource type="LabelSettings" uid="uid://dhdv2mnuq4qq" path="res://Resources/Fonts/PopUpMenuFont.tres" id="2_qgxa6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wbabw"]
@@ -10,13 +11,15 @@ region = Rect2(48, 0, 48, 16)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7n8q4"]
 texture = SubResource("AtlasTexture_wbabw")
 
-[node name="NoteUI" type="Control" unique_id=289822578]
+[node name="NoteUI" type="Control" unique_id=289822578 node_paths=PackedStringArray("_note")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qgxa6")
+_note = NodePath("MarginContainer/Panel/MarginContainer/VBoxContainer/Label")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1200967125]
 layout_mode = 1

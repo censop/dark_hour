@@ -23,7 +23,6 @@ y_sort_enabled = true
 script = ExtResource("1_35g8a")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=114326617]
-visible = false
 z_index = -5
 offset_left = -1558.0
 offset_top = -1499.0
