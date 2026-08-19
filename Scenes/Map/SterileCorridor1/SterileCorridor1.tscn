@@ -3238,7 +3238,7 @@ tile_set = ExtResource("2_hey7m")
 
 [node name="WallsSide" type="TileMapLayer" parent="Walls" unique_id=127048269]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAFAAEAAAALADUAAADr////AAAGADUAAADr/wAAAAAGADUAAADr/wEAAAAGADUAAAA=")
+tile_map_data = PackedByteArray("AAAFAAEAAAALADUAAADr////AAAGADUAAADr/wAAAAAGADUAAADr/wEAAAAGADUAAAAFAP7/AAALADUAAAA=")
 tile_set = SubResource("TileSet_m6a6t")
 
 [node name="WallsBack" type="TileMapLayer" parent="Walls" unique_id=1053688348]
@@ -3247,7 +3247,7 @@ tile_map_data = PackedByteArray("AAAFAP7/AAALADUAAAAFAP3/AAALADQAAAAEAP7/AAAHADU
 tile_set = SubResource("TileSet_x618o")
 
 [node name="CodedDoor001Side" parent="." unique_id=1643899151 instance=ExtResource("4_hey7m")]
-position = Vector2(88, 27)
+position = Vector2(88, 17)
 
 [node name="LockedDoor001" parent="." unique_id=1050804484 instance=ExtResource("6_wweug")]
 position = Vector2(-239, -19)

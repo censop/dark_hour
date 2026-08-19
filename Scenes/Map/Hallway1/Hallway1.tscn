@@ -4,6 +4,8 @@
 [ext_resource type="TileSet" uid="uid://g38wluh2gjh6" path="res://Resources/TileSets/ModernInteriorsHospital.tres" id="2_jsmg2"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_h6ugj"]
 [ext_resource type="PackedScene" uid="uid://cytlv3428ujdx" path="res://Scenes/Props/Doors/PoweredUpSlidingDoor/PoweredUpSlidingDoor.tscn" id="4_0xhj5"]
+[ext_resource type="PackedScene" uid="uid://dyjvnf38xtroe" path="res://Scenes/Props/Furniture/Plants/SmallPlant/SmallPlant.tscn" id="4_lome1"]
+[ext_resource type="PackedScene" uid="uid://cnc4xdnb53p" path="res://Scenes/Props/MovableFurniture/EmergencyCarryBed/EmergencyCarryBed.tscn" id="5_c3g6p"]
 [ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="5_yoypj"]
 [ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="6_yoypj"]
 
@@ -3238,6 +3240,16 @@ y_sort_enabled = true
 tile_set = SubResource("TileSet_x618o")
 
 [node name="Furniture" type="Node2D" parent="." unique_id=495333549]
+y_sort_enabled = true
+
+[node name="SmallPlant" parent="Furniture" unique_id=1463422088 instance=ExtResource("4_lome1")]
+position = Vector2(-20, -130)
+
+[node name="SmallPlant2" parent="Furniture" unique_id=494634529 instance=ExtResource("4_lome1")]
+position = Vector2(18, -21)
+
+[node name="EmergencyCarryBed" parent="Furniture" unique_id=990666621 instance=ExtResource("5_c3g6p")]
+position = Vector2(16, -148)
 
 [node name="PoweredUpSlidingDoor1" parent="." unique_id=1643899151 instance=ExtResource("4_0xhj5")]
 position = Vector2(0, -213)

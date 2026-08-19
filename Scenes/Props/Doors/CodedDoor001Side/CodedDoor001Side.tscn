@@ -4,104 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cwypksjf5hlmv" path="res://Assets/Sprites/ModernInteriors/Animations/animated_hospital_door_green.png" id="2_c61le"]
 [ext_resource type="Texture2D" uid="uid://fdlpm3v232qc" path="res://Assets/Sprites/ModernInteriors/Theme_Sorter_Shadowless/19_Hospital_Shadowless.png" id="3_lpacy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cb861"]
-atlas = ExtResource("2_c61le")
-region = Rect2(16, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r5l41"]
-atlas = ExtResource("2_c61le")
-region = Rect2(48, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6p6nq"]
-atlas = ExtResource("2_c61le")
-region = Rect2(80, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbmbd"]
-atlas = ExtResource("2_c61le")
-region = Rect2(112, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wlyxs"]
-atlas = ExtResource("2_c61le")
-region = Rect2(144, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4a0sk"]
-atlas = ExtResource("2_c61le")
-region = Rect2(176, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_puyj5"]
-atlas = ExtResource("2_c61le")
-region = Rect2(176, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_esxpr"]
-atlas = ExtResource("2_c61le")
-region = Rect2(144, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jv5nv"]
-atlas = ExtResource("2_c61le")
-region = Rect2(112, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yq6hy"]
-atlas = ExtResource("2_c61le")
-region = Rect2(80, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t08mb"]
-atlas = ExtResource("2_c61le")
-region = Rect2(48, 0, 16, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4q6f0"]
-atlas = ExtResource("2_c61le")
-region = Rect2(16, 0, 16, 48)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7chqx"]
-resource_local_to_scene = true
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cb861")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r5l41")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6p6nq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pbmbd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wlyxs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4a0sk")
-}],
-"loop": false,
-"name": &"closeRightDoor",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_puyj5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_esxpr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jv5nv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yq6hy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t08mb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4q6f0")
-}],
-"loop": false,
-"name": &"openRightDoor",
-"speed": 10.0
-}]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ix5m3"]
 atlas = ExtResource("2_c61le")
 region = Rect2(16, 0, 16, 48)
@@ -205,30 +107,27 @@ atlas = ExtResource("3_lpacy")
 region = Rect2(96, 848, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8735p"]
-size = Vector2(4, 51.03125)
+size = Vector2(4, 37.757813)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15ygu"]
+size = Vector2(16, 2.7197266)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hktxa"]
 radius = 17.0
 height = 72.0
 
-[node name="CodedDoor001Side" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_colShape", "_doorLeft", "_doorRight")]
+[node name="CodedDoor001Side" type="StaticBody2D" unique_id=1643899151 node_paths=PackedStringArray("_interactionArea", "_colShapeClosed", "_colShapeOpened", "_doorLeft", "_doorRight")]
 collision_layer = 8
 collision_mask = 28
 script = ExtResource("1_15ygu")
 _interactionArea = NodePath("InteractionArea")
-_colShape = NodePath("PhysicalCollisionShape")
+_colShapeClosed = NodePath("PhysicalCollisionShapeClosed")
+_colShapeOpened = NodePath("PhysicalCollisionShapeOpened")
 DoorCode = "4458"
 _doorLeft = NodePath("Sprites/LeftAnimatedDoor")
-_doorRight = NodePath("Sprites/RightAnimatedDoor")
+_doorRight = NodePath("")
 
 [node name="Sprites" type="Node2D" parent="." unique_id=100001302]
-
-[node name="RightAnimatedDoor" type="AnimatedSprite2D" parent="Sprites" unique_id=1045397291]
-position = Vector2(1, -41)
-sprite_frames = SubResource("SpriteFrames_7chqx")
-animation = &"openRightDoor"
-flip_h = true
-flip_v = true
 
 [node name="LeftAnimatedDoor" type="AnimatedSprite2D" parent="Sprites" unique_id=1989769373]
 position = Vector2(1, -22)
@@ -256,27 +155,19 @@ texture = SubResource("AtlasTexture_pjx5i")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 
-[node name="Sprite2D5" type="Sprite2D" parent="Sprites" unique_id=368532368]
-position = Vector2(-11, -53)
-texture = SubResource("AtlasTexture_pjx5i")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 16)
-
-[node name="Sprite2D9" type="Sprite2D" parent="Sprites" unique_id=1402442806]
-position = Vector2(-11, -58)
-texture = SubResource("AtlasTexture_pjx5i")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 16)
-
 [node name="Sprite2D6" type="Sprite2D" parent="Sprites" unique_id=2088755692]
-position = Vector2(-11, -7)
+position = Vector2(-11, -9)
 texture = SubResource("AtlasTexture_pjx5i")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 
-[node name="PhysicalCollisionShape" type="CollisionShape2D" parent="." unique_id=1120102542]
-position = Vector2(-6, -30)
+[node name="PhysicalCollisionShapeClosed" type="CollisionShape2D" parent="." unique_id=1120102542]
+position = Vector2(-6, -17.121094)
 shape = SubResource("RectangleShape2D_8735p")
+
+[node name="PhysicalCollisionShapeOpened" type="CollisionShape2D" parent="." unique_id=1758323458]
+position = Vector2(1, 0.35986328)
+shape = SubResource("RectangleShape2D_15ygu")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1261220341]
 collision_layer = 9

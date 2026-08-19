@@ -4,7 +4,8 @@ using System;
 public partial class CodedDoor001Side : StaticBody2D
 {
 	[Export] Area2D _interactionArea;
-	[Export] CollisionShape2D _colShape;
+	[Export] CollisionShape2D _colShapeClosed;
+	[Export] CollisionShape2D _colShapeOpened;
 	[Export] String DoorCode = "4482";
 	[Export] AnimatedSprite2D _doorLeft;
 	[Export] AnimatedSprite2D _doorRight;
@@ -18,6 +19,7 @@ public partial class CodedDoor001Side : StaticBody2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_colShapeOpened.SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
 		if (GlobalVariables.DoorsUnlocked.Contains(DoorID))
 		{
 			_isOpen = true;
@@ -74,7 +76,8 @@ public partial class CodedDoor001Side : StaticBody2D
 
     private void UnlockDoor()
 	{
-		_colShape.SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
+		_colShapeClosed.SetDeferred(CollisionShape2D.PropertyName.Disabled, true);
+		_colShapeOpened.SetDeferred(CollisionShape2D.PropertyName.Disabled, false);
 		if (_doorLeft != null) _doorLeft.Play("openLeftDoor");
 		if (_doorRight != null) _doorRight.Play("openRightDoor");
 	}
