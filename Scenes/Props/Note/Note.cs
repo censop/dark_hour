@@ -38,6 +38,7 @@ public partial class Note : Area2D
         if (NoteDatabaseManager.Instance.Notes.TryGetValue(NoteId, out NoteEntry specificNote))
         {
             GD.Print(specificNote.Title);
+            SignalHub.EmitOnNoteInteracted(NoteId);
         }
         else
         {
