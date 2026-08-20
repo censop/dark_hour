@@ -43,6 +43,7 @@ public partial class StartScreen : Control
     private void OnRestartPressed()
     {
         AudioManager.Instance.PlayUIClickSound();
+        GlobalVariables.Instance.ResetData();
         SceneManager.Instance.ChangeScene(ScenePaths.HospitalPath);
     }
 

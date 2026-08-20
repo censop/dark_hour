@@ -20,4 +20,17 @@ public partial class GlobalVariables : Node
         Instance = this;
     }
 
+    public void ResetData()
+    {
+        IsPlayerInLight = false;
+        BatteryTimePercentage = 1;
+        CollectedBatteries = new List<string>();
+        NotConsumedBatteries = 0;
+        DoorKeysCollected = new List<string>();
+        GeneratorsWorking = new List<string>();
+        DoorsUnlocked = new List<string>();
+        TurntOnLights = new List<string>();
+        PlayerPos = Vector2.Zero;
+    }
+
 }
