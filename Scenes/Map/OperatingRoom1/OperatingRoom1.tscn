@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://7trgp3qn8u3u" path="res://Scenes/Props/Furniture/ComplexMonitorDesk/ComplexMonitorDeskFull/ComplexMonitorDeskFull.tscn" id="7_dhwgn"]
 [ext_resource type="Script" uid="uid://pvuprixmqxx8" path="res://Scenes/Map/BigHallway1/RoomArea.cs" id="8_202vt"]
 [ext_resource type="Shader" uid="uid://c3unvivmgt1xw" path="res://Resources/Shaders/RoomAreaShader.gdshader" id="9_4xsg4"]
+[ext_resource type="PackedScene" uid="uid://bhhtywv1ccvbc" path="res://Scenes/Props/Battery/Battery.tscn" id="10_4xsg4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fbvsr"]
 texture = ExtResource("3_nv5jm")
@@ -3274,3 +3275,8 @@ offset_top = -95.0
 offset_right = 84.0
 offset_bottom = 3.0
 color = Color(0, 0, 0, 0.84705883)
+
+[node name="Battery" parent="." unique_id=72985288 instance=ExtResource("10_4xsg4")]
+position = Vector2(20, -40)
+rotation = 1.0699692
+UniqueID = "Battery_011"

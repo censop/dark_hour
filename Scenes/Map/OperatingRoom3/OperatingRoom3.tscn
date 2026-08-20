@@ -3234,7 +3234,7 @@ fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_41eln"]
 closed = false
-polygon = PackedVector2Array(-95, -93, -94, -81, -147, -80, -147, 50, 26, 50, 26, -80, -28, -81, -27, -96)
+polygon = PackedVector2Array(-28, -84, -112, -85, -147, -80, -147, 50, 26, 50, 26, -80, -28, -81, -28, -83)
 
 [node name="OperatingRoom3" type="Node2D" unique_id=1015740257]
 y_sort_enabled = true

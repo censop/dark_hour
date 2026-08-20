@@ -1703,6 +1703,11 @@ position = Vector2(-22, -8)
 position = Vector2(-21, -18)
 rotation = 2.3500395
 
+[node name="Battery2" parent="Interactables" unique_id=72985288 instance=ExtResource("10_m6a6t")]
+position = Vector2(-4, 61)
+rotation = 4.4505897
+UniqueID = "Battery_010"
+
 [node name="RoomArea" type="Area2D" parent="." unique_id=873038400 node_paths=PackedStringArray("_blackoutSquare")]
 collision_mask = 4
 script = ExtResource("11_x618o")
