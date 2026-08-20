@@ -9,6 +9,9 @@
 font = ExtResource("2_e37ne")
 font_size = 32
 
+[sub_resource type="LabelSettings" id="LabelSettings_e37ne"]
+font = ExtResource("2_e37ne")
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_u0jah"]
 atlas = ExtResource("2_ws81a")
 region = Rect2(16, 144, 16, 16)
@@ -53,6 +56,12 @@ theme_override_constants/separation = 12
 layout_mode = 2
 text = "The Abstence"
 label_settings = SubResource("LabelSettings_n5eju")
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer" unique_id=864305252]
+layout_mode = 2
+text = "By Censop"
+label_settings = SubResource("LabelSettings_e37ne")
+horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=1511603131]
 layout_mode = 2

@@ -17,6 +17,9 @@ public partial class SignalHub : Node
 	[Signal] public delegate void OnInputSubmittedEventHandler(string code);
 	[Signal] public delegate void OnNoteInteractedEventHandler(string noteCode);
 
+
+	[Signal] public delegate void OnDemoEndTriggeredEventHandler();
+
 	//player related
 	[Signal] public delegate void OnPlayerDeadEventHandler();
 	[Signal] public delegate void OnPlayerEnterredLightEventHandler();
@@ -105,5 +108,9 @@ public partial class SignalHub : Node
 		Instance.EmitSignal(SignalName.OnNoteInteracted, noteCode);
 	}
 
+	public static void EmitDemoEndTriggered()
+	{
+		Instance.EmitSignal(SignalName.OnDemoEndTriggered);
+	}
 
 }
