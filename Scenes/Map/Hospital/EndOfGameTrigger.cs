@@ -14,7 +14,8 @@ public partial class EndOfGameTrigger : Area2D
         if (body is Player)
 		{
 			SignalHub.EmitDemoEndTriggered();
-			body.SetPhysicsProcess(false);
+			GetTree().Paused = true;
+			
 		}
     }
 

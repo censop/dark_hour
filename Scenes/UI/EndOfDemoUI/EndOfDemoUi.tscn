@@ -4,6 +4,7 @@
 [ext_resource type="LabelSettings" uid="uid://dhdv2mnuq4qq" path="res://Resources/Fonts/PopUpMenuFont.tres" id="1_kusyb"]
 
 [node name="EndOfDemoUI" type="CanvasLayer" unique_id=847796100 node_paths=PackedStringArray("_fadeRect", "_thankYouLabel")]
+process_mode = 3
 script = ExtResource("1_6j5lc")
 _fadeRect = NodePath("ColorRect")
 _thankYouLabel = NodePath("CenterContainer/Label")
